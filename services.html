@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | BV Consulting</title>
+    <meta name="description" content="BV Consulting offers done-for-you client acquisition systems, Google Search Ads, CRM integration, automation workflows, and streamlined booking for service businesses ready to grow.">
+    <meta name="keywords" content="BV Consulting services, client acquisition, lead generation, CRM integration, marketing automation, Google Ads management, appointment booking system, done-for-you marketing">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BV Consulting">
+    <link rel="canonical" href="https://bvconsulting.com/services">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bvconsulting.com/services">
+    <meta property="og:title" content="Our Services | BV Consulting">
+    <meta property="og:description" content="Explore BV Consulting's full suite of done-for-you services: client acquisition, lead generation, CRM, automation, and booking systems.">
+    <meta property="og:site_name" content="BV Consulting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Our Services | BV Consulting">
+    <meta name="twitter:description" content="BV Consulting builds the systems that capture every lead, follow up automatically, and convert prospects into clients while you focus on your work.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "BV Consulting Services",
+      "description": "Full suite of done-for-you client acquisition, lead generation, CRM, automation, and booking services.",
+      "url": "https://bvconsulting.com/services",
+      "isPartOf": { "@type": "WebSite", "name": "BV Consulting", "url": "https://bvconsulting.com" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black:       #050505;
+            --dark:        #0D0D0D;
+            --dark-2:      #111827;
+            --blue:        #2563EB;
+            --blue-light:  #3B82F6;
+            --blue-pale:   #93C5FD;
+            --blue-glow:   rgba(37,99,235,0.12);
+            --white:       #FFFFFF;
+            --gray:        #9CA3AF;
+            --gray-light:  #D1D5DB;
+            --border:      rgba(255,255,255,0.07);
+            --border-blue: rgba(37,99,235,0.25);
+            --green:       #10B981;
+            --green-glow:  rgba(16,185,129,0.10);
+            --amber:       #F59E0B;
+            --red:         #EF4444;
+            --purple:      #8B5CF6;
+            --purple-glow: rgba(139,92,246,0.12);
+            --teal:        #14B8A6;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,5,5,0.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-svg { width: 42px; height: 42px; }
+        .logo-text { font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -0.3px; }
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 9px 20px; border-radius: 8px; font-weight: 600 !important; }
+        .nav-cta:hover { background: #1D4ED8 !important; }
+        .mobile-btn { display: none; background: none; border: 1px solid var(--border); color: white; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 18px; line-height: 1; }
+
+        /* ===== HERO ===== */
+        .hero { padding: 136px 24px 72px; background: var(--black); text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(37,99,235,0.09) 0%, transparent 65%); pointer-events: none; }
+        .hero-inner { max-width: 800px; margin: 0 auto; position: relative; }
+
+        .sec-badge { display: inline-block; background: var(--blue-glow); border: 1px solid var(--border-blue); color: var(--blue-light); padding: 4px 13px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 18px; }
+        .badge-dot { display: inline-block; width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; margin-right: 6px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+        .hero h1 { font-size: clamp(38px, 5.5vw, 64px); font-weight: 900; letter-spacing: -2.5px; line-height: 1.05; margin-bottom: 20px; }
+        .grad-text { background: linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 17px; color: var(--gray); line-height: 1.8; max-width: 620px; margin: 0 auto 40px; }
+
+        .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { display: inline-flex; align-items: center; gap: 9px; background: var(--blue); color: white; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 700; transition: background 0.2s, transform 0.15s; }
+        .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); }
+        .btn-ghost { display: inline-flex; align-items: center; gap: 9px; background: transparent; color: var(--gray-light); text-decoration: none; padding: 14px 28px; border-radius: 10px; font-size: 15px; font-weight: 600; border: 1px solid var(--border); transition: border-color 0.2s, color 0.2s; }
+        .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--white); }
+
+        /* ===== SERVICE NAV TABS ===== */
+        .service-nav { background: var(--dark); border-bottom: 1px solid var(--border); position: sticky; top: 69px; z-index: 90; }
+        .service-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+        .service-nav-inner::-webkit-scrollbar { display: none; }
+
+        .snav-item { display: flex; align-items: center; gap: 8px; padding: 16px 22px; font-size: 13px; font-weight: 600; color: var(--gray); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; flex-shrink: 0; }
+        .snav-item:hover { color: var(--white); }
+        .snav-item.active { color: var(--white); border-bottom-color: var(--blue); }
+        .snav-icon { font-size: 16px; }
+
+        /* ===== SECTION SHARED ===== */
+        .service-section { padding: 88px 24px; }
+        .service-section:nth-child(even) { background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .service-section:nth-child(odd) { background: var(--black); }
+
+        .service-inner { max-width: 1100px; margin: 0 auto; }
+
+        .service-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .service-layout.reverse { direction: rtl; }
+        .service-layout.reverse > * { direction: ltr; }
+
+        .service-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+        .service-content h2 { font-size: clamp(26px, 3vw, 40px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 16px; }
+        .service-content p { font-size: 14px; color: var(--gray-light); line-height: 1.85; margin-bottom: 20px; }
+
+        .service-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+        .service-bullet { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-light); line-height: 1.6; }
+        .bullet-check { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+
+        .service-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; text-decoration: none; padding: 10px 18px; border-radius: 8px; transition: background 0.2s, transform 0.15s; }
+        .service-link:hover { transform: translateY(-1px); }
+
+        /* ===== MINI DASHBOARDS ===== */
+        .mini-window { background: #0C1220; border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; overflow: hidden; box-shadow: 0 20px 56px rgba(0,0,0,0.55); }
+
+        .mini-chrome { background: #080F1C; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
+        .mini-dots { display: flex; gap: 5px; }
+        .mini-dot { width: 9px; height: 9px; border-radius: 50%; }
+        .mini-title { font-size: 11px; color: #4B5563; margin-left: 6px; font-weight: 500; }
+        .mini-live { margin-left: auto; display: flex; align-items: center; gap: 5px; font-size: 10px; color: var(--green); font-weight: 600; }
+        .mini-live-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+
+        /* ===== 1. CLIENT ACQUISITION DASHBOARD ===== */
+        .acq-body { padding: 16px; }
+
+        .acq-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+        .acq-kpi { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 12px; }
+        .acq-kpi-num { font-size: 22px; font-weight: 900; letter-spacing: -1px; line-height: 1; margin-bottom: 3px; }
+        .acq-kpi-label { font-size: 10px; color: #4B5563; }
+        .acq-kpi-change { font-size: 10px; font-weight: 600; color: var(--green); margin-top: 2px; }
+
+        .acq-pipeline { display: flex; gap: 6px; margin-bottom: 12px; }
+        .acq-stage { flex: 1; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 10px 8px; text-align: center; }
+        .acq-stage-icon { font-size: 14px; margin-bottom: 4px; }
+        .acq-stage-num { font-size: 16px; font-weight: 800; letter-spacing: -0.5px; }
+        .acq-stage-label { font-size: 9px; color: #4B5563; margin-top: 2px; }
+
+        .acq-recent { }
+        .acq-recent-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #374151; margin-bottom: 8px; }
+        .acq-lead-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .acq-lead-row:last-child { border-bottom: none; }
+        .acq-av { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 800; color: white; flex-shrink: 0; }
+        .acq-name { font-size: 11px; font-weight: 600; flex: 1; }
+        .acq-val { font-size: 11px; font-weight: 700; color: var(--white); }
+        .stage-pill { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+        .sp-new   { background: rgba(59,130,246,0.15); color: #60A5FA; }
+        .sp-qual  { background: rgba(245,158,11,0.12); color: #FCD34D; }
+        .sp-prop  { background: rgba(249,115,22,0.12); color: #FB923C; }
+        .sp-won   { background: rgba(16,185,129,0.12); color: #34D399; }
+
+        /* ===== 2. GOOGLE ADS MINI DASHBOARD ===== */
+        .ads-body { padding: 14px 16px; }
+
+        .ads-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .ads-title { font-size: 13px; font-weight: 700; }
+        .ads-period { font-size: 10px; color: #4B5563; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); padding: 3px 8px; border-radius: 4px; }
+
+        .ads-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+        .ads-kpi { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px; }
+        .ads-kpi-num { font-size: 18px; font-weight: 900; letter-spacing: -0.8px; line-height: 1; margin-bottom: 2px; }
+        .ads-kpi-label { font-size: 9px; color: #4B5563; }
+        .ads-kpi-up { font-size: 9px; color: var(--green); font-weight: 600; }
+
+        .ads-chart { height: 80px; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; overflow: hidden; margin-bottom: 12px; }
+        .ads-chart svg { width: 100%; height: 56px; }
+
+        .ads-campaign-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 10px; }
+        .ads-campaign-row:last-child { border-bottom: none; }
+        .ads-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+        .ads-camp-name { flex: 1; font-weight: 600; color: var(--gray-light); }
+        .ads-camp-stat { color: var(--gray); }
+        .ads-camp-roas { font-weight: 700; color: var(--green); }
+
+        /* ===== 3. CRM MINI DASHBOARD ===== */
+        .crm-body { padding: 14px 16px; }
+
+        .crm-mini-kpis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+        .crm-mini-kpi { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 10px 12px; }
+        .crm-mini-num { font-size: 20px; font-weight: 900; letter-spacing: -0.8px; line-height: 1; margin-bottom: 2px; }
+        .crm-mini-label { font-size: 9px; color: #4B5563; }
+
+        .crm-contact-mini { }
+        .crm-contact-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #374151; margin-bottom: 8px; }
+        .crm-row { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .crm-row:last-child { border-bottom: none; }
+        .crm-av { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 8px; font-weight: 800; color: white; flex-shrink: 0; }
+        .crm-name { font-size: 11px; font-weight: 600; flex: 1; }
+        .crm-stage-mini { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+        .crm-val { font-size: 10px; font-weight: 700; color: var(--white); }
+
+        /* ===== 4. AUTOMATION MINI ===== */
+        .auto-body { padding: 14px 16px; }
+
+        .auto-flow { display: flex; flex-direction: column; gap: 0; }
+        .auto-step { display: flex; align-items: center; gap: 0; }
+        .auto-node { display: flex; align-items: center; gap: 8px; border-radius: 8px; padding: 9px 12px; flex: 1; }
+        .auto-node-icon { width: 26px; height: 26px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+        .auto-node-text { }
+        .auto-node-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 1px; }
+        .auto-node-title { font-size: 11px; font-weight: 700; color: var(--white); }
+        .auto-status { width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 9px; flex-shrink: 0; margin-left: auto; }
+
+        .auto-connector { display: flex; justify-content: flex-start; padding: 0 0 0 19px; }
+        .auto-vline { width: 1px; height: 12px; background: rgba(255,255,255,0.12); }
+
+        .auto-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 14px; }
+        .auto-stat { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 7px; padding: 8px 10px; text-align: center; }
+        .auto-stat-num { font-size: 16px; font-weight: 900; letter-spacing: -0.5px; }
+        .auto-stat-label { font-size: 9px; color: #4B5563; margin-top: 1px; }
+
+        /* ===== 5. BOOKING MINI ===== */
+        .booking-body { padding: 14px 16px; }
+
+        .booking-month-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .booking-month-title { font-size: 13px; font-weight: 700; }
+        .booking-nav { display: flex; gap: 4px; }
+        .booking-nav-btn { width: 22px; height: 22px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07); border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--gray); cursor: pointer; }
+
+        .booking-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; margin-bottom: 14px; }
+        .cal-header { font-size: 9px; color: #374151; text-align: center; font-weight: 700; padding: 3px; }
+        .cal-day { height: 28px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; color: var(--gray); cursor: pointer; transition: background 0.15s; }
+        .cal-day:hover { background: rgba(255,255,255,0.05); }
+        .cal-day.empty { }
+        .cal-day.has-booking { background: rgba(37,99,235,0.18); color: var(--blue-light); position: relative; }
+        .cal-day.has-booking::after { content: ''; position: absolute; bottom: 3px; width: 4px; height: 4px; background: var(--blue-light); border-radius: 50%; }
+        .cal-day.today { background: var(--blue); color: white; }
+        .cal-day.full { background: rgba(16,185,129,0.15); color: #34D399; }
+
+        .booking-upcoming { }
+        .booking-upcoming-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #374151; margin-bottom: 8px; }
+        .booking-appt { display: flex; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .booking-appt:last-child { border-bottom: none; }
+        .appt-time { font-size: 10px; font-weight: 700; color: var(--blue-light); width: 48px; flex-shrink: 0; }
+        .appt-name { font-size: 11px; font-weight: 600; flex: 1; }
+        .appt-type { font-size: 9px; color: #4B5563; }
+        .appt-status { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 10px; }
+        .as-conf { background: rgba(16,185,129,0.12); color: #34D399; }
+        .as-pend { background: rgba(245,158,11,0.12); color: #FCD34D; }
+
+        /* ===== 6. INDUSTRY SOLUTIONS ===== */
+        .industry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
+
+        .industry-card { background: var(--dark-2); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: border-color 0.2s, transform 0.2s; text-decoration: none; display: block; }
+        .industry-card:hover { border-color: var(--border-blue); transform: translateY(-3px); }
+        .industry-card-icon { font-size: 28px; margin-bottom: 12px; }
+        .industry-card h4 { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 8px; color: var(--white); }
+        .industry-card p { font-size: 12px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+        .industry-card-stat { font-size: 11px; font-weight: 700; color: var(--green); }
+
+        /* ===== COMPARISON TABLE ===== */
+        .compare-section { padding: 88px 24px; background: var(--black); border-top: 1px solid var(--border); }
+        .compare-inner { max-width: 900px; margin: 0 auto; }
+
+        .compare-table { width: 100%; border-collapse: collapse; margin-top: 52px; }
+        .compare-table th { padding: 14px 18px; text-align: left; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #374151; border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .compare-table th:nth-child(2), .compare-table th:nth-child(3) { text-align: center; }
+        .compare-table th:nth-child(3) { color: var(--blue-light); }
+
+        .compare-table td { padding: 13px 18px; font-size: 13px; color: var(--gray-light); border-bottom: 1px solid rgba(255,255,255,0.04); }
+        .compare-table td:nth-child(2), .compare-table td:nth-child(3) { text-align: center; }
+        .compare-table tr:hover td { background: rgba(255,255,255,0.015); }
+
+        .compare-table .feature-name { font-weight: 600; color: var(--white); }
+        .check-y { color: var(--green); font-size: 16px; }
+        .check-n { color: #374151; font-size: 16px; }
+        .check-p { color: var(--amber); font-size: 11px; font-weight: 700; }
+
+        .bvc-col th { background: rgba(37,99,235,0.06); }
+
+        /* ===== PROCESS OVERVIEW ===== */
+        .process-section { padding: 88px 24px; background: var(--dark); border-top: 1px solid var(--border); }
+        .process-inner { max-width: 1100px; margin: 0 auto; }
+
+        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 52px; position: relative; }
+        .process-steps::before { content: ''; position: absolute; top: 28px; left: 14%; right: 14%; height: 2px; background: linear-gradient(90deg, var(--blue), rgba(37,99,235,0.2)); z-index: 0; }
+
+        .proc-step { text-align: center; position: relative; z-index: 1; padding: 0 16px; }
+        .proc-num { width: 56px; height: 56px; border-radius: 50%; background: var(--blue); border: 3px solid var(--black); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: white; margin: 0 auto 18px; box-shadow: 0 0 0 4px rgba(37,99,235,0.18); }
+        .proc-step h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .proc-step p { font-size: 12px; color: var(--gray); line-height: 1.7; }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section { padding: 100px 24px; background: var(--black); text-align: center; position: relative; overflow: hidden; border-top: 1px solid var(--border); }
+        .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(37,99,235,0.09) 0%, transparent 65%); pointer-events: none; }
+        .cta-inner { max-width: 680px; margin: 0 auto; position: relative; }
+        .cta-inner h2 { font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: -2px; line-height: 1.08; margin-bottom: 16px; }
+        .cta-inner p { font-size: 16px; color: var(--gray); line-height: 1.75; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--dark); border-top: 1px solid var(--border); padding: 56px 24px 28px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
+        .footer-brand-desc { font-size: 13px; color: var(--gray); line-height: 1.7; margin-top: 11px; max-width: 260px; }
+        .fc h4 { font-size: 11px; font-weight: 700; color: var(--white); letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 14px; }
+        .fc ul { list-style: none; }
+        .fc ul li { margin-bottom: 9px; }
+        .fc ul li a { font-size: 13px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+        .fc ul li a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 12px; color: var(--gray); }
+        .footer-legal { display: flex; gap: 20px; }
+        .footer-legal a { font-size: 12px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+        .footer-legal a:hover { color: var(--white); }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header { text-align: center; margin-bottom: 0; }
+        .section-header h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 900; letter-spacing: -1.8px; margin-bottom: 12px; }
+        .section-header p { font-size: 15px; color: var(--gray); max-width: 520px; margin: 0 auto; line-height: 1.75; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .service-layout { grid-template-columns: 1fr; gap: 40px; }
+            .service-layout.reverse { direction: ltr; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+            .process-steps::before { display: none; }
+            .industry-grid { grid-template-columns: 1fr 1fr; }
+            .ads-kpis { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: rgba(5,5,5,0.98); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); flex-direction: column; padding: 8px 24px 20px; gap: 0; z-index: 99; }
+            .nav-links.mobile-open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links li a { display: block; padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--gray-light) !important; background: none !important; border-radius: 0 !important; }
+            .nav-links li:last-child a { border-bottom: none; }
+            .nav-cta { margin-top: 4px; text-align: center; border-radius: 8px !important; background: var(--blue) !important; border-bottom: none !important; padding: 11px 20px !important; }
+            .mobile-btn { display: flex; }
+            .industry-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+            .acq-pipeline { flex-wrap: wrap; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .footer-legal { flex-wrap: wrap; justify-content: center; }
+            .hero-btns { flex-direction: column; align-items: center; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .compare-table th:nth-child(2) { display: none; }
+            .compare-table td:nth-child(2) { display: none; }
+        }
+
+           /* ===== SCROLL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* keeps proportions clean */
+    border-radius: 18px; /* matches your SVG rounded corners */
+    background: #000; /* optional, matches your current black background */
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="/index.html" class="logo" aria-label="BV Consulting Home">
+            <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+            <span class="logo-text">BV Consulting</span>
+        </a>
+        <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+            <li><a href="/index.html">Results</a></li>
+            <li><a href="/lead_generation.html">Lead Generation</a></li>
+            <li><a href="/crm_integration.html">CRM Integration</a></li>
+            <li><a href="/automation.html">Automation</a></li>
+            <li><a href="booking.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <button class="mobile-btn" id="mobileBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+    <div class="hero-inner">
+        <div class="sec-badge"><span class="badge-dot"></span>Everything We Build for You</div>
+        <h1>Services That Turn<br><span class="grad-text">Attention into Revenue</span></h1>
+        <p>Every service we offer is done for you completely. We build, integrate, launch, and optimize the systems that bring your business consistent leads, faster follow-up, and more closed deals without adding complexity to your day.</p>
+        <div class="hero-btns">
+            <a href="booking.html" class="btn-primary">Book a Free Strategy Call &#8594;</a>
+            <a href="#service-acquisition" class="btn-ghost">Explore Services &#8595;</a>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== SERVICE NAV ==================== -->
+<div class="service-nav">
+    <div class="service-nav-inner">
+        <a href="#service-acquisition" class="snav-item active"><span class="snav-icon">&#127919;</span> Client Acquisition</a>
+        <a href="#service-ads" class="snav-item"><span class="snav-icon">&#128269;</span> Google Search Ads</a>
+        <a href="#service-crm" class="snav-item"><span class="snav-icon">&#128202;</span> CRM Integration</a>
+        <a href="#service-automation" class="snav-item"><span class="snav-icon">&#9889;</span> Automation</a>
+        <a href="#service-booking" class="snav-item"><span class="snav-icon">&#128197;</span> Booking Systems</a>
+        <a href="#service-industry" class="snav-item"><span class="snav-icon">&#127963;</span> Industry Solutions</a>
+    </div>
+</div>
+
+<!-- ==================== 01: CLIENT ACQUISITION ==================== -->
+<section class="service-section" id="service-acquisition">
+    <div class="service-inner">
+        <div class="service-layout">
+            <div class="service-content">
+                <div class="service-label" style="color:var(--blue-light);">01 &mdash; Client Acquisition</div>
+                <h2>A Complete System for<br><span class="grad-text">Winning New Clients</span></h2>
+                <p>Most businesses spend money getting attention but have no reliable system to turn that attention into paying clients. We build the entire acquisition process from first touch to closed deal, done for you.</p>
+                <ul class="service-bullets">
+                    <li class="service-bullet">
+                        <div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>
+                        Full funnel built from lead capture to closed client, tailored to your business model and target market
+                    </li>
+                    <li class="service-bullet">
+                        <div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>
+                        Landing pages, intake forms, and conversion-focused copy written and designed for you
+                    </li>
+                    <li class="service-bullet">
+                        <div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>
+                        Every lead source connected: ads, organic, referrals, outreach, and social all flow into one system
+                    </li>
+                    <li class="service-bullet">
+                        <div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>
+                        Automated qualification, follow-up, and pipeline movement so no lead ever sits idle
+                    </li>
+                    <li class="service-bullet">
+                        <div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>
+                        Live reporting dashboard so you always know your lead volume, conversion rate, and revenue generated
+                    </li>
+                </ul>
+                <a href="booking.html" class="service-link" style="background:var(--blue);color:white;">Build My Acquisition System &#8594;</a>
+            </div>
+
+            <!-- Acquisition Dashboard -->
+            <div class="mini-window">
+                <div class="mini-chrome">
+                    <div class="mini-dots"><div class="mini-dot" style="background:#FF5F57;"></div><div class="mini-dot" style="background:#FEBC2E;"></div><div class="mini-dot" style="background:#28C840;"></div></div>
+                    <span class="mini-title">Client Acquisition Overview</span>
+                    <div class="mini-live"><div class="mini-live-dot"></div> Live</div>
+                </div>
+                <div class="acq-body">
+                    <div class="acq-kpis">
+                        <div class="acq-kpi">
+                            <div class="acq-kpi-num" style="color:var(--blue-light);">247</div>
+                            <div class="acq-kpi-label">Total Leads</div>
+                            <div class="acq-kpi-change">&#8593; 38 this month</div>
+                        </div>
+                        <div class="acq-kpi">
+                            <div class="acq-kpi-num" style="color:#34D399;">63</div>
+                            <div class="acq-kpi-label">Active Deals</div>
+                            <div class="acq-kpi-change">&#8593; $142K pipeline</div>
+                        </div>
+                        <div class="acq-kpi">
+                            <div class="acq-kpi-num" style="color:#FCD34D;">28%</div>
+                            <div class="acq-kpi-label">Close Rate</div>
+                            <div class="acq-kpi-change">&#8593; up from 11%</div>
+                        </div>
+                    </div>
+                    <div class="acq-pipeline">
+                        <div class="acq-stage"><div class="acq-stage-icon">&#128100;</div><div class="acq-stage-num" style="color:#60A5FA;">84</div><div class="acq-stage-label">New Leads</div></div>
+                        <div class="acq-stage"><div class="acq-stage-icon">&#128172;</div><div class="acq-stage-num" style="color:#A78BFA;">61</div><div class="acq-stage-label">Contacted</div></div>
+                        <div class="acq-stage"><div class="acq-stage-icon">&#9989;</div><div class="acq-stage-num" style="color:#FCD34D;">48</div><div class="acq-stage-label">Qualified</div></div>
+                        <div class="acq-stage"><div class="acq-stage-icon">&#128221;</div><div class="acq-stage-num" style="color:#FB923C;">32</div><div class="acq-stage-label">Proposal</div></div>
+                        <div class="acq-stage"><div class="acq-stage-icon">&#127881;</div><div class="acq-stage-num" style="color:#34D399;">22</div><div class="acq-stage-label">Closed</div></div>
+                    </div>
+                    <div class="acq-recent">
+                        <div class="acq-recent-title">Recent Activity</div>
+                        <div class="acq-lead-row"><div class="acq-av" style="background:#2563EB;">MR</div><div class="acq-name">Marcus Reid</div><span class="stage-pill sp-prop">Proposal</span><div class="acq-val">$8,400</div></div>
+                        <div class="acq-lead-row"><div class="acq-av" style="background:#059669;">DT</div><div class="acq-name">David Torres</div><span class="stage-pill sp-won">Closed</span><div class="acq-val">$6,750</div></div>
+                        <div class="acq-lead-row"><div class="acq-av" style="background:#DC2626;">KP</div><div class="acq-name">Kevin Park</div><span class="stage-pill sp-new">New Lead</span><div class="acq-val">$9,800</div></div>
+                        <div class="acq-lead-row"><div class="acq-av" style="background:#7C3AED;">SJ</div><div class="acq-name">Sarah Johnson</div><span class="stage-pill sp-qual">Qualified</span><div class="acq-val">$12,000</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 02: GOOGLE ADS ==================== -->
+<section class="service-section" id="service-ads">
+    <div class="service-inner">
+        <div class="service-layout reverse">
+            <!-- Ads Dashboard -->
+            <div class="mini-window">
+                <div class="mini-chrome">
+                    <div class="mini-dots"><div class="mini-dot" style="background:#FF5F57;"></div><div class="mini-dot" style="background:#FEBC2E;"></div><div class="mini-dot" style="background:#28C840;"></div></div>
+                    <span class="mini-title">Google Ads &mdash; Campaign Dashboard</span>
+                    <div class="mini-live"><div class="mini-live-dot"></div> Live</div>
+                </div>
+                <div class="ads-body">
+                    <div class="ads-top">
+                        <div class="ads-title">Campaign Performance</div>
+                        <div class="ads-period">Last 30 days</div>
+                    </div>
+                    <div class="ads-kpis">
+                        <div class="ads-kpi"><div class="ads-kpi-num" style="color:var(--white);">$4,280</div><div class="ads-kpi-label">Ad Spend</div><div class="ads-kpi-up">of $5k budget</div></div>
+                        <div class="ads-kpi"><div class="ads-kpi-num" style="color:#60A5FA;">2,614</div><div class="ads-kpi-label">Clicks</div><div class="ads-kpi-up">&#8593; CTR 3.1%</div></div>
+                        <div class="ads-kpi"><div class="ads-kpi-num" style="color:#34D399;">238</div><div class="ads-kpi-label">Leads</div><div class="ads-kpi-up">&#8593; $18 CPL</div></div>
+                        <div class="ads-kpi"><div class="ads-kpi-num" style="color:#FCD34D;">4.25x</div><div class="ads-kpi-label">ROAS</div><div class="ads-kpi-up">&#8593; $18.2K rev</div></div>
+                    </div>
+                    <div class="ads-chart">
+                        <svg viewBox="0 0 500 56" preserveAspectRatio="none">
+                            <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"/><stop offset="100%" stop-color="#2563EB" stop-opacity="0"/></linearGradient></defs>
+                            <path d="M0,48 L25,44 L50,40 L75,36 L100,32 L125,28 L150,24 L175,28 L200,20 L225,16 L250,20 L275,14 L300,10 L325,8 L350,12 L375,6 L400,4 L425,8 L450,3 L475,5 L500,2 L500,56 L0,56 Z" fill="url(#ag)"/>
+                            <path d="M0,48 L25,44 L50,40 L75,36 L100,32 L125,28 L150,24 L175,28 L200,20 L225,16 L250,20 L275,14 L300,10 L325,8 L350,12 L375,6 L400,4 L425,8 L450,3 L475,5 L500,2" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="ads-campaign-row"><div class="ads-dot" style="background:var(--green);box-shadow:0 0 4px var(--green);"></div><div class="ads-camp-name">Roofing Services &mdash; Local Search</div><div class="ads-camp-stat">94 leads</div>&nbsp;&nbsp;<div class="ads-camp-roas">4.8x</div></div>
+                    <div class="ads-campaign-row"><div class="ads-dot" style="background:var(--green);box-shadow:0 0 4px var(--green);"></div><div class="ads-camp-name">Emergency Repair &mdash; 24/7</div><div class="ads-camp-stat">67 leads</div>&nbsp;&nbsp;<div class="ads-camp-roas">5.2x</div></div>
+                    <div class="ads-campaign-row"><div class="ads-dot" style="background:var(--blue-light);"></div><div class="ads-camp-name">Competitor Keywords</div><div class="ads-camp-stat">44 leads</div>&nbsp;&nbsp;<div class="ads-camp-roas">3.9x</div></div>
+                    <div class="ads-campaign-row"><div class="ads-dot" style="background:var(--amber);"></div><div class="ads-camp-name">Seasonal Promotion</div><div class="ads-camp-stat">33 leads</div>&nbsp;&nbsp;<div class="ads-camp-roas">3.2x</div></div>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-label" style="color:#60A5FA;">02 &mdash; Google Search Ads</div>
+                <h2>Put Your Business<br><span class="grad-text">At the Top of Search</span></h2>
+                <p>We build and manage Google Search Ad campaigns that target people actively searching for exactly what you offer. High-intent traffic, measurable results, and a system that connects directly to your CRM so every click becomes a tracked, followed-up lead.</p>
+                <ul class="service-bullets">
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>Deep keyword research to find the exact terms your best clients are searching</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>Ad copy written and tested continuously to maximize click-through rate</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>Dedicated conversion landing page built to turn clicks into leads</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>Call tracking, form tracking, and CRM integration so every lead is captured and followed up</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#10003;</div>Monthly performance reports in plain English showing spend, leads, and revenue</li>
+                </ul>
+                <a href="google-ads.html" class="service-link" style="background:var(--blue-glow);border:1px solid var(--border-blue);color:var(--blue-light);">Learn More About Google Ads &#8594;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 03: CRM ==================== -->
+<section class="service-section" id="service-crm">
+    <div class="service-inner">
+        <div class="service-layout">
+            <div class="service-content">
+                <div class="service-label" style="color:#34D399;">03 &mdash; CRM Integration</div>
+                <h2>Every Lead. Every Deal.<br><span class="grad-text">All in One Place.</span></h2>
+                <p>We build and integrate your CRM from scratch so every contact, conversation, deal, and note lives in one organized system. No more spreadsheets, sticky notes, or lost follow-ups. Your entire pipeline, visible and moving forward.</p>
+                <ul class="service-bullets">
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#10003;</div>Custom CRM built for your business: pipelines, stages, fields, and tags set up your way</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#10003;</div>Every lead source connected: ads, forms, calls, and social all flow into the CRM automatically</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#10003;</div>Two-way SMS and email built in so conversations log automatically against each contact</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#10003;</div>Real-time pipeline reporting showing deal value, stage distribution, and close rate</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#10003;</div>Role-based team access so reps see their contacts and management sees everything</li>
+                </ul>
+                <a href="crm.html" class="service-link" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);color:#34D399;">Explore the CRM Dashboard &#8594;</a>
+            </div>
+
+            <!-- CRM Dashboard -->
+            <div class="mini-window">
+                <div class="mini-chrome">
+                    <div class="mini-dots"><div class="mini-dot" style="background:#FF5F57;"></div><div class="mini-dot" style="background:#FEBC2E;"></div><div class="mini-dot" style="background:#28C840;"></div></div>
+                    <span class="mini-title">BV CRM &mdash; Contact Pipeline</span>
+                    <div class="mini-live"><div class="mini-live-dot"></div> Live</div>
+                </div>
+                <div class="crm-body">
+                    <div class="crm-mini-kpis">
+                        <div class="crm-mini-kpi"><div class="crm-mini-num" style="color:var(--blue-light);">247</div><div class="crm-mini-label">Total Contacts</div></div>
+                        <div class="crm-mini-kpi"><div class="crm-mini-num" style="color:#34D399;">$38,200</div><div class="crm-mini-label">Closed This Month</div></div>
+                        <div class="crm-mini-kpi"><div class="crm-mini-num" style="color:#FCD34D;">1.8m</div><div class="crm-mini-label">Avg Response Time</div></div>
+                        <div class="crm-mini-kpi"><div class="crm-mini-num" style="color:#A78BFA;">63</div><div class="crm-mini-label">Active Deals</div></div>
+                    </div>
+                    <div class="crm-contact-title">Contact List</div>
+                    <div class="crm-row"><div class="crm-av" style="background:#2563EB;">MR</div><div class="crm-name">Marcus Reid</div><span class="crm-stage-mini" style="background:rgba(249,115,22,0.12);color:#FB923C;">Proposal</span><div class="crm-val">$8,400</div></div>
+                    <div class="crm-row"><div class="crm-av" style="background:#7C3AED;">SJ</div><div class="crm-name">Sarah Johnson</div><span class="crm-stage-mini" style="background:rgba(245,158,11,0.12);color:#FCD34D;">Qualified</span><div class="crm-val">$12,000</div></div>
+                    <div class="crm-row"><div class="crm-av" style="background:#059669;">DT</div><div class="crm-name">David Torres</div><span class="crm-stage-mini" style="background:rgba(16,185,129,0.12);color:#34D399;">Closed Won</span><div class="crm-val">$6,750</div></div>
+                    <div class="crm-row"><div class="crm-av" style="background:#DC2626;">KP</div><div class="crm-name">Kevin Park</div><span class="crm-stage-mini" style="background:rgba(59,130,246,0.12);color:#60A5FA;">New Lead</span><div class="crm-val">$9,800</div></div>
+                    <div class="crm-row"><div class="crm-av" style="background:#0891B2;">NW</div><div class="crm-name">Nicole White</div><span class="crm-stage-mini" style="background:rgba(245,158,11,0.12);color:#FCD34D;">Qualified</span><div class="crm-val">$7,100</div></div>
+                    <div class="crm-row"><div class="crm-av" style="background:#9333EA;">JM</div><div class="crm-name">James Monroe</div><span class="crm-stage-mini" style="background:rgba(249,115,22,0.12);color:#FB923C;">Proposal</span><div class="crm-val">$14,500</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 04: AUTOMATION ==================== -->
+<section class="service-section" id="service-automation">
+    <div class="service-inner">
+        <div class="service-layout reverse">
+            <!-- Automation Workflow -->
+            <div class="mini-window">
+                <div class="mini-chrome">
+                    <div class="mini-dots"><div class="mini-dot" style="background:#FF5F57;"></div><div class="mini-dot" style="background:#FEBC2E;"></div><div class="mini-dot" style="background:#28C840;"></div></div>
+                    <span class="mini-title">Workflow Builder &mdash; Lead Intake</span>
+                    <div class="mini-live"><div class="mini-live-dot"></div> Running</div>
+                </div>
+                <div class="auto-body">
+                    <div class="auto-flow">
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(139,92,246,0.10);border:1px solid rgba(139,92,246,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(139,92,246,0.2);">&#9889;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#A78BFA;">Trigger</div><div class="auto-node-title">Form Submitted</div></div>
+                                <div class="auto-status" style="background:rgba(16,185,129,0.2);color:#34D399;">&#10003;</div>
+                            </div>
+                        </div>
+                        <div class="auto-connector"><div class="auto-vline"></div></div>
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(37,99,235,0.10);border:1px solid rgba(37,99,235,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(37,99,235,0.2);">&#128100;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#60A5FA;">Action</div><div class="auto-node-title">Create CRM Contact</div></div>
+                                <div class="auto-status" style="background:rgba(16,185,129,0.2);color:#34D399;">&#10003;</div>
+                            </div>
+                        </div>
+                        <div class="auto-connector"><div class="auto-vline"></div></div>
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(37,99,235,0.10);border:1px solid rgba(37,99,235,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(37,99,235,0.2);">&#128241;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#60A5FA;">Action</div><div class="auto-node-title">Send SMS in 90 seconds</div></div>
+                                <div class="auto-status" style="background:rgba(16,185,129,0.2);color:#34D399;">&#10003;</div>
+                            </div>
+                        </div>
+                        <div class="auto-connector"><div class="auto-vline"></div></div>
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(37,99,235,0.10);border:1px solid rgba(37,99,235,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(37,99,235,0.2);">&#128233;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#60A5FA;">Action</div><div class="auto-node-title">Send Welcome Email</div></div>
+                                <div class="auto-status" style="background:rgba(16,185,129,0.2);color:#34D399;">&#10003;</div>
+                            </div>
+                        </div>
+                        <div class="auto-connector"><div class="auto-vline"></div></div>
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(20,184,166,0.10);border:1px solid rgba(20,184,166,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(20,184,166,0.2);">&#9201;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#5EEAD4;">Wait</div><div class="auto-node-title">Delay 30 minutes</div></div>
+                                <div class="auto-status" style="background:rgba(245,158,11,0.15);color:#FCD34D;">&#8987;</div>
+                            </div>
+                        </div>
+                        <div class="auto-connector"><div class="auto-vline"></div></div>
+                        <div class="auto-step">
+                            <div class="auto-node" style="background:rgba(245,158,11,0.10);border:1px solid rgba(245,158,11,0.28);">
+                                <div class="auto-node-icon" style="background:rgba(245,158,11,0.2);">&#10067;</div>
+                                <div class="auto-node-text"><div class="auto-node-label" style="color:#FCD34D;">Condition</div><div class="auto-node-title">Booked a Call?</div></div>
+                                <div class="auto-status" style="background:rgba(245,158,11,0.15);color:#FCD34D;">&#8987;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auto-stats">
+                        <div class="auto-stat"><div class="auto-stat-num" style="color:#34D399;">1,247</div><div class="auto-stat-label">Enrolled</div></div>
+                        <div class="auto-stat"><div class="auto-stat-num" style="color:#60A5FA;">94.2%</div><div class="auto-stat-label">Completion</div></div>
+                        <div class="auto-stat"><div class="auto-stat-num" style="color:#FCD34D;">312</div><div class="auto-stat-label">Bookings</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-label" style="color:#A78BFA;">04 &mdash; Automation Workflows</div>
+                <h2>Backend Systems That<br><span class="grad-text">Run Without You</span></h2>
+                <p>We build the invisible workflows that power your business around the clock. From the moment a lead arrives to the moment they sign and beyond, every step is automated so your team focuses on delivery, not admin.</p>
+                <ul class="service-bullets">
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);">&#10003;</div>Lead intake workflows that respond within 90 seconds, 24 hours a day, 7 days a week</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);">&#10003;</div>Appointment reminder sequences that reduce no-shows by up to 87 percent</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);">&#10003;</div>No-show recovery, long-term nurture, and re-engagement workflows built in</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);">&#10003;</div>Post-close onboarding sequences that deliver a world-class first impression automatically</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);">&#10003;</div>Built on Make.com, GoHighLevel, Zapier, and Twilio depending on your stack</li>
+                </ul>
+                <a href="automation.html" class="service-link" style="background:var(--purple-glow);border:1px solid rgba(139,92,246,0.25);color:#A78BFA;">See the Workflow Builder &#8594;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 05: BOOKING ==================== -->
+<section class="service-section" id="service-booking">
+    <div class="service-inner">
+        <div class="service-layout">
+            <div class="service-content">
+                <div class="service-label" style="color:#5EEAD4;">05 &mdash; Booking Systems</div>
+                <h2>A Calendar That Fills<br><span class="grad-text">Itself Automatically</span></h2>
+                <p>We integrate and automate your entire booking process so leads go from interested to scheduled without any back-and-forth. Confirmations, reminders, and follow-ups all happen automatically so your calendar stays full and your no-show rate drops.</p>
+                <ul class="service-bullets">
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);">&#10003;</div>Booking calendar built and branded, embedded directly in your site and linked from every follow-up</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);">&#10003;</div>Instant confirmation SMS and email with calendar invite sent the moment someone books</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);">&#10003;</div>Automated reminders at 24 hours and 1 hour before every appointment</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);">&#10003;</div>One-click reschedule and cancel links in every reminder so clients self-serve</li>
+                    <li class="service-bullet"><div class="bullet-check" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);">&#10003;</div>Every booking syncs to your CRM automatically with lead source and deal details attached</li>
+                </ul>
+                <a href="booking.html" class="service-link" style="background:var(--teal-glow);border:1px solid rgba(20,184,166,0.25);color:#5EEAD4;">Book a Strategy Call &#8594;</a>
+            </div>
+
+            <!-- Booking Calendar -->
+            <div class="mini-window">
+                <div class="mini-chrome">
+                    <div class="mini-dots"><div class="mini-dot" style="background:#FF5F57;"></div><div class="mini-dot" style="background:#FEBC2E;"></div><div class="mini-dot" style="background:#28C840;"></div></div>
+                    <span class="mini-title">BV Consulting &mdash; Booking Calendar</span>
+                    <div class="mini-live"><div class="mini-live-dot"></div> Live</div>
+                </div>
+                <div class="booking-body">
+                    <div class="booking-month-header">
+                        <div class="booking-month-title">April 2025</div>
+                        <div class="booking-nav">
+                            <div class="booking-nav-btn">&#8249;</div>
+                            <div class="booking-nav-btn">&#8250;</div>
+                        </div>
+                    </div>
+                    <div class="booking-cal">
+                        <div class="cal-header">Su</div><div class="cal-header">Mo</div><div class="cal-header">Tu</div><div class="cal-header">We</div><div class="cal-header">Th</div><div class="cal-header">Fr</div><div class="cal-header">Sa</div>
+                        <div class="cal-day empty"></div><div class="cal-day">1</div><div class="cal-day has-booking">2</div><div class="cal-day has-booking">3</div><div class="cal-day">4</div><div class="cal-day has-booking">5</div><div class="cal-day">6</div>
+                        <div class="cal-day">7</div><div class="cal-day full">8</div><div class="cal-day today">8</div><div class="cal-day has-booking">9</div><div class="cal-day full">10</div><div class="cal-day has-booking">11</div><div class="cal-day">12</div>
+                        <div class="cal-day">13</div><div class="cal-day has-booking">14</div><div class="cal-day has-booking">15</div><div class="cal-day full">16</div><div class="cal-day has-booking">17</div><div class="cal-day">18</div><div class="cal-day">19</div>
+                        <div class="cal-day">20</div><div class="cal-day has-booking">21</div><div class="cal-day has-booking">22</div><div class="cal-day">23</div><div class="cal-day has-booking">24</div><div class="cal-day full">25</div><div class="cal-day">26</div>
+                        <div class="cal-day">27</div><div class="cal-day has-booking">28</div><div class="cal-day">29</div><div class="cal-day has-booking">30</div>
+                    </div>
+                    <div class="booking-upcoming">
+                        <div class="booking-upcoming-title">Upcoming Today</div>
+                        <div class="booking-appt"><div class="appt-time">9:00 AM</div><div><div class="appt-name">Marcus Reid</div><div class="appt-type">Strategy Call &bull; 30 min</div></div><div class="appt-status as-conf">Confirmed</div></div>
+                        <div class="booking-appt"><div class="appt-time">11:30 AM</div><div><div class="appt-name">Sarah Johnson</div><div class="appt-type">Discovery Call &bull; 30 min</div></div><div class="appt-status as-conf">Confirmed</div></div>
+                        <div class="booking-appt"><div class="appt-time">2:00 PM</div><div><div class="appt-name">Kevin Park</div><div class="appt-type">Proposal Review &bull; 45 min</div></div><div class="appt-status as-pend">Pending</div></div>
+                        <div class="booking-appt"><div class="appt-time">4:00 PM</div><div><div class="appt-name">Nicole White</div><div class="appt-type">Strategy Call &bull; 30 min</div></div><div class="appt-status as-conf">Confirmed</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 06: INDUSTRY SOLUTIONS ==================== -->
+<section class="service-section" id="service-industry">
+    <div class="service-inner">
+        <div class="section-header">
+            <div class="sec-badge">06 &mdash; Industry Solutions</div>
+            <h2>Built for Your<br><span class="grad-text">Specific Industry</span></h2>
+            <p>We do not use generic templates. Every system is designed around how your industry sells, what objections buyers have, and what a typical deal cycle looks like for your market.</p>
+        </div>
+        <div class="industry-grid">
+            <a class="industry-card" href="roofing.html">
+                <div class="industry-card-icon">&#127968;</div>
+                <h4>Roofing Contractors</h4>
+                <p>Storm lead capture, emergency repair funnels, estimate follow-up automation, and Google Ads targeting homeowners actively searching for roofers.</p>
+                <div class="industry-card-stat">&#8593; 3x leads, 87% fewer no-shows</div>
+            </a>
+            <a class="industry-card" href="booking.html">
+                <div class="industry-card-icon">&#127963;</div>
+                <h4>Real Estate Professionals</h4>
+                <p>Buyer and seller lead funnels, listing interest automation, showing schedulers, and long-term nurture for leads not ready to act right now.</p>
+                <div class="industry-card-stat">&#8593; 40% faster lead-to-showing rate</div>
+            </a>
+            <a class="industry-card" href="booking.html">
+                <div class="industry-card-icon">&#128166;</div>
+                <h4>Plumbing and HVAC</h4>
+                <p>Emergency service lead capture with instant response, seasonal campaign automation, and review generation to dominate local search results.</p>
+                <div class="industry-card-stat">&#8593; Fully booked 2 weeks out</div>
+            </a>
+            <a class="industry-card" href="booking.html">
+                <div class="industry-card-icon">&#128188;</div>
+                <h4>B2B Service Companies</h4>
+                <p>Outbound and inbound lead generation, multi-touch cold outreach automation, proposal follow-up sequences, and deal pipeline management.</p>
+                <div class="industry-card-stat">&#8593; $48K closed in 60 days</div>
+            </a>
+            <a class="industry-card" href="booking.html">
+                <div class="industry-card-icon">&#127947;</div>
+                <h4>Coaches and Consultants</h4>
+                <p>Content-to-call funnels, free session booking automation, objection nurture sequences, and payment integration for seamless client onboarding.</p>
+                <div class="industry-card-stat">&#8593; 5x more discovery calls booked</div>
+            </a>
+            <a class="industry-card" href="booking.html">
+                <div class="industry-card-icon">&#128138;</div>
+                <h4>Medical and Dental</h4>
+                <p>New patient acquisition funnels, HIPAA-aware follow-up, appointment scheduling automation, and review systems that build your local reputation.</p>
+                <div class="industry-card-stat">&#8593; 60% reduction in admin time</div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== COMPARISON TABLE ==================== -->
+<section class="compare-section">
+    <div class="compare-inner">
+        <div class="section-header">
+            <div class="sec-badge">Why BV Consulting</div>
+            <h2>How We Compare to<br><span class="grad-text">Doing It Another Way</span></h2>
+            <p>See exactly what you get with BV Consulting versus hiring freelancers, using DIY tools, or working with a traditional agency.</p>
+        </div>
+        <table class="compare-table">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>DIY / Freelancers</th>
+                    <th class="bvc-col">&#11088; BV Consulting</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="feature-name">Full system built for you, not handed off</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Lead capture, CRM, follow-up, and booking in one system</td><td><span class="check-p">Partial</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Google Search Ads managed by a specialist</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Automated follow-up firing within 90 seconds</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">CRM integrated with every lead source</td><td><span class="check-p">Rarely</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Industry-specific system, not a template</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Ongoing optimization after launch</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Monthly reporting in plain English</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Dedicated support contact, not a ticket queue</td><td><span class="check-n">&#10007;</span></td><td><span class="check-y">&#10003;</span></td></tr>
+                <tr><td class="feature-name">Month-to-month after initial commitment</td><td><span class="check-p">Varies</span></td><td><span class="check-y">&#10003;</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- ==================== OUR PROCESS ==================== -->
+<section class="process-section">
+    <div class="process-inner">
+        <div class="section-header">
+            <div class="sec-badge">How We Work</div>
+            <h2>From Strategy Call to<br><span class="grad-text">Live System in 14 Days</span></h2>
+            <p>We move fast. Most clients go from our first call to a fully live acquisition system in under two weeks.</p>
+        </div>
+        <div class="process-steps">
+            <div class="proc-step">
+                <div class="proc-num">01</div>
+                <h4>Strategy Call</h4>
+                <p>We audit your current process, identify where you are losing leads, and map out exactly what your system needs to look like.</p>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">02</div>
+                <h4>Build and Configure</h4>
+                <p>We build your CRM, automation workflows, landing pages, and ad campaigns. You do not touch a thing. We handle all of it.</p>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">03</div>
+                <h4>Launch and Test</h4>
+                <p>Everything is tested end to end before it goes live. Leads flow in, follow-up fires, bookings land in your calendar.</p>
+            </div>
+            <div class="proc-step">
+                <div class="proc-num">04</div>
+                <h4>Optimize Monthly</h4>
+                <p>We monitor performance and optimize continuously. Your system gets smarter and more efficient the longer it runs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+    <div class="cta-inner">
+        <div class="sec-badge"><span class="badge-dot"></span>Ready to Get Started?</div>
+        <h2>Let Us Build Your<br><span class="grad-text">Complete Growth System</span></h2>
+        <p>Book a free 30-minute strategy call and we will show you exactly which services apply to your business, what results to expect, and how quickly we can get your system live.</p>
+        <div class="cta-buttons">
+            <a href="booking.html" class="btn-primary">Book a Free Strategy Call &#8594;</a>
+            <a href="support.html" class="btn-ghost">Ask a Question</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BACK TO TOP ==================== -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<style>
+    #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/* Slightly bigger on mobile */
+@media (max-width: 768px) {
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="/index.html" class="logo" aria-label="BV Consulting">
+                    <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+                    <span class="logo-text" style="font-size:16px;">BV Consulting</span>
+                </a>
+                <p class="footer-brand-desc">Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking. Your business, on autopilot.</p>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services.html">All Services</a></li>
+                    <li><a href="/automation.html">Automation Workflows</a></li>
+                    <li><a href="/crm_integration.html">CRM Integration</a></li>
+                    <li><a href="/lead_generation.html">Lead Generation</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/index.html">About Us</a></li>
+                    <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+                    <li><a href="/index.html">Results</a></li>
+                    <li><a href="/book_appointmnet.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms_&_condition.html">Terms &amp; Conditions</a></li>
+                    <li><a href="/customer_support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BV Consulting. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/terms_&_condition.html">Terms &amp; Conditions</a>
+                <a href="/customer_support.html">Support</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    // Navbar scroll shadow
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('mainNav');
+        nav.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.6)' : 'none';
+    });
+
+    // Hamburger menu
+    const mobileBtn = document.getElementById('mobileBtn');
+    const navLinks  = document.getElementById('navLinks');
+
+    mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('mobile-open');
+        this.setAttribute('aria-expanded', isOpen);
+        this.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        }
+    });
+
+    // Active service nav highlight on scroll
+    const sections = document.querySelectorAll('.service-section[id], section[id]');
+    const snavItems = document.querySelectorAll('.snav-item');
+
+    const snavObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                snavItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === '#' + id) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(s => snavObs.observe(s));
+
+    // Smooth scroll for service nav
+    snavItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const offset = 130;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.industry-card, .proc-step, .handle-item');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity   = '1';
+                entry.target.style.transform = 'translateY(0)';
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08 });
+
+    reveals.forEach((el, i) => {
+        el.style.opacity    = '0';
+        el.style.transform  = 'translateY(16px)';
+        el.style.transition = `opacity 0.45s ease ${(i % 4) * 0.08}s, transform 0.45s ease ${(i % 4) * 0.08}s`;
+        obs.observe(el);
+    });
+</script>
+
+</body>
+</html>
