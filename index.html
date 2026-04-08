@@ -982,49 +982,8 @@
 }
     </style>
 
-    <style>
-/* ===== FADE ANIMATION ===== */
-  body {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-  }
-
-  body.fade-in {
-    opacity: 1;
-  }
-
-  body.fade-out {
-    opacity: 0;
-  }
-</style>
-
-
 </head>
 <body>
-
-<script>
-  // Fade in on page load
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add("fade-in");
-  });
-
-  // Fade out on link click
-  document.querySelectorAll("a").forEach(link => {
-    if (link.hostname === window.location.hostname) {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        const href = this.href;
-
-        document.body.classList.remove("fade-in");
-        document.body.classList.add("fade-out");
-
-        setTimeout(() => {
-          window.location.href = href;
-        }, 400);
-      });
-    }
-  });
-</script>
 
 <!-- ==================== NAVIGATION ==================== -->
 <nav id="mainNav">
