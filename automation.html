@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation and Workflows | BV Consulting</title>
+    <meta name="description" content="BV Consulting builds backend automation workflows that run your entire client acquisition process on autopilot. Lead capture, follow-up, booking, CRM updates, and notifications all happen automatically.">
+    <meta name="keywords" content="business automation workflows, marketing automation, lead follow-up automation, Make.com automation, GoHighLevel workflows, Zapier automation, automated CRM, backend automation, BV Consulting automation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BV Consulting">
+    <link rel="canonical" href="https://bvconsulting.com/automation">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bvconsulting.com/automation">
+    <meta property="og:title" content="Automation and Workflows | BV Consulting">
+    <meta property="og:description" content="We build backend automation workflows that handle your entire lead-to-close process automatically. No manual tasks. No missed follow-ups. Just results.">
+    <meta property="og:site_name" content="BV Consulting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Automation and Workflows | BV Consulting">
+    <meta name="twitter:description" content="BV Consulting builds backend automation workflows that run your entire client acquisition process on autopilot so your business closes deals while you sleep.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Business Automation and Workflow Building",
+      "description": "BV Consulting designs and builds backend automation workflows that handle lead capture, follow-up, booking, CRM updates, and client communication automatically.",
+      "provider": {
+        "@type": "Organization",
+        "name": "BV Consulting",
+        "url": "https://bvconsulting.com"
+      },
+      "url": "https://bvconsulting.com/automation",
+      "serviceType": "Marketing Automation"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black:       #050505;
+            --dark:        #0D0D0D;
+            --dark-2:      #111827;
+            --dark-3:      #1A1A2E;
+            --blue:        #2563EB;
+            --blue-light:  #3B82F6;
+            --blue-pale:   #93C5FD;
+            --blue-glow:   rgba(37,99,235,0.12);
+            --white:       #FFFFFF;
+            --gray:        #9CA3AF;
+            --gray-light:  #D1D5DB;
+            --border:      rgba(255,255,255,0.07);
+            --border-blue: rgba(37,99,235,0.25);
+            --green:       #10B981;
+            --green-glow:  rgba(16,185,129,0.10);
+            --amber:       #F59E0B;
+            --red:         #EF4444;
+            --purple:      #8B5CF6;
+            --purple-glow: rgba(139,92,246,0.12);
+            --teal:        #14B8A6;
+            --teal-glow:   rgba(20,184,166,0.12);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(5,5,5,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-svg { width: 42px; height: 42px; }
+        .logo-text { font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -0.3px; }
+
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--white); }
+
+        .nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 9px 20px; border-radius: 8px; font-weight: 600 !important; }
+        .nav-cta:hover { background: #1D4ED8 !important; }
+
+        .mobile-btn { display: none; background: none; border: 1px solid var(--border); color: white; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 18px; line-height: 1; }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 136px 24px 80px;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px; left: 50%; transform: translateX(-50%);
+            width: 1000px; height: 1000px;
+            background: radial-gradient(circle, rgba(139,92,246,0.07) 0%, rgba(37,99,235,0.07) 40%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-inner { max-width: 860px; margin: 0 auto; position: relative; }
+
+        .sec-badge {
+            display: inline-block;
+            background: rgba(139,92,246,0.10);
+            border: 1px solid rgba(139,92,246,0.28);
+            color: #A78BFA;
+            padding: 4px 13px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .badge-dot {
+            display: inline-block;
+            width: 6px; height: 6px;
+            background: #A78BFA;
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+        .hero h1 {
+            font-size: clamp(38px, 5.5vw, 66px);
+            font-weight: 900;
+            letter-spacing: -2.8px;
+            line-height: 1.04;
+            margin-bottom: 22px;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .grad-purple {
+            background: linear-gradient(135deg, #C4B5FD, #8B5CF6, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: var(--gray);
+            line-height: 1.8;
+            max-width: 640px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: var(--blue);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: transparent;
+            color: var(--gray-light);
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-ghost:hover { border-color: rgba(255,255,255,0.2); color: var(--white); }
+
+        /* ===== STAT STRIP ===== */
+        .stat-strip {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-strip-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .strip-stat { padding: 30px 24px; text-align: center; border-right: 1px solid var(--border); }
+        .strip-stat:last-child { border-right: none; }
+
+        .strip-num {
+            font-size: 34px;
+            font-weight: 900;
+            letter-spacing: -1.8px;
+            background: linear-gradient(135deg, #fff 40%, var(--blue-pale));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .strip-label { font-size: 12px; color: var(--gray); line-height: 1.5; }
+
+        /* ===== SECTION HEADER ===== */
+        .section-header { text-align: center; margin-bottom: 52px; }
+
+        .section-header h2 {
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 900;
+            letter-spacing: -1.8px;
+            margin-bottom: 12px;
+        }
+
+        .section-header p { font-size: 15px; color: var(--gray); max-width: 520px; margin: 0 auto; line-height: 1.75; }
+
+        /* ===== LIVE WORKFLOW BUILDER ===== */
+        .workflow-section {
+            padding: 96px 24px;
+            background: var(--black);
+        }
+
+        .workflow-inner { max-width: 1200px; margin: 0 auto; }
+
+        /* Workflow canvas window */
+        .workflow-window {
+            background: #080D18;
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+        }
+
+        .wf-chrome {
+            background: #050A14;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .wf-dots { display: flex; gap: 6px; }
+        .wf-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .wf-chrome-title { font-size: 12px; color: var(--gray); margin-left: 8px; }
+        .wf-live { margin-left: auto; display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--green); font-weight: 600; }
+        .wf-live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 1.5s infinite; }
+
+        /* Workflow toolbar */
+        .wf-toolbar {
+            background: #080D18;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wf-tab {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 6px;
+            color: var(--gray);
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .wf-tab.active { background: rgba(139,92,246,0.15); color: #A78BFA; }
+        .wf-tab:hover:not(.active) { background: rgba(255,255,255,0.04); color: var(--gray-light); }
+
+        .wf-toolbar-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+
+        .wf-btn {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.04);
+            color: var(--gray-light);
+            cursor: pointer;
+        }
+
+        .wf-btn-run {
+            background: var(--green);
+            color: white;
+            border-color: var(--green);
+        }
+
+        /* Canvas area */
+        .wf-canvas {
+            padding: 32px 24px 28px;
+            overflow-x: auto;
+            min-height: 380px;
+            position: relative;
+        }
+
+        /* Grid dots background */
+        .wf-canvas::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+
+        /* Flow row */
+        .flow-row {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+            flex-wrap: nowrap;
+            min-width: 900px;
+        }
+
+        .flow-row:last-child { margin-bottom: 0; }
+
+        /* Connector line */
+        .connector {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .conn-line {
+            width: 36px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(139,92,246,0.5), rgba(59,130,246,0.5));
+            position: relative;
+        }
+
+        .conn-line::after {
+            content: '';
+            position: absolute;
+            right: -4px;
+            top: -3px;
+            border: 4px solid transparent;
+            border-left-color: rgba(59,130,246,0.6);
+        }
+
+        .conn-line.animated {
+            background: linear-gradient(90deg, transparent, rgba(139,92,246,0.8));
+            animation: flow-anim 1.5s linear infinite;
+        }
+
+        @keyframes flow-anim {
+            0%   { background-position: 0 0; }
+            100% { background-position: 200px 0; }
+        }
+
+        /* Vertical connector */
+        .v-connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 0 56px;
+            padding: 4px 0;
+        }
+
+        .v-line {
+            width: 2px;
+            height: 20px;
+            background: rgba(139,92,246,0.35);
+            position: relative;
+        }
+
+        /* Node styles */
+        .node {
+            flex-shrink: 0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            position: relative;
+            min-width: 160px;
+            max-width: 180px;
+        }
+
+        .node:hover { transform: translateY(-2px); }
+
+        .node.active { box-shadow: 0 0 0 2px rgba(139,92,246,0.5), 0 8px 24px rgba(0,0,0,0.4); }
+
+        .node-icon {
+            width: 32px; height: 32px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .node-body { flex: 1; min-width: 0; }
+        .node-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .node-title { font-size: 12px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .node-sub { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+
+        /* Node status dot */
+        .node-status {
+            position: absolute;
+            top: 6px; right: 6px;
+            width: 7px; height: 7px;
+            border-radius: 50%;
+        }
+
+        .ns-active  { background: var(--green); box-shadow: 0 0 5px var(--green); }
+        .ns-waiting { background: var(--amber); }
+        .ns-done    { background: #6B7280; }
+
+        /* Trigger node */
+        .node-trigger { background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.30); }
+        .node-trigger .node-icon { background: rgba(139,92,246,0.20); }
+        .node-trigger .node-label { color: #A78BFA; }
+        .node-trigger .node-title { color: var(--white); }
+
+        /* Action node */
+        .node-action { background: rgba(37,99,235,0.10); border: 1px solid rgba(37,99,235,0.28); }
+        .node-action .node-icon { background: rgba(37,99,235,0.18); }
+        .node-action .node-label { color: var(--blue-light); }
+        .node-action .node-title { color: var(--white); }
+
+        /* Condition node */
+        .node-condition { background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.28); }
+        .node-condition .node-icon { background: rgba(245,158,11,0.18); }
+        .node-condition .node-label { color: #FCD34D; }
+        .node-condition .node-title { color: var(--white); }
+
+        /* Delay node */
+        .node-delay { background: rgba(20,184,166,0.10); border: 1px solid rgba(20,184,166,0.28); }
+        .node-delay .node-icon { background: rgba(20,184,166,0.18); }
+        .node-delay .node-label { color: #5EEAD4; }
+        .node-delay .node-title { color: var(--white); }
+
+        /* Done node */
+        .node-done { background: rgba(16,185,129,0.10); border: 1px solid rgba(16,185,129,0.28); }
+        .node-done .node-icon { background: rgba(16,185,129,0.18); }
+        .node-done .node-label { color: #34D399; }
+        .node-done .node-title { color: var(--white); }
+
+        /* Branch split */
+        .branch-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .branch-row { display: flex; align-items: center; gap: 0; }
+
+        .branch-label {
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        .bl-yes { background: rgba(16,185,129,0.15); color: #34D399; }
+        .bl-no  { background: rgba(239,68,68,0.12); color: #F87171; }
+
+        /* Execution stats bar */
+        .wf-stats-bar {
+            background: #050A14;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .wf-stat { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--gray); }
+        .wf-stat strong { color: var(--white); font-weight: 700; }
+        .wf-stat-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+        /* ===== WORKFLOW SCENARIOS ===== */
+        .scenarios-section {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 96px 24px;
+        }
+
+        .scenarios-inner { max-width: 1100px; margin: 0 auto; }
+
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 52px;
+        }
+
+        .scenario-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+
+        .scenario-card:hover { border-color: var(--border-blue); transform: translateY(-3px); }
+
+        .scenario-header {
+            padding: 20px 22px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .scenario-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 19px;
+            flex-shrink: 0;
+        }
+
+        .scenario-header h3 { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 2px; }
+        .scenario-header p { font-size: 11px; color: var(--gray); }
+
+        .scenario-steps { padding: 16px 22px 20px; }
+
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .step-row:last-child { margin-bottom: 0; }
+
+        .step-row::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 24px;
+            bottom: -6px;
+            width: 1px;
+            background: var(--border);
+        }
+
+        .step-row:last-child::before { display: none; }
+
+        .step-bullet {
+            width: 24px; height: 24px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 10px;
+            font-weight: 800;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-text { flex: 1; }
+        .step-text strong { font-size: 12px; font-weight: 700; display: block; margin-bottom: 1px; }
+        .step-text span { font-size: 11px; color: var(--gray); line-height: 1.5; display: block; }
+
+        .scenario-footer {
+            border-top: 1px solid var(--border);
+            padding: 12px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sf-stat { font-size: 11px; color: var(--gray); }
+        .sf-stat strong { color: var(--green); font-weight: 700; }
+
+        .sf-badge {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: rgba(16,185,129,0.12);
+            color: #34D399;
+        }
+
+        /* ===== WHAT AUTOMATION HANDLES ===== */
+        .handles-section {
+            padding: 96px 24px;
+            background: var(--black);
+        }
+
+        .handles-inner { max-width: 1100px; margin: 0 auto; }
+
+        .handles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 52px;
+        }
+
+        .handle-item {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 26px 28px;
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .handle-item:hover { border-color: var(--border-blue); transform: translateY(-2px); }
+
+        .handle-icon {
+            width: 46px; height: 46px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 21px;
+            flex-shrink: 0;
+        }
+
+        .handle-body h4 { font-size: 15px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 7px; }
+        .handle-body p { font-size: 13px; color: var(--gray); line-height: 1.75; }
+
+        /* ===== PLATFORMS SECTION ===== */
+        .platforms-section {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 80px 24px;
+        }
+
+        .platforms-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+
+        .platforms-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 36px; }
+
+        .platforms-grid { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+        .platform-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 20px;
+            transition: border-color 0.2s, transform 0.15s;
+            cursor: pointer;
+        }
+
+        .platform-card:hover { border-color: var(--border-blue); transform: translateY(-2px); }
+
+        .plat-icon {
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .plat-name { font-size: 13px; font-weight: 700; color: var(--white); }
+        .plat-role { font-size: 11px; color: var(--gray); margin-top: 1px; }
+
+        /* ===== BEFORE AFTER ===== */
+        .before-after-section {
+            padding: 96px 24px;
+            background: var(--black);
+        }
+
+        .before-after-inner { max-width: 1100px; margin: 0 auto; }
+
+        .ba-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            align-items: center;
+            margin-top: 52px;
+        }
+
+        .ba-col {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .ba-col.after { border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.04); }
+
+        .ba-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 22px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ba-badge {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .ba-badge.before { background: rgba(239,68,68,0.12); color: #F87171; }
+        .ba-badge.after  { background: rgba(16,185,129,0.14); color: #34D399; }
+
+        .ba-header p { font-size: 13px; color: var(--gray); }
+
+        .ba-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .ba-item:last-child { margin-bottom: 0; }
+
+        .ba-icon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+
+        .ba-item p { font-size: 13px; color: var(--gray-light); line-height: 1.6; }
+
+        .ba-arrow {
+            font-size: 32px;
+            color: var(--border-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* ===== RESULTS ===== */
+        .results-section {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 96px 24px;
+        }
+
+        .results-inner { max-width: 1100px; margin: 0 auto; }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 52px;
+        }
+
+        .result-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .result-card:hover { border-color: var(--border-blue); transform: translateY(-3px); }
+
+        .result-industry { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--blue-light); margin-bottom: 16px; }
+
+        .result-stat-big {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, #fff 40%, var(--blue-pale));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .result-stat-label { font-size: 14px; color: var(--gray-light); font-weight: 600; margin-bottom: 16px; }
+
+        .result-quote { font-size: 12px; color: var(--gray); font-style: italic; line-height: 1.75; padding-top: 16px; border-top: 1px solid var(--border); }
+
+        .result-author { display: flex; align-items: center; gap: 9px; margin-top: 12px; }
+        .result-av { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: white; flex-shrink: 0; }
+        .result-name { font-size: 12px; font-weight: 700; }
+        .result-role { font-size: 10px; color: var(--gray); }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 100px 24px;
+            background: var(--black);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid var(--border);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(139,92,246,0.07) 0%, rgba(37,99,235,0.05) 40%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-inner { max-width: 680px; margin: 0 auto; position: relative; }
+
+        .cta-inner h2 {
+            font-size: clamp(30px, 4vw, 52px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.08;
+            margin-bottom: 16px;
+        }
+
+        .cta-inner p { font-size: 16px; color: var(--gray); line-height: 1.75; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--dark); border-top: 1px solid var(--border); padding: 56px 24px 28px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
+        .footer-brand-desc { font-size: 13px; color: var(--gray); line-height: 1.7; margin-top: 11px; max-width: 260px; }
+
+        .fc h4 { font-size: 11px; font-weight: 700; color: var(--white); letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 14px; }
+        .fc ul { list-style: none; }
+        .fc ul li { margin-bottom: 9px; }
+        .fc ul li a { font-size: 13px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+        .fc ul li a:hover { color: var(--white); }
+
+        .footer-bottom { border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 12px; color: var(--gray); }
+        .footer-legal { display: flex; gap: 20px; }
+        .footer-legal a { font-size: 12px; color: var(--gray); text-decoration: none; transition: color 0.2s; }
+        .footer-legal a:hover { color: var(--white); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .scenarios-grid { grid-template-columns: 1fr 1fr; }
+            .results-grid { grid-template-columns: 1fr 1fr; }
+            .ba-grid { grid-template-columns: 1fr; }
+            .ba-arrow { transform: rotate(90deg); }
+            .stat-strip-inner { grid-template-columns: repeat(2, 1fr); }
+            .strip-stat:nth-child(2) { border-right: none; }
+            .strip-stat:nth-child(3) { border-top: 1px solid var(--border); }
+            .strip-stat:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%; left: 0; right: 0;
+                background: rgba(5,5,5,0.98);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 8px 24px 20px;
+                gap: 0;
+                z-index: 99;
+            }
+            .nav-links.mobile-open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links li a { display: block; padding: 13px 0; border-bottom: 1px solid var(--border); font-size: 15px; color: var(--gray-light) !important; background: none !important; border-radius: 0 !important; }
+            .nav-links li:last-child a { border-bottom: none; }
+            .nav-cta { margin-top: 4px; text-align: center; border-radius: 8px !important; background: var(--blue) !important; border-bottom: none !important; padding: 11px 20px !important; }
+            .mobile-btn { display: flex; }
+            .scenarios-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr; }
+            .handles-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .footer-legal { flex-wrap: wrap; justify-content: center; }
+            .hero-btns { flex-direction: column; align-items: center; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .wf-canvas { padding: 20px 16px; }
+        }
+
+         /* ===== SCROLL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* keeps proportions clean */
+    border-radius: 18px; /* matches your SVG rounded corners */
+    background: #000; /* optional, matches your current black background */ 
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="/index.html" class="logo" aria-label="BV Consulting Home">
+            <img href="/index.html" src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+            <span class="logo-text">BV Consulting</span>
+        </a>
+        <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+            <li><a href="bv-consulting.html#services">Services</a></li>
+            <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+            <li><a href="bv-consulting.html#results">Results</a></li>
+            <li><a href="/lead_generation.html">Lead Generation</a></li>
+            <li><a href="/crm_integration.html">CRM Integration</a></li>
+            <li><a href="#automation">Automation</a></li>
+            <li><a href="booking.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <button class="mobile-btn" id="mobileBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+    <div class="hero-inner">
+        <div class="sec-badge"><span class="badge-dot"></span>Backend Workflow Automation</div>
+        <h1>Your Business Runs<br><span class="grad-purple">While You Sleep</span></h1>
+        <p>We build the invisible engine behind your business. Backend workflows that fire the moment a lead comes in, follow up automatically, book appointments, update your CRM, notify your team, and move deals forward without anyone lifting a finger.</p>
+        <div class="hero-btns">
+            <a href="booking.html" class="btn-primary">Get Your System Built &#8594;</a>
+            <a href="#workflow" class="btn-ghost">See It in Action &#8595;</a>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== STAT STRIP ==================== -->
+<div class="stat-strip">
+    <div class="stat-strip-inner">
+        <div class="strip-stat">
+            <div class="strip-num">&lt;2min</div>
+            <div class="strip-label">Automated response time<br>after every new lead</div>
+        </div>
+        <div class="strip-stat">
+            <div class="strip-num">40h</div>
+            <div class="strip-label">Average hours saved per month<br>eliminating manual tasks</div>
+        </div>
+        <div class="strip-stat">
+            <div class="strip-num">87%</div>
+            <div class="strip-label">Fewer no-shows with<br>automated reminders</div>
+        </div>
+        <div class="strip-stat">
+            <div class="strip-num">24/7</div>
+            <div class="strip-label">Your follow-up and booking<br>systems never sleep</div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== LIVE WORKFLOW BUILDER ==================== -->
+<section class="workflow-section" id="workflow">
+    <div class="workflow-inner">
+        <div class="section-header">
+            <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;">Workflow Builder</div>
+            <h2>This Is What Runs<br><span class="grad-purple">Behind Your Business</span></h2>
+            <p>Every automation is a visual workflow: a chain of triggers, conditions, actions, and delays that executes automatically in the background the moment something happens.</p>
+        </div>
+
+        <div class="workflow-window">
+            <!-- Chrome -->
+            <div class="wf-chrome">
+                <div class="wf-dots">
+                    <div class="wf-dot" style="background:#FF5F57;"></div>
+                    <div class="wf-dot" style="background:#FEBC2E;"></div>
+                    <div class="wf-dot" style="background:#28C840;"></div>
+                </div>
+                <span class="wf-chrome-title">BV Consulting &#8212; Workflow Builder &bull; Lead Follow-Up Sequence</span>
+                <div class="wf-live"><div class="wf-live-dot"></div> Running</div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="wf-toolbar">
+                <div class="wf-tab active">Lead Intake</div>
+                <div class="wf-tab">Booking Reminder</div>
+                <div class="wf-tab">No-Show Recovery</div>
+                <div class="wf-tab">Post-Close Onboarding</div>
+                <div class="wf-toolbar-right">
+                    <div class="wf-btn">&#128203; Duplicate</div>
+                    <div class="wf-btn">&#9998; Edit</div>
+                    <div class="wf-btn wf-btn-run">&#9654; Run Test</div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <div class="wf-canvas">
+
+                <!-- Row 1: Trigger -->
+                <div class="flow-row">
+                    <div class="node node-trigger active">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#9889;</div>
+                        <div class="node-body">
+                            <div class="node-label">Trigger</div>
+                            <div class="node-title">Form Submitted</div>
+                            <div class="node-sub">Landing page / ad</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line animated"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#128100;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Create Contact</div>
+                            <div class="node-sub">CRM + tag "New Lead"</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line animated"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#128241;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Send SMS</div>
+                            <div class="node-sub">"Thanks! We'll call in 2 min"</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line animated"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#128233;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Send Email</div>
+                            <div class="node-sub">Welcome + booking link</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line animated"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#128276;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Notify Team</div>
+                            <div class="node-sub">Slack + email alert</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical connector -->
+                <div class="v-connector"><div class="v-line"></div></div>
+
+                <!-- Row 2: Delay + Condition -->
+                <div class="flow-row">
+                    <div class="node node-delay">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#9201;</div>
+                        <div class="node-body">
+                            <div class="node-label">Wait</div>
+                            <div class="node-title">Delay 30 min</div>
+                            <div class="node-sub">If no booking yet</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line animated"></div></div>
+                    <div class="node node-condition">
+                        <div class="node-status ns-active"></div>
+                        <div class="node-icon">&#10067;</div>
+                        <div class="node-body">
+                            <div class="node-label">Condition</div>
+                            <div class="node-title">Booked a Call?</div>
+                            <div class="node-sub">Check calendar tag</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line"></div></div>
+                    <!-- Branch YES / NO -->
+                    <div class="branch-container">
+                        <div class="branch-row">
+                            <span class="branch-label bl-yes">YES</span>
+                            <div class="connector"><div class="conn-line"></div></div>
+                            <div class="node node-done" style="min-width:140px;">
+                                <div class="node-status ns-done"></div>
+                                <div class="node-icon">&#10003;</div>
+                                <div class="node-body">
+                                    <div class="node-label">Done</div>
+                                    <div class="node-title">Move to "Booked"</div>
+                                    <div class="node-sub">Pipeline updated</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="branch-row">
+                            <span class="branch-label bl-no">NO</span>
+                            <div class="connector"><div class="conn-line animated"></div></div>
+                            <div class="node node-action" style="min-width:140px;">
+                                <div class="node-status ns-active"></div>
+                                <div class="node-icon">&#128241;</div>
+                                <div class="node-body">
+                                    <div class="node-label">Action</div>
+                                    <div class="node-title">Follow-Up SMS #2</div>
+                                    <div class="node-sub">"Still interested?"</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical connector -->
+                <div class="v-connector" style="margin-left:224px;"><div class="v-line"></div></div>
+
+                <!-- Row 3: Day 1 follow-up -->
+                <div class="flow-row" style="margin-left:188px;">
+                    <div class="node node-delay">
+                        <div class="node-status ns-waiting"></div>
+                        <div class="node-icon">&#9201;</div>
+                        <div class="node-body">
+                            <div class="node-label">Wait</div>
+                            <div class="node-title">Delay 24 hours</div>
+                            <div class="node-sub">Day 1 follow-up</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-waiting"></div>
+                        <div class="node-icon">&#128233;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Email Follow-Up</div>
+                            <div class="node-sub">Case study + CTA</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line"></div></div>
+                    <div class="node node-delay">
+                        <div class="node-status ns-waiting"></div>
+                        <div class="node-icon">&#9201;</div>
+                        <div class="node-body">
+                            <div class="node-label">Wait</div>
+                            <div class="node-title">Delay 48 hours</div>
+                            <div class="node-sub">Day 3 follow-up</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line"></div></div>
+                    <div class="node node-action">
+                        <div class="node-status ns-waiting"></div>
+                        <div class="node-icon">&#128222;</div>
+                        <div class="node-body">
+                            <div class="node-label">Action</div>
+                            <div class="node-title">Voicemail Drop</div>
+                            <div class="node-sub">Personal message</div>
+                        </div>
+                    </div>
+                    <div class="connector"><div class="conn-line"></div></div>
+                    <div class="node node-condition">
+                        <div class="node-status ns-waiting"></div>
+                        <div class="node-icon">&#10067;</div>
+                        <div class="node-body">
+                            <div class="node-label">Condition</div>
+                            <div class="node-title">Responded?</div>
+                            <div class="node-sub">Check reply tag</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats bar -->
+            <div class="wf-stats-bar">
+                <div class="wf-stat"><div class="wf-stat-dot" style="background:var(--green);"></div>Status: <strong>Active</strong></div>
+                <div class="wf-stat">Executions today: <strong>38</strong></div>
+                <div class="wf-stat">Total contacts enrolled: <strong>1,247</strong></div>
+                <div class="wf-stat">Avg. completion rate: <strong>94.2%</strong></div>
+                <div class="wf-stat">Bookings generated: <strong>312</strong></div>
+                <div class="wf-stat" style="margin-left:auto;">Last run: <strong>4 min ago</strong></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== AUTOMATION SCENARIOS ==================== -->
+<section class="scenarios-section">
+    <div class="scenarios-inner">
+        <div class="section-header">
+            <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;">Pre-Built Workflows</div>
+            <h2>The Automations We<br><span class="grad-text">Build For Your Business</span></h2>
+            <p>Every workflow is custom-built for your business and runs automatically in the background from day one. Here are the core systems we set up for every client.</p>
+        </div>
+
+        <div class="scenarios-grid">
+
+            <!-- Lead Intake -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(139,92,246,0.15);">&#9889;</div>
+                    <div>
+                        <h3>Lead Intake Workflow</h3>
+                        <p>Fires the moment a lead comes in</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Form or ad lead submitted</strong>
+                            <span>Web form, Facebook Lead Ad, Google Ads, or landing page fill</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Contact created in CRM instantly</strong>
+                            <span>Tagged with source, assigned to the right pipeline stage and rep</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>SMS sent within 90 seconds</strong>
+                            <span>Personalized text with their name and a booking link</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>Email confirmation + calendar link</strong>
+                            <span>Branded email with value and clear next step</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>Team notified in Slack and email</strong>
+                            <span>Instant alert with lead details so no one misses a hot prospect</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">Avg. booking rate: <strong>+340%</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+            <!-- Booking Reminder -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(37,99,235,0.15);">&#128197;</div>
+                    <div>
+                        <h3>Appointment Reminder Workflow</h3>
+                        <p>Reduces no-shows by up to 87%</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Appointment booked</strong>
+                            <span>GoHighLevel or Calendly booking confirmed</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Confirmation SMS and email sent</strong>
+                            <span>Includes date, time, Zoom or phone details, and prep info</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>24-hour reminder sequence fires</strong>
+                            <span>SMS and email reminder the day before with one-click reschedule link</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>1-hour reminder sent</strong>
+                            <span>Final reminder with join link and contact info in case they need to reach out</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>Post-call follow-up triggered</strong>
+                            <span>Thank you message with next steps and proposal link fires after the call</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">No-show reduction: <strong>87%</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+            <!-- No-Show Recovery -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(245,158,11,0.15);">&#128257;</div>
+                    <div>
+                        <h3>No-Show Recovery Workflow</h3>
+                        <p>Wins back missed appointments</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Appointment missed</strong>
+                            <span>Contact tagged "No-Show" 15 minutes after the scheduled start time</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Immediate empathetic SMS sent</strong>
+                            <span>"We missed you today, no worries, here is a link to reschedule"</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>Follow-up email with value</strong>
+                            <span>A case study or resource that keeps them warm and reminds them why they booked</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>Rep task assigned in CRM</strong>
+                            <span>Manual call task created and assigned so a human follows up personally</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>7-day re-engagement sequence</strong>
+                            <span>Three-touch nurture sequence if still no response after the initial outreach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">No-shows recovered: <strong>41%</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+            <!-- Lead Nurture -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(20,184,166,0.15);">&#127807;</div>
+                    <div>
+                        <h3>Long-Term Nurture Workflow</h3>
+                        <p>Converts leads who need more time</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Lead unresponsive after 7 days</strong>
+                            <span>Contact moves to "Nurture" stage in the pipeline automatically</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Weekly value email sequence</strong>
+                            <span>Automated emails with tips, results, and case studies over 8 weeks</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>Monthly SMS check-in</strong>
+                            <span>Light-touch text to keep the relationship warm without being pushy</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>Re-engagement trigger on reply</strong>
+                            <span>Any reply automatically moves them back to the active pipeline and notifies the rep</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>Seasonal offer drop at 90 days</strong>
+                            <span>Targeted offer or discount sent at the 90-day mark to re-activate cold leads</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">Cold lead recovery: <strong>+28%</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+            <!-- Post-Close Onboarding -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(16,185,129,0.15);">&#127942;</div>
+                    <div>
+                        <h3>Post-Close Onboarding Workflow</h3>
+                        <p>Delivers a world-class client experience</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Deal marked "Closed Won"</strong>
+                            <span>CRM stage change fires the entire onboarding sequence instantly</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Welcome email and next steps sent</strong>
+                            <span>Branded welcome email with onboarding checklist and kickoff call link</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>Intake form delivered automatically</strong>
+                            <span>Client questionnaire sent via SMS and email to gather what we need to start</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>Internal team task sequence created</strong>
+                            <span>Project tasks automatically assigned to the right team members in the right order</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>30-day check-in scheduled</strong>
+                            <span>Automated check-in email and satisfaction survey sent at 30 days post-start</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">Client satisfaction: <strong>4.9 / 5</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+            <!-- Review Request -->
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <div class="scenario-icon" style="background:rgba(251,191,36,0.15);">&#11088;</div>
+                    <div>
+                        <h3>Review and Referral Workflow</h3>
+                        <p>Turns clients into your best salespeople</p>
+                    </div>
+                </div>
+                <div class="scenario-steps">
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(139,92,246,0.2);color:#A78BFA;">1</div>
+                        <div class="step-text">
+                            <strong>Trigger: Project milestone reached</strong>
+                            <span>Automatically fires when a client tag, deal stage, or date is updated</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">2</div>
+                        <div class="step-text">
+                            <strong>Check-in message sent at right moment</strong>
+                            <span>Timed to catch the client when satisfaction is highest, not randomly</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">3</div>
+                        <div class="step-text">
+                            <strong>Review request SMS and email fired</strong>
+                            <span>Direct Google review link with a personal note that drives high conversion</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(37,99,235,0.2);color:#60A5FA;">4</div>
+                        <div class="step-text">
+                            <strong>Referral offer delivered</strong>
+                            <span>Incentive-based referral request sent with a unique tracking link per client</span>
+                        </div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-bullet" style="background:rgba(16,185,129,0.2);color:#34D399;">5</div>
+                        <div class="step-text">
+                            <strong>Referral tracked and rewarded</strong>
+                            <span>CRM tags any referred contact, notifies the original client, and triggers reward fulfillment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scenario-footer">
+                    <span class="sf-stat">Reviews generated: <strong>+220%</strong></span>
+                    <span class="sf-badge">&#9679; Active</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== WHAT AUTOMATION HANDLES ==================== -->
+<section class="handles-section">
+    <div class="handles-inner">
+        <div class="section-header">
+            <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;">What Gets Automated</div>
+            <h2>Every Repetitive Task<br><span class="grad-purple">Removed From Your Plate</span></h2>
+            <p>If your team does it more than once the same way, we automate it. Here is what our backend workflows take over completely.</p>
+        </div>
+
+        <div class="handles-grid">
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);">&#9889;</div>
+                <div class="handle-body">
+                    <h4>Instant Lead Response</h4>
+                    <p>The moment a lead fills out any form, submits a chat, calls your number, or clicks an ad, a personalized response fires automatically within 90 seconds. No one has to monitor an inbox or pick up the phone first.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.25);">&#128241;</div>
+                <div class="handle-body">
+                    <h4>Multi-Touch Follow-Up Sequences</h4>
+                    <p>SMS, email, and voicemail drop sequences that run on a custom schedule for days or weeks after a lead comes in. Each message is tailored to where the prospect is in the journey, not a generic blast.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);">&#128197;</div>
+                <div class="handle-body">
+                    <h4>Booking and Appointment Management</h4>
+                    <p>Confirmations, reminders at 24 hours and 1 hour out, post-call summaries, and reschedule links all sent automatically. Every appointment has a full communication trail without any manual sending.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.25);">&#128100;</div>
+                <div class="handle-body">
+                    <h4>CRM Data Entry and Updates</h4>
+                    <p>Every contact, conversation, tag, note, and pipeline stage change updates automatically based on what actions are taken. No one on your team has to manually move a deal or log an activity again.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(20,184,166,0.12);border:1px solid rgba(20,184,166,0.25);">&#128276;</div>
+                <div class="handle-body">
+                    <h4>Internal Team Notifications</h4>
+                    <p>The right person gets notified at the right moment. Hot lead comes in? Sales rep is pinged instantly. Deal closes? Finance and delivery team get the handoff automatically. No one falls through the cracks.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25);">&#128257;</div>
+                <div class="handle-body">
+                    <h4>Re-Engagement and Nurture</h4>
+                    <p>Leads who do not book immediately get enrolled in a long-term nurture sequence. Monthly touches, value content, and seasonal offers run automatically for months without anyone having to remember to follow up.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.25);">&#11088;</div>
+                <div class="handle-body">
+                    <h4>Review and Referral Requests</h4>
+                    <p>Google review requests and referral offers sent at the exact right moment in the client lifecycle, when satisfaction is highest. Tracked automatically so you know who reviewed and who referred.</p>
+                </div>
+            </div>
+            <div class="handle-item">
+                <div class="handle-icon" style="background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.25);">&#128178;</div>
+                <div class="handle-body">
+                    <h4>Invoice and Payment Triggers</h4>
+                    <p>Payment reminders, receipt confirmations, and overdue notices all sent automatically on your schedule. Connect with Stripe or QuickBooks and your billing communication runs on autopilot.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PLATFORMS ==================== -->
+<section class="platforms-section">
+    <div class="platforms-inner">
+        <div class="platforms-label">The platforms we build your automations on</div>
+        <div class="platforms-grid">
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(139,92,246,0.15);">&#128257;</div>
+                <div>
+                    <div class="plat-name">Make.com</div>
+                    <div class="plat-role">Visual workflow engine</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(37,99,235,0.15);">&#127919;</div>
+                <div>
+                    <div class="plat-name">GoHighLevel</div>
+                    <div class="plat-role">CRM + automation hub</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(245,158,11,0.15);">&#9889;</div>
+                <div>
+                    <div class="plat-name">Zapier</div>
+                    <div class="plat-role">App-to-app connectors</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(16,185,129,0.15);">&#128222;</div>
+                <div>
+                    <div class="plat-name">Twilio</div>
+                    <div class="plat-role">SMS and voice automation</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(239,68,68,0.15);">&#128233;</div>
+                <div>
+                    <div class="plat-name">ActiveCampaign</div>
+                    <div class="plat-role">Email automation</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(20,184,166,0.15);">&#128197;</div>
+                <div>
+                    <div class="plat-name">Calendly</div>
+                    <div class="plat-role">Booking triggers</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(37,99,235,0.15);">&#128178;</div>
+                <div>
+                    <div class="plat-name">Stripe</div>
+                    <div class="plat-role">Payment triggers</div>
+                </div>
+            </div>
+            <div class="platform-card">
+                <div class="plat-icon" style="background:rgba(139,92,246,0.15);">&#128640;</div>
+                <div>
+                    <div class="plat-name">Slack</div>
+                    <div class="plat-role">Team notifications</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BEFORE AND AFTER ==================== -->
+<section class="before-after-section">
+    <div class="before-after-inner">
+        <div class="section-header">
+            <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;">The Transformation</div>
+            <h2>Your Business<br><span class="grad-text">Before and After Automation</span></h2>
+            <p>This is the difference between chasing leads manually and having a system that does it for you around the clock.</p>
+        </div>
+
+        <div class="ba-grid">
+
+            <div class="ba-col">
+                <div class="ba-header">
+                    <span class="ba-badge before">Before</span>
+                    <p>Manual, inconsistent, exhausting</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>Leads sit in an inbox for hours before anyone responds, and by then they have already called a competitor</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>Follow-up depends on whoever remembers to do it that day, which means most leads just go cold</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>Appointment reminders are sent manually or not at all, resulting in a high no-show rate</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>CRM data is entered manually and is always incomplete, outdated, or wrong</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>Team finds out about new leads and deals through Slack pings or checking their email manually</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#10060;</span>
+                    <p>Review requests are forgotten and referral programs are inconsistently executed</p>
+                </div>
+            </div>
+
+            <div class="ba-arrow">&#8594;</div>
+
+            <div class="ba-col after">
+                <div class="ba-header">
+                    <span class="ba-badge after">After</span>
+                    <p>Automatic, consistent, scalable</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>Every lead gets a personalized SMS within 90 seconds of submitting, before they have closed the page</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>Multi-touch follow-up runs on autopilot for days and weeks with zero manual effort from your team</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>Reminders go out at 24 hours and 1 hour automatically, cutting no-shows by 87 percent</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>CRM updates in real time based on actions taken, tags applied, and pipeline stages changed</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>The right team member gets an instant Slack and email notification the moment anything important happens</p>
+                </div>
+                <div class="ba-item">
+                    <span class="ba-icon">&#9989;</span>
+                    <p>Reviews and referral requests fire automatically at the perfect moment in every client relationship</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== RESULTS ==================== -->
+<section class="results-section">
+    <div class="results-inner">
+        <div class="section-header">
+            <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;">What Clients Experience</div>
+            <h2>Automation Changes<br><span class="grad-text">Everything</span></h2>
+            <p>These are real outcomes from businesses that replaced manual processes with BV Consulting-built automation systems.</p>
+        </div>
+
+        <div class="results-grid">
+            <div class="result-card">
+                <div class="result-industry">&#127968; Roofing Contractor</div>
+                <div class="result-stat-big">3x</div>
+                <div class="result-stat-label">More qualified leads booked per month</div>
+                <p class="result-quote">"We were responding to leads the next day and losing half of them. Now they get a text in under two minutes and our booking rate tripled in 30 days."</p>
+                <div class="result-author">
+                    <div class="result-av" style="background:#2563EB;">MR</div>
+                    <div>
+                        <div class="result-name">Marcus Reid</div>
+                        <div class="result-role">Owner, Apex Roofing</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-industry">&#128188; Business Coach</div>
+                <div class="result-stat-big">40h</div>
+                <div class="result-stat-label">Hours per month saved from manual tasks</div>
+                <p class="result-quote">"I used to spend half my week on follow-ups, reminders, and CRM updates. Now the system handles all of it and I spend that time actually coaching clients."</p>
+                <div class="result-author">
+                    <div class="result-av" style="background:#7C3AED;">SJ</div>
+                    <div>
+                        <div class="result-name">Sarah Johnson</div>
+                        <div class="result-role">Elite Business Coaching</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-industry">&#128166; Plumbing and HVAC</div>
+                <div class="result-stat-big">87%</div>
+                <div class="result-stat-label">Drop in no-show rate after automation</div>
+                <p class="result-quote">"We had a no-show problem that was costing us thousands every month. The reminder sequences fixed it almost immediately. It was the single best change we made."</p>
+                <div class="result-author">
+                    <div class="result-av" style="background:#0F766E;">RC</div>
+                    <div>
+                        <div class="result-name">Ryan Castillo</div>
+                        <div class="result-role">Castillo Plumbing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+    <div class="cta-inner">
+        <div class="sec-badge" style="background:rgba(139,92,246,0.10);border-color:rgba(139,92,246,0.28);color:#A78BFA;"><span class="badge-dot"></span>Ready to Automate?</div>
+        <h2>Let Us Build the<br><span class="grad-purple">Engine Behind Your Business</span></h2>
+        <p>Book a free strategy call and we will map out exactly which workflows will have the biggest impact on your business, how quickly we can get them live, and what results you can realistically expect.</p>
+        <div class="cta-buttons">
+            <a href="/book_appointmnet.html" class="btn-primary">Book a Free Strategy Call &#8594;</a>
+            <a href="/customer_support.html" class="btn-ghost">Ask a Question</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BACK TO TOP ==================== -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<style>
+    #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/* Slightly bigger on mobile */
+@media (max-width: 768px) {
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="/index.html" class="logo" aria-label="BV Consulting">
+                    <img href="/index.html" src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+                    <span class="logo-text" style="font-size:16px;">BV Consulting</span>
+                </a>
+                <p class="footer-brand-desc">Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking. Your business, on autopilot.</p>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="bv-consulting.html#services">Client Acquisition</a></li>
+                    <li><a href="/automation.html">Automation Workflows</a></li>
+                    <li><a href="/crm_integration.html">CRM Integration</a></li>
+                    <li><a href="/lead_generation.html">Lead Generation</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+                    <li><a href="bv-consulting.html#results">Results</a></li>
+                    <li><a href="/book_appointmnet.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms_&_condition.html">Terms &amp; Conditions</a></li>
+                    <li><a href="/customer_support.html">Customer Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BV Consulting. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/terms_&_condition.html">Terms &amp; Conditions</a>
+                <a href="/customer_support.html">Support</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    // Navbar scroll shadow
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('mainNav');
+        nav.style.boxShadow = window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.6)' : 'none';
+    });
+
+    // Hamburger menu
+    const mobileBtn = document.getElementById('mobileBtn');
+    const navLinks  = document.getElementById('navLinks');
+
+    mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('mobile-open');
+        this.setAttribute('aria-expanded', isOpen);
+        this.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        }
+    });
+
+    // Workflow tab switcher
+    document.querySelectorAll('.wf-tab').forEach(tab => {
+        tab.addEventListener('click', function() {
+            document.querySelectorAll('.wf-tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Animate nodes on click (pulse effect)
+    document.querySelectorAll('.node').forEach(node => {
+        node.addEventListener('click', function() {
+            this.style.transition = 'box-shadow 0.1s';
+            this.style.boxShadow = '0 0 0 3px rgba(139,92,246,0.6), 0 8px 28px rgba(0,0,0,0.5)';
+            setTimeout(() => {
+                this.style.boxShadow = '';
+            }, 600);
+        });
+    });
+
+    // Scenario card tab behavior
+    document.querySelectorAll('.scenario-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.scenario-card').forEach(c => {
+                c.style.borderColor = '';
+            });
+            this.style.borderColor = 'rgba(37,99,235,0.4)';
+        });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.scenario-card, .handle-item, .result-card, .platform-card, .ba-col');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity   = '1';
+                entry.target.style.transform = 'translateY(0)';
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.07 });
+
+    reveals.forEach((el, i) => {
+        el.style.opacity    = '0';
+        el.style.transform  = 'translateY(16px)';
+        el.style.transition = `opacity 0.45s ease ${(i % 6) * 0.07}s, transform 0.45s ease ${(i % 6) * 0.07}s`;
+        obs.observe(el);
+    });
+
+    // Animate the "animated" connector lines with a traveling dot
+    const animLines = document.querySelectorAll('.conn-line.animated');
+    animLines.forEach(line => {
+        const dot = document.createElement('div');
+        dot.style.cssText = `
+            position:absolute; width:8px; height:8px;
+            background:#A78BFA; border-radius:50%;
+            top:-3px; left:0;
+            box-shadow:0 0 6px #A78BFA;
+            animation: travel-dot ${1.2 + Math.random() * 0.6}s linear infinite;
+        `;
+        line.style.position = 'relative';
+        line.style.overflow = 'visible';
+        line.appendChild(dot);
+    });
+
+    // Inject keyframe for dot travel
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes travel-dot {
+            0%   { left: 0; opacity: 0; }
+            10%  { opacity: 1; }
+            90%  { opacity: 1; }
+            100% { left: calc(100% - 8px); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+</body>
+</html>
