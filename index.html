@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV Consulting | Done-For-You Client Acquisition &amp; Lead Generation Systems</title>
+    <meta name="description" content="BV Consulting builds done-for-you client acquisition systems, lead generation pipelines, automated follow-up, and streamlined booking so your business captures every lead and converts them while you sleep.">
+    <meta name="keywords" content="client acquisition system, lead generation, automated follow-up, CRM automation, booking automation, done-for-you marketing, sales automation, business growth, lead nurturing, revenue automation">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BV Consulting">
+    <link rel="canonical" href="https://bvconsulting.live/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bvconsulting.live/">
+    <meta property="og:title" content="BV Consulting | Done-For-You Client Acquisition Systems">
+    <meta property="og:description" content="We build done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking so your business runs consistently, captures every lead, and converts them while you sleep.">
+    <meta property="og:site_name" content="BV Consulting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BV Consulting | Done-For-You Client Acquisition Systems">
+    <meta name="twitter:description" content="We build done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking.">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BV Consulting",
+      "description": "Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking.",
+      "url": "https://bvconsulting.live",
+      "serviceType": ["Client Acquisition", "Lead Generation", "Marketing Automation", "CRM Integration", "Booking Systems"],
+      "areaServed": "United States",
+      "knowsAbout": ["Lead Generation", "CRM Automation", "Client Acquisition", "Sales Funnels", "Follow-Up Sequences"]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #050505;
+            --dark: #0D0D0D;
+            --dark-2: #111827;
+            --dark-3: #1A1A2E;
+            --blue: #2563EB;
+            --blue-light: #3B82F6;
+            --blue-pale: #93C5FD;
+            --blue-glow: rgba(37,99,235,0.12);
+            --white: #FFFFFF;
+            --gray: #9CA3AF;
+            --gray-light: #D1D5DB;
+            --border: rgba(255,255,255,0.07);
+            --border-blue: rgba(37,99,235,0.25);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(5,5,5,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 0;
+            transition: box-shadow 0.3s;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-svg { width: 42px; height: 42px; }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--white); }
+
+        .nav-cta {
+            background: var(--blue) !important;
+            color: var(--white) !important;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+        }
+
+        .nav-cta:hover { background: #1D4ED8 !important; }
+
+        .mobile-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            padding: 130px 24px 80px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -250px; right: -150px;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px; left: -100px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(37,99,235,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37,99,235,0.08);
+            border: 1px solid rgba(37,99,235,0.28);
+            color: var(--blue-pale);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 22px;
+            letter-spacing: 0.2px;
+        }
+
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: var(--blue-light);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        h1 {
+            font-size: clamp(38px, 4.8vw, 62px);
+            font-weight: 900;
+            line-height: 1.06;
+            letter-spacing: -2.5px;
+            margin-bottom: 22px;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-p {
+            font-size: 17px;
+            color: var(--gray);
+            line-height: 1.75;
+            margin-bottom: 38px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: white;
+            padding: 13px 26px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-primary:hover { background: #1D4ED8; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.35); }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 13px 26px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.14);
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn-secondary:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.04); }
+
+        .hero-stats {
+            display: flex;
+            gap: 28px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat-num {
+            font-size: 30px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .stat-num em { color: var(--blue-light); font-style: normal; }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 3px;
+            line-height: 1.4;
+        }
+
+        /* Hero Mockup */
+        .hero-right { position: relative; }
+
+        .mockup-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+            position: relative;
+        }
+
+        .mockup-dots { display: flex; gap: 6px; margin-bottom: 18px; }
+        .md { width: 10px; height: 10px; border-radius: 50%; }
+        .md-r { background: #FF5F57; }
+        .md-y { background: #FEBC2E; }
+        .md-g { background: #28C840; }
+        .mockup-lbl { font-size: 11px; color: var(--gray); margin-left: 8px; line-height: 10px; }
+
+        .lead-row {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 12px 14px;
+            background: var(--dark-3);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            margin-bottom: 9px;
+            transition: border-color 0.2s;
+        }
+
+        .lead-row:hover { border-color: var(--border-blue); }
+
+        .l-av {
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .l-info { flex: 1; }
+        .l-name { font-size: 12px; font-weight: 600; }
+        .l-sub { font-size: 10px; color: var(--gray); margin-top: 1px; }
+
+        .badge-pill {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 9px;
+            border-radius: 20px;
+        }
+
+        .pill-new { background: rgba(37,99,235,0.14); color: #60A5FA; }
+        .pill-booked { background: rgba(16,185,129,0.14); color: #34D399; }
+        .pill-closed { background: rgba(245,158,11,0.14); color: #FCD34D; }
+
+        .mockup-metrics {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        .mm-item { text-align: center; }
+        .mm-val { font-size: 19px; font-weight: 800; }
+        .mm-val.bl { color: var(--blue-light); }
+        .mm-val.gr { color: #34D399; }
+        .mm-label { font-size: 10px; color: var(--gray); margin-top: 1px; }
+
+        .float-notif {
+            position: absolute;
+            right: -22px;
+            top: 56px;
+            background: #0F1729;
+            border: 1px solid rgba(37,99,235,0.35);
+            border-radius: 10px;
+            padding: 11px 15px;
+            width: 196px;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+        }
+
+        .fn-title { font-size: 11px; font-weight: 700; color: #60A5FA; }
+        .fn-body { font-size: 10px; color: var(--gray); margin-top: 3px; }
+
+        /* ===== SECTION BASE ===== */
+        section { padding: 96px 24px; }
+
+        .sc { max-width: 1200px; margin: 0 auto; }
+
+        .sec-badge {
+            display: inline-block;
+            background: rgba(37,99,235,0.08);
+            border: 1px solid rgba(37,99,235,0.22);
+            color: var(--blue-light);
+            padding: 4px 13px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            font-size: clamp(30px, 3.8vw, 46px);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 14px;
+        }
+
+        .sec-sub {
+            font-size: 16px;
+            color: var(--gray);
+            max-width: 570px;
+            line-height: 1.75;
+            margin-bottom: 56px;
+        }
+
+        /* ===== SERVICES ===== */
+        .services { background: var(--dark); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .svc-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .svc-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .svc-card:hover { border-color: rgba(37,99,235,0.3); transform: translateY(-3px); }
+        .svc-card:hover::before { opacity: 1; }
+
+        .svc-icon {
+            width: 50px; height: 50px;
+            background: var(--blue-glow);
+            border: 1px solid rgba(37,99,235,0.18);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .svc-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 9px;
+        }
+
+        .svc-card p {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .svc-list { list-style: none; }
+
+        .svc-list li {
+            font-size: 13px;
+            color: var(--gray-light);
+            padding: 5px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .svc-list li::before {
+            content: '';
+            width: 16px; height: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='rgba(37,99,235,0.15)'/%3E%3Cpath d='M5 8l2 2 4-4' stroke='%2360A5FA' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how { background: var(--black); }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            position: relative;
+        }
+
+        .steps::before {
+            content: '';
+            position: absolute;
+            top: 27px; left: 12%; right: 12%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), rgba(37,99,235,0.1));
+        }
+
+        .step {
+            padding: 0 12px;
+            text-align: center;
+        }
+
+        .step-num {
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: white;
+            font-size: 17px;
+            font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 18px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 0 7px var(--black), 0 0 0 8px rgba(37,99,235,0.25);
+        }
+
+        .step h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+        .step p { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+        /* ===== RESULTS ===== */
+        .results { background: var(--dark); }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .res-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .res-card::after {
+            content: '';
+            position: absolute;
+            bottom: -20px; right: -20px;
+            width: 80px; height: 80px;
+            background: radial-gradient(circle, rgba(37,99,235,0.07), transparent);
+        }
+
+        .res-industry {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 10px;
+        }
+
+        .res-metric {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 40%, #93C5FD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .res-desc {
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .res-quote {
+            font-size: 12px;
+            color: var(--gray-light);
+            font-style: italic;
+            padding: 10px 14px;
+            background: rgba(37,99,235,0.05);
+            border-left: 2px solid var(--blue);
+            border-radius: 0 6px 6px 0;
+            line-height: 1.6;
+        }
+
+        /* ===== CRM AUTOMATION ===== */
+        .crm { background: var(--black); }
+
+        .crm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .crm-visual {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+        }
+
+        .crm-visual-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--gray);
+            margin-bottom: 16px;
+        }
+
+        .flow { display: flex; flex-direction: column; gap: 0; }
+
+        .flow-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 14px;
+            background: var(--dark-3);
+            border: 1px solid transparent;
+            border-radius: 10px;
+            transition: border-color 0.25s;
+        }
+
+        .flow-row:hover { border-color: var(--border-blue); }
+
+        .flow-icon {
+            width: 34px; height: 34px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .flow-content { flex: 1; }
+        .flow-title { font-size: 12px; font-weight: 600; }
+        .flow-detail { font-size: 10px; color: var(--gray); margin-top: 2px; }
+
+        .live-badge {
+            font-size: 9px;
+            font-weight: 700;
+            color: #34D399;
+            letter-spacing: 0.3px;
+        }
+
+        .flow-arrow {
+            width: 2px; height: 14px;
+            background: var(--border);
+            margin: 3px 0 3px 23px;
+            position: relative;
+        }
+
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; left: -3px;
+            width: 8px; height: 8px;
+            border-right: 2px solid var(--border);
+            border-bottom: 2px solid var(--border);
+            transform: rotate(45deg);
+        }
+
+        .crm-feats { display: flex; flex-direction: column; gap: 26px; }
+
+        .crm-feat { display: flex; gap: 16px; align-items: flex-start; }
+
+        .crm-feat-icon {
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            background: var(--blue-glow);
+            border: 1px solid rgba(37,99,235,0.18);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .crm-feat h3 { font-size: 16px; font-weight: 700; margin-bottom: 5px; }
+        .crm-feat p { font-size: 14px; color: var(--gray); line-height: 1.65; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testi { background: var(--dark); }
+
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .testi-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 26px;
+        }
+
+        .stars { color: #FCD34D; font-size: 13px; letter-spacing: 2px; margin-bottom: 14px; }
+
+        .testi-text {
+            font-size: 14px;
+            color: var(--gray-light);
+            line-height: 1.72;
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .testi-author { display: flex; align-items: center; gap: 11px; }
+
+        .t-av {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        .t-name { font-size: 13px; font-weight: 600; }
+        .t-role { font-size: 11px; color: var(--gray); margin-top: 1px; }
+
+        /* ===== CTA BANNER ===== */
+        .cta-sec { background: var(--black); }
+
+        .cta-box {
+            background: linear-gradient(140deg, #0C1A3E 0%, #0A1424 100%);
+            border: 1px solid rgba(37,99,235,0.28);
+            border-radius: 24px;
+            padding: 80px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: -120px; left: 50%; transform: translateX(-50%);
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(37,99,235,0.13), transparent 65%);
+        }
+
+        .cta-box h2 { position: relative; margin-bottom: 14px; }
+        .cta-box .cta-p { color: var(--gray); font-size: 17px; margin-bottom: 38px; position: relative; }
+
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+        /* ===== CONTACT FORM ===== */
+        .contact-sec { background: var(--dark); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .contact-info h2 { margin-bottom: 14px; }
+        .contact-info p { color: var(--gray); line-height: 1.75; margin-bottom: 32px; font-size: 15px; }
+
+        .perks { display: flex; flex-direction: column; gap: 13px; }
+
+        .perk {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 14px;
+            color: var(--gray-light);
+        }
+
+        .perk-ico {
+            width: 30px; height: 30px;
+            background: var(--blue-glow);
+            border-radius: 7px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .form-wrap {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 34px;
+        }
+
+        .fg { margin-bottom: 18px; }
+
+        .fg label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--gray-light);
+            margin-bottom: 7px;
+            letter-spacing: 0.2px;
+        }
+
+        .fg input,
+        .fg select,
+        .fg textarea {
+            width: 100%;
+            background: var(--dark-3);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--white);
+            padding: 11px 15px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .fg input:focus,
+        .fg select:focus,
+        .fg textarea:focus { border-color: var(--blue); }
+
+        .fg select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239CA3AF' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 16px; padding-right: 40px; }
+
+        .fg select option { background: #1A1A2E; }
+
+        .fg textarea { resize: vertical; min-height: 95px; }
+
+        .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+        .submit-btn {
+            width: 100%;
+            padding: 13px;
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .submit-btn:hover { background: #1D4ED8; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,99,235,0.3); }
+        .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+        .form-note {
+            text-align: center;
+            font-size: 11px;
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success.show { display: block; }
+        .fs-icon { font-size: 48px; margin-bottom: 14px; }
+        .form-success h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .form-success p { color: var(--gray); font-size: 14px; line-height: 1.6; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 56px 24px 28px;
+        }
+
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 44px;
+        }
+
+        .footer-brand-desc {
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-top: 11px;
+            max-width: 260px;
+        }
+
+        .fc h4 {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .fc ul { list-style: none; }
+        .fc ul li { margin-bottom: 9px; }
+
+        .fc ul li a {
+            font-size: 13px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .fc ul li a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p { font-size: 12px; color: var(--gray); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 0; }
+            .hero-right { display: none; }
+            .steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .steps::before { display: none; }
+            .crm-grid { grid-template-columns: 1fr; gap: 40px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 30px; }
+        }
+
+        @media (max-width: 768px) {
+            section { padding: 64px 20px; }
+            h1 { letter-spacing: -1.5px; }
+            h2 { letter-spacing: -1px; }
+            .nav-links { display: none; }
+            .mobile-btn { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr; }
+            .testi-grid { grid-template-columns: 1fr; }
+            .hero-stats { flex-wrap: wrap; gap: 18px; }
+            .cta-box { padding: 48px 24px; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+            .fg-row { grid-template-columns: 1fr; }
+        }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* keeps proportions clean */
+    border-radius: 18px; /* matches your SVG rounded corners */
+    background: #000; /* optional, matches your current black background */
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="#home" class="logo" aria-label="BV Consulting Home">
+        <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+            <span class="logo-text">BV Consulting</span>
+        </a>
+        <ul class="nav-links" role="navigation" aria-label="Main navigation">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#automation">Automation</a></li>
+            <li><a href="#contact" class="nav-cta">Get Started</a></li>
+        </ul>
+        <button class="mobile-btn" aria-label="Open menu">&#9776;</button>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+    <div class="hero-grid">
+        <!-- Left Content -->
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Done-For-You Growth Systems
+            </div>
+            <h1>
+                Your Business<br>
+                <span class="grad-text">Captures Every Lead.</span><br>
+                Converts While<br>You Sleep.
+            </h1>
+            <p class="hero-p">
+                We build done-for-you client acquisition systems, lead generation pipelines, automated follow-up, and streamlined booking so your business runs consistently, captures every lead, and converts them on autopilot.
+            </p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">
+                    Book a Free Strategy Call
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#results" class="btn-secondary">
+                    See Real Results
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">3<em>x</em></div>
+                    <div class="stat-label">Average Lead<br>Volume Increase</div>
+                </div>
+                <div>
+                    <div class="stat-num">87<em>%</em></div>
+                    <div class="stat-label">Faster Lead<br>Response Time</div>
+                </div>
+                <div>
+                    <div class="stat-num">40<em>+</em></div>
+                    <div class="stat-label">Hours Saved<br>Per Month</div>
+                </div>
+            </div>
+        </div>
+        <!-- Right: Dashboard Mockup -->
+        <div class="hero-right" aria-hidden="true">
+            <div class="mockup-card">
+                <div class="mockup-dots">
+                    <div class="md md-r"></div>
+                    <div class="md md-y"></div>
+                    <div class="md md-g"></div>
+                    <span class="mockup-lbl">BV Consulting CRM Dashboard</span>
+                </div>
+                <div class="lead-row">
+                    <div class="l-av" style="background:#112244;">JD</div>
+                    <div class="l-info">
+                        <div class="l-name">James Davidson</div>
+                        <div class="l-sub">Submitted form &bull; 2 min ago</div>
+                    </div>
+                    <div class="badge-pill pill-new">New Lead</div>
+                </div>
+                <div class="lead-row">
+                    <div class="l-av" style="background:#0D2B1A;">SR</div>
+                    <div class="l-info">
+                        <div class="l-name">Sarah Reynolds</div>
+                        <div class="l-sub">Follow-up sent automatically</div>
+                    </div>
+                    <div class="badge-pill pill-booked">Booked</div>
+                </div>
+                <div class="lead-row">
+                    <div class="l-av" style="background:#2B1010;">MT</div>
+                    <div class="l-info">
+                        <div class="l-name">Mike Torres</div>
+                        <div class="l-sub">Discovery call completed</div>
+                    </div>
+                    <div class="badge-pill pill-closed">Closed $4,200</div>
+                </div>
+                <div class="mockup-metrics">
+                    <div class="mm-item">
+                        <div class="mm-val bl">47</div>
+                        <div class="mm-label">New Leads</div>
+                    </div>
+                    <div class="mm-item">
+                        <div class="mm-val">23</div>
+                        <div class="mm-label">Booked Calls</div>
+                    </div>
+                    <div class="mm-item">
+                        <div class="mm-val gr">$31K</div>
+                        <div class="mm-label">Pipeline Value</div>
+                    </div>
+                </div>
+            </div>
+            <div class="float-notif">
+                <div class="fn-title">&#128276; New Lead Captured</div>
+                <div class="fn-body">Follow-up sequence triggered automatically</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+    <div class="sc">
+        <div class="sec-badge">Our Services</div>
+        <h2>Everything You Need to<br><span class="grad-text">Fill Your Pipeline</span></h2>
+        <p class="sec-sub">We handle your entire client acquisition process from first touch to booked call, so you can stay focused on delivering results for your clients.</p>
+        <div class="services-grid">
+            <article class="svc-card reveal">
+                <div class="svc-icon" role="img" aria-label="Target icon">&#127919;</div>
+                <h3>Done-For-You Client Acquisition</h3>
+                <p>We build and manage your entire outbound system so that qualified prospects land in your pipeline every week, without you lifting a finger.</p>
+                <ul class="svc-list">
+                    <li>Ideal Client Profile (ICP) targeting</li>
+                    <li>Multi-channel outreach campaigns</li>
+                    <li>Personalized messaging at scale</li>
+                    <li>A/B testing and performance optimization</li>
+                </ul>
+            </article>
+            <article class="svc-card reveal">
+                <div class="svc-icon" role="img" aria-label="Chart icon">&#128200;</div>
+                <h3>Lead Generation Systems</h3>
+                <p>From landing pages to paid ads to organic funnels, we engineer high-converting lead generation infrastructure that brings your ideal clients directly to you.</p>
+                <ul class="svc-list">
+                    <li>High-converting landing page design</li>
+                    <li>Paid ad strategy and management</li>
+                    <li>SEO-optimized content funnels</li>
+                    <li>Lead magnet creation and distribution</li>
+                </ul>
+            </article>
+            <article class="svc-card reveal">
+                <div class="svc-icon" role="img" aria-label="Lightning bolt icon">&#9889;</div>
+                <h3>Automated Follow-Up</h3>
+                <p>Never let another lead fall through the cracks. Our automated follow-up systems ensure every prospect receives timely, personalized communication at exactly the right moment.</p>
+                <ul class="svc-list">
+                    <li>Multi-step email and SMS sequences</li>
+                    <li>Behavior-triggered automation flows</li>
+                    <li>Re-engagement campaigns for cold leads</li>
+                    <li>Real-time lead scoring and prioritization</li>
+                </ul>
+            </article>
+            <article class="svc-card reveal">
+                <div class="svc-icon" role="img" aria-label="Calendar icon">&#128197;</div>
+                <h3>Streamlined Booking Systems</h3>
+                <p>Remove all friction between a lead showing interest and getting on your calendar. Our booking infrastructure integrates seamlessly with your existing workflow and CRM.</p>
+                <ul class="svc-list">
+                    <li>Automated calendar booking integration</li>
+                    <li>Confirmation and reminder sequences</li>
+                    <li>No-show reduction workflows</li>
+                    <li>Post-call follow-up automation</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== HOW IT WORKS ==================== -->
+<section class="how" id="how-it-works">
+    <div class="sc">
+        <div class="sec-badge">How It Works</div>
+        <h2>Your System, <span class="grad-text">Built in 4 Steps</span></h2>
+        <p class="sec-sub">From our first call to a fully operational client acquisition machine, we move fast and build systems that run without you.</p>
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-num">1</div>
+                <h3>Strategy Call</h3>
+                <p>We learn your business, your ideal client, your current pipeline, and build a custom acquisition roadmap tailored to your specific goals.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">2</div>
+                <h3>System Build</h3>
+                <p>Our team builds your full tech stack: CRM, lead capture pages, outreach sequences, automation flows, and booking calendar, all connected and tested.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">3</div>
+                <h3>Launch &amp; Optimize</h3>
+                <p>We launch your campaigns, monitor performance, and optimize based on real data. You get a live dashboard so you always know what is working.</p>
+            </div>
+            <div class="step reveal">
+                <div class="step-num">4</div>
+                <h3>Scale &amp; Repeat</h3>
+                <p>Once your system is converting consistently, we scale what is working, expand to new channels, and keep your pipeline growing month after month.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== RESULTS ==================== -->
+<section class="results" id="results">
+    <div class="sc">
+        <div class="sec-badge">Client Results</div>
+        <h2>Real Businesses. <span class="grad-text">Real Numbers.</span></h2>
+        <p class="sec-sub">These are not hypothetical projections. These are the actual results our clients have seen after implementing their BV Consulting acquisition systems.</p>
+        <div class="results-grid">
+            <article class="res-card reveal">
+                <div class="res-industry">Roofing Contractor</div>
+                <div class="res-metric">312%</div>
+                <p class="res-desc">Increase in qualified leads within 90 days of launching their automated outreach and landing page system.</p>
+                <blockquote class="res-quote">"We went from chasing jobs to turning them down. The system books calls while I am on the roof."</blockquote>
+            </article>
+            <article class="res-card reveal">
+                <div class="res-industry">Business Coach</div>
+                <div class="res-metric">$48K</div>
+                <p class="res-desc">Generated in new client revenue in the first 60 days after implementing a fully automated follow-up and booking funnel.</p>
+                <blockquote class="res-quote">"I used to lose leads because I forgot to follow up. Now the system handles all of it and my calendar stays full."</blockquote>
+            </article>
+            <article class="res-card reveal">
+                <div class="res-industry">Marketing Agency</div>
+                <div class="res-metric">4.7x</div>
+                <p class="res-desc">Return on ad spend after restructuring their lead funnel, adding CRM automation, and installing a multi-touch follow-up sequence.</p>
+                <blockquote class="res-quote">"We were getting leads but losing them. BV Consulting fixed the leak and our close rate doubled in 30 days."</blockquote>
+            </article>
+            <article class="res-card reveal">
+                <div class="res-industry">Real Estate Team</div>
+                <div class="res-metric">2.1x</div>
+                <p class="res-desc">Increase in booked appointments per month after deploying automated text and email follow-up that responds to leads in under 60 seconds.</p>
+                <blockquote class="res-quote">"Speed to lead is everything in real estate. Now we respond faster than any competitor, automatically."</blockquote>
+            </article>
+            <article class="res-card reveal">
+                <div class="res-industry">Med Spa Owner</div>
+                <div class="res-metric">87%</div>
+                <p class="res-desc">Reduction in no-show rate after implementing automated booking reminders, confirmation sequences, and a pre-appointment nurture flow.</p>
+                <blockquote class="res-quote">"We used to lose $3,000 a month in no-shows. That problem is basically gone now."</blockquote>
+            </article>
+            <article class="res-card reveal">
+                <div class="res-industry">SaaS Startup</div>
+                <div class="res-metric">$120K</div>
+                <p class="res-desc">In new ARR closed within 6 months of deploying an outbound lead generation system and automated demo booking pipeline.</p>
+                <blockquote class="res-quote">"We had a great product but no repeatable way to fill the pipeline. BV Consulting solved that completely."</blockquote>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CRM & AUTOMATION ==================== -->
+<section class="crm" id="automation">
+    <div class="sc">
+        <div class="sec-badge">CRM &amp; Automation</div>
+        <h2>How Your <span class="grad-text">Automation Works</span></h2>
+        <p class="sec-sub">Every piece of your system is connected and running 24 hours a day, 7 days a week. Here is exactly what happens the moment a lead discovers you.</p>
+        <div class="crm-grid">
+            <!-- Left: Automation Flow Visual -->
+            <div class="crm-visual reveal">
+                <div class="crm-visual-label">Live Automation Flow</div>
+                <div class="flow">
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(37,99,235,0.14);">&#128229;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">Lead Enters Your Funnel</div>
+                            <div class="flow-detail">Via ad, form, referral, or outreach campaign</div>
+                        </div>
+                        <div class="live-badge">LIVE</div>
+                    </div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(16,185,129,0.12);">&#9889;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">Instant Auto-Response Sent</div>
+                            <div class="flow-detail">SMS and email delivered within 60 seconds</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(245,158,11,0.12);">&#129504;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">CRM Lead Scoring</div>
+                            <div class="flow-detail">Automatically tagged and scored by intent level</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(139,92,246,0.12);">&#128197;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">Booking Link Delivered</div>
+                            <div class="flow-detail">Personalized calendar invite sent automatically</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(37,99,235,0.14);">&#128276;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">Nurture Sequence Activates</div>
+                            <div class="flow-detail">7-touch follow-up over 14 days if no booking</div>
+                        </div>
+                    </div>
+                    <div class="flow-arrow"></div>
+                    <div class="flow-row">
+                        <div class="flow-icon" style="background:rgba(16,185,129,0.12);">&#128176;</div>
+                        <div class="flow-content">
+                            <div class="flow-title">Call Booked. Deal Closed.</div>
+                            <div class="flow-detail">Revenue tracked automatically in your dashboard</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: CRM Feature List -->
+            <div class="crm-feats reveal">
+                <div class="crm-feat">
+                    <div class="crm-feat-icon">&#128279;</div>
+                    <div>
+                        <h3>Fully Integrated Tech Stack</h3>
+                        <p>We connect your CRM, email platform, SMS tool, ad accounts, calendar, and booking page into one seamless system. No more manually moving data between disconnected tools.</p>
+                    </div>
+                </div>
+                <div class="crm-feat">
+                    <div class="crm-feat-icon">&#128202;</div>
+                    <div>
+                        <h3>Real-Time Pipeline Dashboard</h3>
+                        <p>See every lead, every conversation, every booked call, and every closed deal in one place. Know exactly where your revenue is coming from at any given moment.</p>
+                    </div>
+                </div>
+                <div class="crm-feat">
+                    <div class="crm-feat-icon">&#129302;</div>
+                    <div>
+                        <h3>AI-Powered Follow-Up Sequences</h3>
+                        <p>Our follow-up sequences use behavior-based triggers to send the right message at the right time. If a lead opens an email but does not book, they receive a different message than someone who never opened it.</p>
+                    </div>
+                </div>
+                <div class="crm-feat">
+                    <div class="crm-feat-icon">&#128737;</div>
+                    <div>
+                        <h3>Zero Leads Lost. Ever.</h3>
+                        <p>Every lead is captured, tagged, and placed into an appropriate follow-up sequence. No lead is ever forgotten, ignored, or lost due to human error or a missed notification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section class="testi" id="testimonials">
+    <div class="sc">
+        <div class="sec-badge">Testimonials</div>
+        <h2>What Our <span class="grad-text">Clients Say</span></h2>
+        <p class="sec-sub">We measure our success by the growth our clients experience, not the services we deliver.</p>
+        <div class="testi-grid">
+            <article class="testi-card reveal">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testi-text">"Before BV Consulting, I was manually chasing every lead and still losing half of them. Now the system does it all. I woke up this morning to three booked calls. I did not send a single message."</p>
+                <div class="testi-author">
+                    <div class="t-av" style="background:#112244;">DK</div>
+                    <div>
+                        <div class="t-name">David Kinsley</div>
+                        <div class="t-role">Financial Advisor</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testi-card reveal">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testi-text">"The ROI was obvious within the first month. We were spending money on ads but leaking leads at every step. BV Consulting fixed the entire funnel and our revenue jumped 60% in 90 days."</p>
+                <div class="testi-author">
+                    <div class="t-av" style="background:#0D2B2B;">AL</div>
+                    <div>
+                        <div class="t-name">Amanda Lee</div>
+                        <div class="t-role">Digital Marketing Agency Owner</div>
+                    </div>
+                </div>
+            </article>
+            <article class="testi-card reveal">
+                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testi-text">"I was skeptical about automation feeling impersonal, but the sequences they built feel completely natural. Our response rate from prospects actually went up. Highly recommend for any serious service business."</p>
+                <div class="testi-author">
+                    <div class="t-av" style="background:#1E1040;">RC</div>
+                    <div>
+                        <div class="t-name">Robert Chen</div>
+                        <div class="t-role">Executive Business Coach</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA BANNER ==================== -->
+<section class="cta-sec">
+    <div class="sc">
+        <div class="cta-box reveal">
+            <div class="sec-badge" style="margin:0 auto 14px;display:inline-block;">Limited Spots Available</div>
+            <h2>Ready to Stop Losing Leads<br>and <span class="grad-text">Start Converting Them?</span></h2>
+            <p class="cta-p">Book a free 30-minute strategy call. We will audit your current acquisition process, identify the biggest leaks in your pipeline, and show you exactly what a done-for-you system looks like for your business.</p>
+            <div class="cta-btns">
+                <a href="#contact" class="btn-primary">
+                    Book Your Free Strategy Call
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#results" class="btn-secondary">See More Results</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT FORM ==================== -->
+<section class="contact-sec" id="contact">
+    <div class="sc">
+        <div class="contact-grid">
+            <!-- Left Info -->
+            <div class="contact-info reveal">
+                <div class="sec-badge">Get Started</div>
+                <h2>Book Your Free<br><span class="grad-text">Strategy Call</span></h2>
+                <p>Tell us about your business and your goals. We will review your submission and reach out within one business day to confirm your call and send you a custom preparation guide.</p>
+                <div class="perks">
+                    <div class="perk">
+                        <div class="perk-ico">&#9989;</div>
+                        Free 30-minute acquisition system audit
+                    </div>
+                    <div class="perk">
+                        <div class="perk-ico">&#9989;</div>
+                        Custom growth roadmap for your business
+                    </div>
+                    <div class="perk">
+                        <div class="perk-ico">&#9989;</div>
+                        No pressure. No obligation.
+                    </div>
+                    <div class="perk">
+                        <div class="perk-ico">&#9989;</div>
+                        Results-based partnership model
+                    </div>
+                    <div class="perk">
+                        <div class="perk-ico">&#9989;</div>
+                        We respond within one business day
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Form -->
+            <div class="form-wrap reveal">
+                <form id="leadForm" novalidate>
+                    <div class="fg-row">
+                        <div class="fg">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name">
+                        </div>
+                        <div class="fg">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name">
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="john@yourbusiness.com" required autocomplete="email">
+                    </div>
+                    <div class="fg">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+                    </div>
+                    <div class="fg">
+                        <label for="industry">Your Industry / Business Type *</label>
+                        <select id="industry" name="industry" required>
+                            <option value="" disabled selected>Select your industry</option>
+                            <option value="coaching">Coaching / Consulting</option>
+                            <option value="agency">Marketing / Creative Agency</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="home-services">Home Services / Contractor</option>
+                            <option value="healthcare">Healthcare / Med Spa</option>
+                            <option value="saas">SaaS / Tech</option>
+                            <option value="finance">Finance / Insurance</option>
+                            <option value="ecommerce">E-Commerce</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label for="revenue">Current Monthly Revenue Range</label>
+                        <select id="revenue" name="revenue">
+                            <option value="" disabled selected>Select range</option>
+                            <option value="under-5k">Under $5K / month</option>
+                            <option value="5k-15k">$5K - $15K / month</option>
+                            <option value="15k-50k">$15K - $50K / month</option>
+                            <option value="50k-100k">$50K - $100K / month</option>
+                            <option value="100k-plus">$100K+ / month</option>
+                        </select>
+                    </div>
+                    <div class="fg">
+                        <label for="challenge">What is your biggest challenge right now?</label>
+                        <textarea id="challenge" name="challenge" placeholder="Tell us about your current lead generation situation and what you want to improve..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Book My Free Strategy Call &#8594;
+                    </button>
+                    <p class="form-note">No spam. No pressure. Just a real conversation about growing your business.</p>
+                </form>
+                <div class="form-success" id="formSuccess" role="alert">
+                    <div class="fs-icon">&#127881;</div>
+                    <h3>Application Received!</h3>
+                    <p>We will review your information and reach out within one business day to confirm your strategy call. Check your email for a confirmation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="#home" class="logo" aria-label="BV Consulting">
+            <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+                    <span class="logo-text" style="font-size:16px;">BV Consulting</span>
+                </a>
+                <p class="footer-brand-desc">Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking. Your business, on autopilot.</p>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Client Acquisition</a></li>
+                    <li><a href="#services">Lead Generation</a></li>
+                    <li><a href="#services">Automated Follow-Up</a></li>
+                    <li><a href="#services">Booking Systems</a></li>
+                    <li><a href="#automation">CRM Integration</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#results">Results</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Get Started</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/termsandconditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Industries</h4>
+                <ul>
+                    <li><a href="#contact">Coaching &amp; Consulting</a></li>
+                    <li><a href="#contact">Home Services</a></li>
+                    <li><a href="#contact">Real Estate</a></li>
+                    <li><a href="#contact">Healthcare</a></li>
+                    <li><a href="#contact">SaaS &amp; Tech</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BV Consulting. All rights reserved.</p>
+            <p>Built to grow your business while you sleep.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    // =====================================================
+    // MAKE.COM WEBHOOK
+    // Replace the URL below with your actual Make.com webhook URL
+    // Example: https://hook.us1.make.com/abcdefghijklmnop
+    // =====================================================
+    const MAKE_WEBHOOK_URL = 'https://hook.us2.make.com/h4fnc134ovn4nb1kbpv1r6o6rjgacxmv';
+
+    // ===== FORM SUBMISSION =====
+    const form = document.getElementById('leadForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        const payload = {
+            firstName: document.getElementById('firstName').value.trim(),
+            lastName: document.getElementById('lastName').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            industry: document.getElementById('industry').value,
+            revenue: document.getElementById('revenue').value,
+            challenge: document.getElementById('challenge').value.trim(),
+            submittedAt: new Date().toISOString(),
+            source: 'BV Consulting Website'
+        };
+
+        try {
+            await fetch(MAKE_WEBHOOK_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+                mode: 'no-cors'
+            });
+        } catch (err) {
+            // Submission attempted - show success regardless (no-cors fetch always throws)
+        }
+
+        form.style.display = 'none';
+        formSuccess.classList.add('show');
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // ===== NAVBAR SCROLL EFFECT =====
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('mainNav');
+        nav.style.boxShadow = window.scrollY > 20
+            ? '0 4px 30px rgba(0,0,0,0.6)'
+            : 'none';
+    });
+
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver(
+        (entries) => entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        }),
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
