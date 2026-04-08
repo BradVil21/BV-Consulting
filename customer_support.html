@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | BV Consulting</title>
+    <meta name="description" content="Get support from BV Consulting. Submit a technical support request, file a complaint, or request more information about our client acquisition and lead generation services.">
+    <meta name="keywords" content="BV Consulting support, technical support, file complaint, contact BV Consulting, customer service, help desk">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BV Consulting">
+    <link rel="canonical" href="https://bvconsulting.com/support">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bvconsulting.com/support">
+    <meta property="og:title" content="Customer Support | BV Consulting">
+    <meta property="og:description" content="Get the help you need. Submit a technical support request, file a complaint, or request more information from the BV Consulting team.">
+    <meta property="og:site_name" content="BV Consulting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Customer Support | BV Consulting">
+    <meta name="twitter:description" content="Get the help you need from BV Consulting. Technical support, complaints, and general inquiries all in one place.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Customer Support",
+      "description": "BV Consulting customer support center for technical issues, complaints, and general inquiries.",
+      "url": "https://bvconsulting.com/support",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "BV Consulting",
+        "url": "https://bvconsulting.com"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #050505;
+            --dark: #0D0D0D;
+            --dark-2: #111827;
+            --dark-3: #1A1A2E;
+            --blue: #2563EB;
+            --blue-light: #3B82F6;
+            --blue-pale: #93C5FD;
+            --blue-glow: rgba(37,99,235,0.12);
+            --white: #FFFFFF;
+            --gray: #9CA3AF;
+            --gray-light: #D1D5DB;
+            --border: rgba(255,255,255,0.07);
+            --border-blue: rgba(37,99,235,0.25);
+            --green: #10B981;
+            --green-glow: rgba(16,185,129,0.12);
+            --amber: #F59E0B;
+            --amber-glow: rgba(245,158,11,0.12);
+            --red: #EF4444;
+            --red-glow: rgba(239,68,68,0.12);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        body.loaded {
+            opacity: 1;
+}
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            background: rgba(5,5,5,0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-svg { width: 42px; height: 42px; }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--white); }
+
+        .nav-cta {
+            background: var(--blue) !important;
+            color: var(--white) !important;
+            padding: 9px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover { background: #1D4ED8 !important; }
+
+        .mobile-btn {
+            display: none;
+            background: none;
+            border: 1px solid var(--border);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            padding: 130px 24px 64px;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -200px; left: 50%; transform: translateX(-50%);
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(37,99,235,0.10) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .page-hero-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .sec-badge {
+            display: inline-block;
+            background: rgba(37,99,235,0.08);
+            border: 1px solid rgba(37,99,235,0.22);
+            color: var(--blue-light);
+            padding: 4px 13px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .badge-dot {
+            display: inline-block;
+            width: 6px; height: 6px;
+            background: var(--blue-light);
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .page-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            line-height: 1.08;
+            margin-bottom: 18px;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6, #2563EB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-hero p {
+            font-size: 17px;
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        /* ===== RESPONSE TIME STRIP ===== */
+        .response-strip {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 24px 24px;
+        }
+
+        .response-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .response-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--gray-light);
+        }
+
+        .response-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            box-shadow: 0 0 6px var(--green);
+            flex-shrink: 0;
+        }
+
+        .response-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--border);
+        }
+
+        /* ===== DEPARTMENT SECTION ===== */
+        .dept-section {
+            padding: 72px 24px 0;
+            background: var(--black);
+        }
+
+        .dept-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .dept-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .dept-heading h2 {
+            font-size: clamp(26px, 3vw, 36px);
+            font-weight: 800;
+            letter-spacing: -1.2px;
+            margin-bottom: 10px;
+        }
+
+        .dept-heading p {
+            font-size: 15px;
+            color: var(--gray);
+        }
+
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .dept-card {
+            background: var(--dark-2);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            cursor: pointer;
+            transition: border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+            width: 100%;
+        }
+
+        .dept-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Technical Support */
+        .dept-card.tech .dept-icon-wrap { background: var(--blue-glow); border-color: var(--border-blue); }
+        .dept-card.tech::before { background: var(--blue); }
+        .dept-card.tech:hover, .dept-card.tech.active {
+            border-color: var(--border-blue);
+            box-shadow: 0 8px 40px rgba(37,99,235,0.12);
+        }
+        .dept-card.tech:hover::before, .dept-card.tech.active::before { opacity: 1; }
+        .dept-card.tech.active { background: rgba(37,99,235,0.04); }
+
+        /* Complaint */
+        .dept-card.complaint .dept-icon-wrap { background: var(--red-glow); border-color: rgba(239,68,68,0.25); }
+        .dept-card.complaint::before { background: var(--red); }
+        .dept-card.complaint:hover, .dept-card.complaint.active {
+            border-color: rgba(239,68,68,0.25);
+            box-shadow: 0 8px 40px rgba(239,68,68,0.08);
+        }
+        .dept-card.complaint:hover::before, .dept-card.complaint.active::before { opacity: 1; }
+        .dept-card.complaint.active { background: rgba(239,68,68,0.03); }
+
+        /* Information */
+        .dept-card.info .dept-icon-wrap { background: var(--green-glow); border-color: rgba(16,185,129,0.25); }
+        .dept-card.info::before { background: var(--green); }
+        .dept-card.info:hover, .dept-card.info.active {
+            border-color: rgba(16,185,129,0.25);
+            box-shadow: 0 8px 40px rgba(16,185,129,0.08);
+        }
+        .dept-card.info:hover::before, .dept-card.info.active::before { opacity: 1; }
+        .dept-card.info.active { background: rgba(16,185,129,0.03); }
+
+        .dept-icon-wrap {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            border: 1px solid;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .dept-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .dept-card p {
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .dept-response {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray);
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        .dept-response span { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+        .dept-select-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: 4px;
+            transition: gap 0.2s;
+        }
+
+        .dept-card:hover .dept-select-btn,
+        .dept-card.active .dept-select-btn { gap: 12px; }
+
+        .dept-select-btn .arrow { font-size: 16px; }
+
+        .selected-indicator {
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: var(--green);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 11px;
+            color: white;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .dept-card.active .selected-indicator {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ===== FORM SECTION ===== */
+        .form-section {
+            padding: 56px 24px 96px;
+            background: var(--black);
+        }
+
+        .form-wrap {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .form-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            display: none;
+            animation: fadeSlideIn 0.3s ease;
+        }
+
+        .form-card.visible { display: block; }
+
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-card-header {
+            padding: 28px 32px 22px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .form-header-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .form-card-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .form-card-header p {
+            font-size: 13px;
+            color: var(--gray);
+            margin-top: 2px;
+        }
+
+        .form-body {
+            padding: 32px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group:last-of-type { margin-bottom: 0; }
+
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray);
+            margin-bottom: 7px;
+        }
+
+        .required-star { color: var(--red); margin-left: 3px; }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 14px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--border-blue);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+            background: rgba(37,99,235,0.04);
+        }
+
+        input::placeholder,
+        textarea::placeholder { color: #4B5563; }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 38px;
+            cursor: pointer;
+        }
+
+        select option { background: #111827; color: var(--white); }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Priority selector */
+        .priority-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .priority-opt {
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .priority-opt input[type="radio"] { display: none; }
+
+        .priority-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--gray);
+            text-align: center;
+        }
+
+        .priority-label .p-icon { font-size: 18px; }
+
+        .priority-opt input[type="radio"]:checked + .priority-label {
+            border-color: var(--border-blue);
+            background: var(--blue-glow);
+            color: var(--white);
+        }
+
+        /* File upload */
+        .file-upload-area {
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            position: relative;
+        }
+
+        .file-upload-area:hover {
+            border-color: var(--border-blue);
+            background: var(--blue-glow);
+        }
+
+        .file-upload-area input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .file-upload-icon { font-size: 24px; margin-bottom: 6px; }
+
+        .file-upload-text {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+        .file-upload-text strong { color: var(--blue-light); }
+
+        .file-upload-hint {
+            font-size: 11px;
+            color: #4B5563;
+            margin-top: 4px;
+        }
+
+        /* Divider */
+        .form-divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 24px 0;
+        }
+
+        /* Submit button */
+        .submit-btn {
+            width: 100%;
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 28px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            letter-spacing: -0.2px;
+            margin-top: 24px;
+        }
+
+        .submit-btn:hover { background: #1D4ED8; transform: translateY(-1px); }
+        .submit-btn:active { transform: translateY(0); }
+        .submit-btn:disabled { background: #374151; cursor: not-allowed; transform: none; }
+
+        .submit-btn .btn-spinner {
+            width: 16px; height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+            display: none;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Form success state */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 56px 32px;
+        }
+
+        .success-icon {
+            width: 64px; height: 64px;
+            background: var(--green-glow);
+            border: 1px solid rgba(16,185,129,0.3);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px;
+        }
+
+        .success-title {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .success-msg {
+            font-size: 14px;
+            color: var(--gray);
+            line-height: 1.75;
+            max-width: 420px;
+            margin: 0 auto 24px;
+        }
+
+        .success-ticket {
+            display: inline-block;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: var(--gray);
+            font-family: monospace;
+            letter-spacing: 0.5px;
+        }
+
+        /* No selection prompt */
+        .no-selection {
+            text-align: center;
+            padding: 56px 24px;
+            color: var(--gray);
+        }
+
+        .no-selection-icon {
+            font-size: 40px;
+            margin-bottom: 14px;
+            opacity: 0.4;
+        }
+
+        .no-selection p {
+            font-size: 15px;
+        }
+
+        /* ===== CONTACT ALTERNATIVES ===== */
+        .alt-section {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 64px 24px;
+        }
+
+        .alt-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .alt-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .alt-heading h2 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 8px;
+        }
+
+        .alt-heading p { font-size: 14px; color: var(--gray); }
+
+        .alt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .alt-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+
+        .alt-card:hover { border-color: var(--border-blue); }
+
+        .alt-icon {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .alt-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .alt-card p {
+            font-size: 12px;
+            color: var(--gray);
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+
+        .alt-link {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .alt-link:hover { color: var(--white); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            padding: 56px 24px 28px;
+        }
+
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 44px;
+        }
+
+        .footer-brand-desc {
+            font-size: 13px;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-top: 11px;
+            max-width: 260px;
+        }
+
+        .fc h4 {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .fc ul { list-style: none; }
+        .fc ul li { margin-bottom: 9px; }
+
+        .fc ul li a {
+            font-size: 13px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .fc ul li a:hover { color: var(--white); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p { font-size: 12px; color: var(--gray); }
+
+        .footer-legal { display: flex; gap: 20px; }
+
+        .footer-legal a {
+            font-size: 12px;
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-legal a:hover { color: var(--white); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .dept-grid { grid-template-columns: 1fr; }
+            .alt-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(5,5,5,0.98);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: 8px 24px 20px;
+                gap: 0;
+                z-index: 99;
+            }
+            .nav-links.mobile-open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links li a {
+                display: block;
+                padding: 13px 0;
+                border-bottom: 1px solid var(--border);
+                font-size: 15px;
+                color: var(--gray-light) !important;
+                background: none !important;
+                border-radius: 0 !important;
+            }
+            .nav-links li:last-child a { border-bottom: none; }
+            .nav-cta {
+                margin-top: 4px;
+                text-align: center;
+                border-radius: 8px !important;
+                background: var(--blue) !important;
+                border-bottom: none !important;
+                padding: 11px 20px !important;
+            }
+            .mobile-btn { display: flex; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+            .footer-legal { flex-wrap: wrap; justify-content: center; }
+            .response-divider { display: none; }
+            .form-body { padding: 24px 20px; }
+            .form-card-header { padding: 22px 20px 18px; }
+        }
+
+        .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* keeps proportions clean */
+    border-radius: 18px; /* matches your SVG rounded corners */
+    background: #000; /* optional, matches your current black background */
+}
+    
+    .support_titles {
+        color: white;
+    }
+    </style>
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="bv-consulting.html" class="logo" aria-label="BV Consulting Home">
+            <a href="/index.html">
+  <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+</a>
+            <span class="logo-text">BV Consulting</span>
+        </a>
+        <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+            <li><a href="bv-consulting.html#services">Services</a></li>
+            <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+            <li><a href="bv-consulting.html#results">Results</a></li>
+            <li><a href="bv-consulting.html#automation">Automation</a></li>
+            <li><a href="/customer_support.html">Customer Support</a></li>
+            <li><a href="booking.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <button class="mobile-btn" id="mobileBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
+</nav>
+
+<!-- ==================== PAGE HERO ==================== -->
+<header class="page-hero">
+    <div class="page-hero-inner">
+        <div class="sec-badge"><span class="badge-dot"></span>We Are Here to Help</div>
+        <h1>How Can We<br><span class="grad-text">Help You?</span></h1>
+        <p>Choose the type of support you need below and fill out the form. Your request will go directly to the right team member so you get a faster, more helpful response.</p>
+    </div>
+</header>
+
+<!-- ==================== RESPONSE TIME STRIP ==================== -->
+<div class="response-strip">
+    <div class="response-inner">
+        <div class="response-item">
+            <span class="response-dot"></span>
+            Technical Support: within 24 hours
+        </div>
+        <div class="response-divider"></div>
+        <div class="response-item">
+            <span class="response-dot" style="background:#F59E0B;box-shadow:0 0 6px #F59E0B;"></span>
+            Complaints: within 48 hours
+        </div>
+        <div class="response-divider"></div>
+        <div class="response-item">
+            <span class="response-dot" style="background:#3B82F6;box-shadow:0 0 6px #3B82F6;"></span>
+            General Inquiries: within 1 business day
+        </div>
+    </div>
+</div>
+
+<!-- ==================== DEPARTMENT CARDS ==================== -->
+<section class="dept-section">
+    <div class="dept-inner">
+        <div class="dept-heading">
+            <h2>Select a <span class="grad-text">Support Type</span></h2>
+            <p>Pick the option that best describes what you need and a tailored form will appear below.</p>
+        </div>
+
+        <div class="dept-grid">
+
+            <!-- Technical Support -->
+            <button class="dept-card tech" onclick="selectDept('tech')" aria-label="Select Technical Support">
+                <div class="selected-indicator">&#10003;</div>
+                <div class="dept-icon-wrap">&#128736;</div>
+                <h3 class="support_titles">Technical Support</h3>
+                <p>Something not working as expected? Issues with your CRM setup, automation workflows, integrations, or any part of the system we built for you.</p>
+                <div class="dept-response">
+                    <span style="background:var(--green);"></span>
+                    Avg. response: within 24 hours
+                </div>
+                <div class="dept-select-btn">
+                    Get Technical Help <span class="arrow">&#8594;</span>
+                </div>
+            </button>
+
+            <!-- File a Complaint -->
+            <button class="dept-card complaint" onclick="selectDept('complaint')" aria-label="Select File a Complaint">
+                <div class="selected-indicator">&#10003;</div>
+                <div class="dept-icon-wrap">&#128221;</div>
+                <h3 class="support_titles">File a Complaint</h3>
+                <p>Not satisfied with a deliverable, a timeline, or your overall experience? We take every complaint seriously and will review it with full accountability.</p>
+                <div class="dept-response">
+                    <span style="background:var(--amber);"></span>
+                    Avg. response: within 48 hours
+                </div>
+                <div class="dept-select-btn">
+                    File a Complaint <span class="arrow">&#8594;</span>
+                </div>
+            </button>
+
+            <!-- Need More Information -->
+            <button class="dept-card info" onclick="selectDept('info')" aria-label="Select Need More Information">
+                <div class="selected-indicator">&#10003;</div>
+                <div class="dept-icon-wrap">&#128161;</div>
+                <h3 class="support_titles">Need More Information</h3>
+                <p>Questions about our services, pricing, process, or whether we are the right fit for your business? Our team is happy to walk you through everything.</p>
+                <div class="dept-response">
+                    <span style="background:var(--blue-light);"></span>
+                    Avg. response: within 1 business day
+                </div>
+                <div class="dept-select-btn">
+                    Ask a Question <span class="arrow">&#8594;</span>
+                </div>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FORM SECTION ==================== -->
+<section class="form-section" id="supportForm">
+    <div class="form-wrap">
+
+        <!-- Default prompt -->
+        <div class="no-selection" id="noSelectionPrompt">
+            <div class="no-selection-icon">&#9757;</div>
+            <p>Select a support type above to get started.</p>
+        </div>
+
+        <!-- ---- TECH SUPPORT FORM ---- -->
+        <div class="form-card" id="form-tech">
+            <div class="form-card-header">
+                <div class="form-header-icon" style="background:var(--blue-glow);border:1px solid var(--border-blue);">&#128736;</div>
+                <div>
+                    <h3>Technical Support Request</h3>
+                    <p>Describe your issue and our technical team will get back to you within 24 hours.</p>
+                </div>
+            </div>
+            <div class="form-body" id="techFormBody">
+                <form id="techForm" novalidate>
+                    <input type="hidden" name="department" value="Technical Support">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tech-fname">First Name <span class="required-star">*</span></label>
+                            <input type="text" id="tech-fname" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tech-lname">Last Name <span class="required-star">*</span></label>
+                            <input type="text" id="tech-lname" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tech-email">Email Address <span class="required-star">*</span></label>
+                            <input type="email" id="tech-email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tech-phone">Phone Number</label>
+                            <input type="tel" id="tech-phone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tech-system">Affected System / Tool <span class="required-star">*</span></label>
+                        <select id="tech-system" name="affectedSystem" required>
+                            <option value="" disabled selected>Select the system with the issue</option>
+                            <option>CRM Setup</option>
+                            <option>Automation Workflow</option>
+                            <option>Lead Generation Funnel</option>
+                            <option>Booking / Calendar System</option>
+                            <option>Email or SMS Integration</option>
+                            <option>Reporting / Dashboard</option>
+                            <option>Website or Landing Page</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priority Level <span class="required-star">*</span></label>
+                        <div class="priority-group">
+                            <div class="priority-opt">
+                                <input type="radio" name="priority" id="tech-p1" value="Low">
+                                <label for="tech-p1" class="priority-label"><span class="p-icon">&#128994;</span> Low</label>
+                            </div>
+                            <div class="priority-opt">
+                                <input type="radio" name="priority" id="tech-p2" value="Medium" checked>
+                                <label for="tech-p2" class="priority-label"><span class="p-icon">&#128993;</span> Medium</label>
+                            </div>
+                            <div class="priority-opt">
+                                <input type="radio" name="priority" id="tech-p3" value="High">
+                                <label for="tech-p3" class="priority-label"><span class="p-icon">&#128308;</span> High</label>
+                            </div>
+                            <div class="priority-opt">
+                                <input type="radio" name="priority" id="tech-p4" value="Critical">
+                                <label for="tech-p4" class="priority-label"><span class="p-icon">&#128680;</span> Critical</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top:16px;">
+                        <label for="tech-issue">Describe the Issue <span class="required-star">*</span></label>
+                        <textarea id="tech-issue" name="issueDescription" placeholder="Please describe what is happening, what you expected to happen, and any steps to reproduce the issue..." rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Attach a Screenshot (optional)</label>
+                        <div class="file-upload-area">
+                            <input type="file" name="attachment" accept="image/*,.pdf">
+                            <div class="file-upload-icon">&#128206;</div>
+                            <div class="file-upload-text"><strong>Click to upload</strong> or drag and drop</div>
+                            <div class="file-upload-hint">PNG, JPG, PDF up to 10MB</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="techSubmitBtn">
+                        <span class="btn-spinner" id="techSpinner"></span>
+                        <span id="techBtnText">Submit Technical Support Request</span>
+                    </button>
+                </form>
+                <div class="form-success" id="techSuccess">
+                    <div class="success-icon">&#10003;</div>
+                    <div class="success-title">Request Received</div>
+                    <p class="success-msg">Your technical support request has been submitted and routed to our technical team. You will receive a confirmation email shortly and a response within 24 hours.</p>
+                    <div class="success-ticket" id="techTicket"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- COMPLAINT FORM ---- -->
+        <div class="form-card" id="form-complaint">
+            <div class="form-card-header">
+                <div class="form-header-icon" style="background:var(--red-glow);border:1px solid rgba(239,68,68,0.25);">&#128221;</div>
+                <div>
+                    <h3>File a Complaint</h3>
+                    <p>We take all feedback seriously. Your complaint will be reviewed by a senior team member within 48 hours.</p>
+                </div>
+            </div>
+            <div class="form-body" id="complaintFormBody">
+                <form id="complaintForm" novalidate>
+                    <input type="hidden" name="department" value="Complaints">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="comp-fname">First Name <span class="required-star">*</span></label>
+                            <input type="text" id="comp-fname" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comp-lname">Last Name <span class="required-star">*</span></label>
+                            <input type="text" id="comp-lname" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="comp-email">Email Address <span class="required-star">*</span></label>
+                            <input type="email" id="comp-email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comp-phone">Phone Number</label>
+                            <input type="tel" id="comp-phone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-category">Complaint Category <span class="required-star">*</span></label>
+                        <select id="comp-category" name="complaintCategory" required>
+                            <option value="" disabled selected>Select complaint category</option>
+                            <option>Service Quality</option>
+                            <option>Missed Deadline or Delay</option>
+                            <option>Billing or Payment Issue</option>
+                            <option>Communication Issue</option>
+                            <option>Deliverable Not Meeting Expectations</option>
+                            <option>Staff or Team Conduct</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-date">When Did This Occur? <span class="required-star">*</span></label>
+                        <input type="text" id="comp-date" name="incidentDate" placeholder="e.g. April 2025 or approximately 2 weeks ago" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-description">Describe Your Complaint <span class="required-star">*</span></label>
+                        <textarea id="comp-description" name="complaintDescription" placeholder="Please provide as much detail as possible about what happened, how it affected you, and what you would like to see resolved..." rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-resolution">What Resolution Are You Seeking?</label>
+                        <textarea id="comp-resolution" name="desiredResolution" placeholder="Let us know what outcome would resolve this for you..." rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Supporting Documentation (optional)</label>
+                        <div class="file-upload-area">
+                            <input type="file" name="attachment" accept="image/*,.pdf,.doc,.docx">
+                            <div class="file-upload-icon">&#128206;</div>
+                            <div class="file-upload-text"><strong>Click to upload</strong> or drag and drop</div>
+                            <div class="file-upload-hint">PNG, JPG, PDF, DOC up to 10MB</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="compSubmitBtn" style="background:#DC2626;">
+                        <span class="btn-spinner" id="compSpinner"></span>
+                        <span id="compBtnText">Submit Complaint</span>
+                    </button>
+                </form>
+                <div class="form-success" id="compSuccess">
+                    <div class="success-icon">&#10003;</div>
+                    <div class="success-title">Complaint Received</div>
+                    <p class="success-msg">Your complaint has been submitted and escalated to a senior team member. We take this seriously and will respond within 48 hours with a plan to address your concerns.</p>
+                    <div class="success-ticket" id="compTicket"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- INFORMATION FORM ---- -->
+        <div class="form-card" id="form-info">
+            <div class="form-card-header">
+                <div class="form-header-icon" style="background:var(--green-glow);border:1px solid rgba(16,185,129,0.25);">&#128161;</div>
+                <div>
+                    <h3>Request More Information</h3>
+                    <p>Have a question about our services, pricing, or process? We will get back to you within 1 business day.</p>
+                </div>
+            </div>
+            <div class="form-body" id="infoFormBody">
+                <form id="infoForm" novalidate>
+                    <input type="hidden" name="department" value="General Information">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="info-fname">First Name <span class="required-star">*</span></label>
+                            <input type="text" id="info-fname" name="firstName" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="info-lname">Last Name <span class="required-star">*</span></label>
+                            <input type="text" id="info-lname" name="lastName" placeholder="Smith" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="info-email">Email Address <span class="required-star">*</span></label>
+                            <input type="email" id="info-email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="info-phone">Phone Number</label>
+                            <input type="tel" id="info-phone" name="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="info-business">Business Name</label>
+                        <input type="text" id="info-business" name="businessName" placeholder="Your Company LLC">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="info-topic">Topic of Interest <span class="required-star">*</span></label>
+                        <select id="info-topic" name="topicOfInterest" required>
+                            <option value="" disabled selected>What are you interested in learning about?</option>
+                            <option>Pricing and Packages</option>
+                            <option>Lead Generation Services</option>
+                            <option>CRM Setup and Automation</option>
+                            <option>Booking and Appointment Systems</option>
+                            <option>Done-For-You Client Acquisition</option>
+                            <option>Industry-Specific Solutions</option>
+                            <option>Partnership or Referral Opportunities</option>
+                            <option>General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="info-message">Your Question or Message <span class="required-star">*</span></label>
+                        <textarea id="info-message" name="message" placeholder="What would you like to know? Feel free to share any context about your business or goals..." rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="info-contact-pref">Preferred Contact Method</label>
+                        <select id="info-contact-pref" name="preferredContact">
+                            <option value="" disabled selected>How would you like us to reach you?</option>
+                            <option>Email</option>
+                            <option>Phone Call</option>
+                            <option>Either</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="infoSubmitBtn" style="background:var(--green);color:white;">
+                        <span class="btn-spinner" id="infoSpinner"></span>
+                        <span id="infoBtnText">Send My Question</span>
+                    </button>
+                </form>
+                <div class="form-success" id="infoSuccess">
+                    <div class="success-icon">&#10003;</div>
+                    <div class="success-title">Message Sent</div>
+                    <p class="success-msg">Thank you for reaching out. Your inquiry has been routed to the right team member and you can expect a response within 1 business day.</p>
+                    <div class="success-ticket" id="infoTicket"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== ALTERNATIVE CONTACT ==================== -->
+<section class="alt-section">
+    <div class="alt-inner">
+        <div class="alt-heading">
+            <h2>Other Ways to Reach Us</h2>
+            <p>Prefer a more direct line? We have you covered.</p>
+        </div>
+        <div class="alt-grid">
+            <div class="alt-card">
+                <div class="alt-icon">&#128197;</div>
+                <h4>Book a Strategy Call</h4>
+                <p>Skip the back-and-forth. Book a free 30-minute call and speak with a real team member directly.</p>
+                <a href="/book_appointmnet.html" class="alt-link">Book a Free Call &#8594;</a>
+            </div>
+            <div class="alt-card">
+                <div class="alt-icon">&#128172;</div>
+                <h4>Send Us an Email</h4>
+                <p>Reach our support team directly at our inbox. Include your name and the subject and we will route it appropriately.</p>
+                <a href="mailto:support@bvconsulting.com" class="alt-link">info@bvconsulting.live</a>
+            </div>
+            <div class="alt-card">
+                <div class="alt-icon">&#128241;</div>
+                <h4>Call or Text Us</h4>
+                <p>For urgent matters, give us a call or send a text. Business hours are Monday through Friday, 9am to 6pm EST.</p>
+                <a href="tel:+19548251009" class="alt-link">+1 (954) 825-1009</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== BACK TO TOP ==================== -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<style>
+    #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/* Slightly bigger on mobile */
+@media (max-width: 768px) {
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="/index.html" class="logo" aria-label="BV Consulting">
+            <a href="/index.html">
+  <img src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+</a>
+                    <span class="logo-text" style="font-size:16px;">BV Consulting</span>
+                </a>
+                <p class="footer-brand-desc">Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking. Your business, on autopilot.</p>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="bv-consulting.html#services">Client Acquisition</a></li>
+                    <li><a href="bv-consulting.html#services">Lead Generation</a></li>
+                    <li><a href="bv-consulting.html#services">Automated Follow-Up</a></li>
+                    <li><a href="bv-consulting.html#services">Booking Systems</a></li>
+                    <li><a href="bv-consulting.html#automation">CRM Integration</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="bv-consulting.html#how-it-works">How It Works</a></li>
+                    <li><a href="bv-consulting.html#results">Results</a></li>
+                    <li><a href="bv-consulting.html#testimonials">Testimonials</a></li>
+                    <li><a href="/book_appointmnet.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BV Consulting. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms &amp; Conditions</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    // ---- Make.com Webhook ----
+    const MAKE_WEBHOOK_URL = 'https://hook.us1.make.com/YOUR_WEBHOOK_ID_HERE';
+
+    // ---- Navbar scroll shadow ----
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('mainNav');
+        nav.style.boxShadow = window.scrollY > 20
+            ? '0 4px 30px rgba(0,0,0,0.6)'
+            : 'none';
+    });
+
+    // ---- Hamburger menu ----
+    const mobileBtn = document.getElementById('mobileBtn');
+    const navLinks  = document.getElementById('navLinks');
+
+    mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('mobile-open');
+        this.setAttribute('aria-expanded', isOpen);
+        this.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        }
+    });
+
+    // ---- Generate ticket ID ----
+    function genTicket(prefix) {
+        const rand = Math.random().toString(36).substring(2, 8).toUpperCase();
+        const ts   = Date.now().toString().slice(-5);
+        return prefix + '-' + rand + ts;
+    }
+
+    // ---- Department selector ----
+    let currentDept = null;
+
+    function selectDept(dept) {
+        // Update cards
+        document.querySelectorAll('.dept-card').forEach(c => c.classList.remove('active'));
+        document.querySelector('.dept-card.' + dept).classList.add('active');
+
+        // Update forms
+        document.querySelectorAll('.form-card').forEach(f => f.classList.remove('visible'));
+        document.getElementById('form-' + dept).classList.add('visible');
+        document.getElementById('noSelectionPrompt').style.display = 'none';
+
+        currentDept = dept;
+
+        // Scroll to form
+        setTimeout(() => {
+            document.getElementById('supportForm').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+    }
+
+    // ---- Form submission helper ----
+    function submitSupportForm(formId, btnId, spinnerId, btnTextId, successId, ticketId, ticketPrefix) {
+        const form    = document.getElementById(formId);
+        const btn     = document.getElementById(btnId);
+        const spinner = document.getElementById(spinnerId);
+        const btnText = document.getElementById(btnTextId);
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Basic validation
+            const required = form.querySelectorAll('[required]');
+            let valid = true;
+            required.forEach(field => {
+                field.style.borderColor = '';
+                if (!field.value.trim()) {
+                    field.style.borderColor = 'var(--red)';
+                    valid = false;
+                }
+            });
+            if (!valid) return;
+
+            // Loading state
+            btn.disabled   = true;
+            spinner.style.display = 'inline-block';
+            btnText.textContent   = 'Submitting...';
+
+            // Build payload
+            const data = { submittedAt: new Date().toISOString() };
+            new FormData(form).forEach((val, key) => { data[key] = val; });
+
+            // Send to Make.com
+            fetch(MAKE_WEBHOOK_URL, {
+                method: 'POST',
+                mode:   'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body:   JSON.stringify(data)
+            })
+            .finally(() => {
+                // Show success regardless of CORS response
+                const ticket = genTicket(ticketPrefix);
+                document.getElementById(ticketId).textContent = 'Ticket ID: ' + ticket;
+                form.style.display      = 'none';
+                document.getElementById(successId).style.display = 'block';
+            });
+        });
+    }
+
+    // ---- Wire up all three forms ----
+    submitSupportForm('techForm',      'techSubmitBtn',  'techSpinner',  'techBtnText',  'techSuccess',  'techTicket',  'TECH');
+    submitSupportForm('complaintForm', 'compSubmitBtn',  'compSpinner',  'compBtnText',  'compSuccess',  'compTicket',  'COMP');
+    submitSupportForm('infoForm',      'infoSubmitBtn',  'infoSpinner',  'infoBtnText',  'infoSuccess',  'infoTicket',  'INFO');
+
+    // ---- Check URL param for pre-selecting dept ----
+    (function() {
+        const params = new URLSearchParams(window.location.search);
+        const dept   = params.get('dept');
+        if (dept && ['tech', 'complaint', 'info'].includes(dept)) {
+            selectDept(dept);
+        }
+    })();
+</script>
+
+</body>
+</html>
