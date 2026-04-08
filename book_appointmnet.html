@@ -695,7 +695,7 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#results">Results</a></li>
-            <li><a href="/crm_integration.html">Lead Generation</a></li>
+            <li><a href="/lead_generation.html">Lead Generation</a></li>
             <li><a href="/crm_integration.html">CRM Integration</a></li>
             <li><a href="#automation">Automation</a></li>
             <li><a href="/customer_support.html">Customer Support</a></li>
@@ -973,6 +973,68 @@ backToTop.addEventListener("click", () => {
 });
 </script>
 
+<!-- ==================== BACK TO TOP ==================== -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<style>
+    #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/* Slightly bigger on mobile */
+@media (max-width: 768px) {
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+
 <!-- ==================== FOOTER ==================== -->
 <footer>
     <div class="footer-inner">
@@ -988,10 +1050,10 @@ backToTop.addEventListener("click", () => {
                 <h4>Services</h4>
                 <ul>
                     <li><a href="bv-consulting.html#services">Client Acquisition</a></li>
-                    <li><a href="bv-consulting.html#services">Lead Generation</a></li>
+                    <li><a href="/lead_generation.html">Lead Generation</a></li>
                     <li><a href="bv-consulting.html#services">Automated Follow-Up</a></li>
-                    <li><a href="bv-consulting.html#services">Booking Systems</a></li>
-                    <li><a href="bv-consulting.html#automation">CRM Integration</a></li>
+                    <li><a href="/book_appointmnet.html">Booking Systems</a></li>
+                    <li><a href="/crm_integration.html">CRM Integration</a></li>
                 </ul>
             </div>
             <div class="fc">
