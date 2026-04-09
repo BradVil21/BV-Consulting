@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | BV Consulting - Lead Generation and Client Acquisition Insights</title>
+    <meta name="description" content="Tips, strategies, and insights on lead generation, Google Ads, CRM, automation, and client acquisition for service-based businesses. From the BV Consulting team.">
+    <meta name="keywords" content="lead generation tips, client acquisition blog, Google Ads for contractors, CRM for small business, sales automation, roofing marketing, service business growth">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="BV Consulting">
+    <link rel="canonical" href="https://bvconsulting.live/blog">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bvconsulting.live/blog">
+    <meta property="og:title" content="Blog | BV Consulting">
+    <meta property="og:description" content="Practical strategies for service-based businesses on lead generation, automation, CRM, and converting more of the leads you already have.">
+    <meta property="og:site_name" content="BV Consulting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | BV Consulting">
+    <meta name="twitter:description" content="Practical lead generation and client acquisition tips from the BV Consulting team.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "BV Consulting Blog",
+      "description": "Insights on lead generation, Google Ads, CRM, automation, and client acquisition for service-based businesses.",
+      "url": "https://bvconsulting.live/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BV Consulting",
+        "url": "https://bvconsulting.live"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --black: #050505;
+            --dark: #0D0D0D;
+            --dark-2: #111827;
+            --dark-3: #1A1A2E;
+            --blue: #2563EB;
+            --blue-light: #3B82F6;
+            --blue-pale: #93C5FD;
+            --blue-glow: rgba(37,99,235,0.12);
+            --green: #10B981;
+            --white: #FFFFFF;
+            --gray: #9CA3AF;
+            --gray-light: #D1D5DB;
+            --border: rgba(255,255,255,0.07);
+            --border-blue: rgba(37,99,235,0.25);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(5,5,5,0.92);
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow 0.3s;
+        }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .logo-svg { width: 42px; height: 42px; }
+        .logo-text { font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -0.3px; }
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a { color: var(--gray); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--white); }
+        .nav-cta { background: var(--blue) !important; color: var(--white) !important; padding: 9px 20px; border-radius: 8px; font-weight: 600 !important; }
+        .nav-cta:hover { background: #1D4ED8 !important; }
+        .mobile-btn { display: none; background: none; border: 1px solid var(--border); color: white; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 18px; line-height: 1; }
+
+        @media (max-width: 768px) {
+            .mobile-btn { display: block; }
+            .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; background: rgba(5,5,5,0.98); flex-direction: column; align-items: flex-start; gap: 0; padding: 12px 0 20px; border-bottom: 1px solid var(--border); z-index: 99; }
+            .nav-links.mobile-open { display: flex; }
+            .nav-links li { width: 100%; }
+            .nav-links a { display: block; padding: 13px 24px; font-size: 15px; }
+            .nav-cta { margin: 8px 20px 0; display: inline-block; text-align: center; border-radius: 8px; }
+        }
+
+        /* ===== UTILS ===== */
+        .grad-text { background: linear-gradient(135deg, var(--blue-light), var(--blue-pale)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .sec-badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.22); color: var(--blue-light); padding: 4px 13px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 18px; }
+        .badge-dot { display: inline-block; width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(59,130,246,0.5)}50%{box-shadow:0 0 0 6px rgba(59,130,246,0)} }
+        .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 24px 64px;
+            background: var(--black);
+            position: relative; overflow: hidden; text-align: center;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 900px;
+            background: radial-gradient(circle, rgba(37,99,235,0.09) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .hero-inner { max-width: 700px; margin: 0 auto; position: relative; }
+        .hero h1 { font-size: clamp(34px, 5.5vw, 58px); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 18px; }
+        .hero p { font-size: 17px; color: var(--gray); line-height: 1.7; max-width: 520px; margin: 0 auto; }
+
+        /* ===== CATEGORY FILTER ===== */
+        .filter-bar {
+            background: var(--dark-2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 0 24px;
+            position: sticky; top: 70px; z-index: 50;
+        }
+        .filter-inner {
+            max-width: 1100px; margin: 0 auto;
+            display: flex; gap: 0;
+            overflow-x: auto; scrollbar-width: none;
+        }
+        .filter-inner::-webkit-scrollbar { display: none; }
+        .filter-btn {
+            padding: 15px 20px;
+            background: none; border: none; border-bottom: 2px solid transparent;
+            color: var(--gray); font-family: 'Inter', sans-serif;
+            font-size: 13px; font-weight: 600;
+            cursor: pointer; white-space: nowrap;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .filter-btn:hover { color: var(--white); }
+        .filter-btn.active { color: var(--blue-light); border-bottom-color: var(--blue); }
+
+        /* ===== BLOG LAYOUT ===== */
+        .blog-section {
+            max-width: 1100px; margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        /* ===== FEATURED POST ===== */
+        .featured-post {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 48px;
+            transition: border-color 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .featured-post:hover { border-color: var(--border-blue); }
+
+        .featured-visual {
+            background: linear-gradient(135deg, #0a1628 0%, #0d1f3d 100%);
+            padding: 40px;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-visual::before {
+            content: '';
+            position: absolute; top: -60px; right: -60px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(37,99,235,0.14) 0%, transparent 70%);
+        }
+        .feat-icon {
+            font-size: 56px; margin-bottom: 24px; position: relative; z-index: 1;
+        }
+        .feat-tag {
+            display: inline-block;
+            background: var(--blue-glow); border: 1px solid var(--border-blue);
+            color: var(--blue-light); padding: 4px 12px; border-radius: 100px;
+            font-size: 10px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase;
+            margin-bottom: 14px; width: fit-content; position: relative; z-index: 1;
+        }
+        .feat-read-time {
+            font-size: 12px; color: var(--gray); position: relative; z-index: 1;
+        }
+
+        .featured-content { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+        .featured-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue-light); margin-bottom: 12px; }
+        .featured-title { font-size: clamp(20px, 2.5vw, 28px); font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+        .featured-excerpt { font-size: 14px; color: var(--gray); line-height: 1.75; margin-bottom: 24px; }
+        .featured-meta { display: flex; align-items: center; gap: 12px; }
+        .author-avatar {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: var(--blue-glow); border: 1px solid var(--border-blue);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 700; color: var(--blue-light);
+        }
+        .author-info strong { display: block; font-size: 13px; font-weight: 700; }
+        .author-info span { font-size: 12px; color: var(--gray); }
+        .read-more-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: var(--blue-light); font-size: 13px; font-weight: 600;
+            text-decoration: none; margin-top: 20px;
+            transition: gap 0.2s;
+        }
+        .read-more-link:hover { gap: 10px; }
+
+        /* ===== POST GRID ===== */
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .post-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex; flex-direction: column;
+            cursor: pointer;
+            text-decoration: none; color: inherit;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .post-card:hover { border-color: var(--border-blue); transform: translateY(-3px); }
+
+        .post-card-visual {
+            padding: 28px 28px 20px;
+            background: linear-gradient(135deg, #0a1628 0%, #0d1b3e 100%);
+            display: flex; align-items: flex-start; justify-content: space-between;
+        }
+        .post-card-icon { font-size: 32px; }
+        .post-cat-tag {
+            font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 100px;
+            text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .cat-ads     { background: rgba(37,99,235,0.12);  color: var(--blue-light); border: 1px solid rgba(37,99,235,0.25); }
+        .cat-crm     { background: rgba(16,185,129,0.10); color: var(--green);      border: 1px solid rgba(16,185,129,0.25); }
+        .cat-auto    { background: rgba(139,92,246,0.10); color: #A78BFA;           border: 1px solid rgba(139,92,246,0.25); }
+        .cat-growth  { background: rgba(251,191,36,0.10); color: #FBBF24;           border: 1px solid rgba(251,191,36,0.25); }
+        .cat-sales   { background: rgba(239,68,68,0.10);  color: #F87171;           border: 1px solid rgba(239,68,68,0.25); }
+        .cat-book    { background: rgba(6,182,212,0.10);  color: #22D3EE;           border: 1px solid rgba(6,182,212,0.25); }
+
+        .post-card-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+        .post-card-title { font-size: 16px; font-weight: 700; letter-spacing: -0.3px; line-height: 1.35; margin-bottom: 10px; }
+        .post-card-excerpt { font-size: 13px; color: var(--gray); line-height: 1.65; flex: 1; }
+        .post-card-footer {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px 24px; border-top: 1px solid var(--border);
+        }
+        .post-card-date { font-size: 11px; color: var(--gray); }
+        .post-card-read { font-size: 11px; color: var(--gray); }
+
+        /* ===== LOAD MORE ===== */
+        .load-more-wrap { text-align: center; margin-top: 48px; }
+        .btn-outline {
+            display: inline-block; background: transparent; color: var(--white);
+            text-decoration: none; padding: 13px 32px; border-radius: 10px;
+            font-size: 14px; font-weight: 600; border: 1px solid var(--border);
+            transition: border-color 0.2s, transform 0.2s; cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-outline:hover { border-color: rgba(255,255,255,0.3); transform: translateY(-1px); }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter-section {
+            background: var(--dark);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 72px 24px;
+        }
+        .newsletter-inner {
+            max-width: 600px; margin: 0 auto; text-align: center;
+        }
+        .newsletter-inner h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+        .newsletter-inner p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 28px; }
+        .newsletter-form { display: flex; gap: 10px; max-width: 480px; margin: 0 auto; }
+        .newsletter-input {
+            flex: 1; background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+            border-radius: 10px; color: var(--white); font-family: 'Inter', sans-serif;
+            font-size: 14px; padding: 13px 16px; outline: none; transition: border-color 0.2s;
+        }
+        .newsletter-input:focus { border-color: var(--blue); }
+        .newsletter-input::placeholder { color: var(--gray); }
+        .newsletter-btn {
+            background: var(--blue); color: var(--white); border: none;
+            border-radius: 10px; padding: 13px 22px; font-size: 14px; font-weight: 700;
+            font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap;
+            transition: background 0.2s;
+        }
+        .newsletter-btn:hover { background: #1D4ED8; }
+        .newsletter-note { font-size: 12px; color: var(--gray); margin-top: 12px; }
+        .newsletter-success { display: none; background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); border-radius: 12px; padding: 18px 24px; }
+        .newsletter-success p { color: var(--green); font-size: 14px; font-weight: 600; margin: 0; }
+
+        /* ===== TOPICS SIDEBAR STRIP ===== */
+        .topics-strip {
+            background: var(--black);
+            padding: 60px 24px;
+        }
+        .topics-inner {
+            max-width: 1100px; margin: 0 auto;
+        }
+        .topics-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 20px; }
+        .topic-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+        .topic-chip {
+            background: var(--dark-2); border: 1px solid var(--border); border-radius: 100px;
+            padding: 8px 16px; font-size: 13px; font-weight: 500; color: var(--gray);
+            cursor: pointer; transition: border-color 0.2s, color 0.2s;
+        }
+        .topic-chip:hover { border-color: var(--border-blue); color: var(--blue-light); }
+        .topic-chip.active { background: var(--blue-glow); border-color: var(--border-blue); color: var(--blue-light); }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--dark); border-top: 1px solid var(--border); padding: 60px 24px 30px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
+        .footer-brand-desc { font-size: 13px; color: var(--gray); line-height: 1.7; margin-top: 14px; max-width: 280px; }
+        .fc h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gray); margin-bottom: 16px; }
+        .fc ul { list-style: none; }
+        .fc ul li { margin-bottom: 10px; }
+        .fc ul li a { color: var(--gray); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+        .fc ul li a:hover { color: var(--white); }
+        .footer-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+        .footer-bottom p { font-size: 13px; color: var(--gray); }
+        .footer-legal { display: flex; gap: 20px; }
+        .footer-legal a { color: var(--gray); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+        .footer-legal a:hover { color: var(--white); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .post-grid { grid-template-columns: 1fr 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .featured-post { grid-template-columns: 1fr; }
+            .featured-visual { min-height: 220px; }
+            .post-grid { grid-template-columns: 1fr; }
+            .newsletter-form { flex-direction: column; }
+            .newsletter-btn { width: 100%; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+        }
+        @media (max-width: 480px) {
+            .footer-top { grid-template-columns: 1fr; }
+        }
+
+        /* ===== POST HIDDEN STATE ===== */
+        .post-card.hidden { display: none; }
+        .featured-post.hidden { display: none; }
+
+        /* ===== SCROLL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain; /* keeps proportions clean */
+    border-radius: 18px; /* matches your SVG rounded corners */
+    background: #000; /* optional, matches your current black background */
+        }
+    </style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="/index.html" class="logo" aria-label="BV Consulting Home">
+            <img href="/index.html" src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+            <span class="logo-text">BV Consulting</span>
+        </a>
+        <ul class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/index.html">Results</a></li>
+            <li><a href="/lead_generation.html">Lead Generation</a></li>
+            <li><a href="/crm_integration.html">CRM Integration</a></li>
+            <li><a href="/automation.html">Automation</a></li>
+            <li><a href="/customer_support.html">Customer Support</a></li>
+            <li><a href="/book_appointmnet.html" class="nav-cta">Get Started</a></li>
+        </ul>
+        <button class="mobile-btn" id="mobileBtn" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+    <div class="hero-inner">
+        <div class="sec-badge"><span class="badge-dot"></span>The BV Consulting Blog</div>
+        <h1>Insights That Help<br><span class="grad-text">Your Business Grow</span></h1>
+        <p>Practical tips on lead generation, Google Ads, CRM, automation, and converting more of the leads you are already getting.</p>
+    </div>
+</header>
+
+<!-- ==================== CATEGORY FILTER ==================== -->
+<div class="filter-bar">
+    <div class="filter-inner">
+        <button class="filter-btn active" data-cat="all" onclick="filterPosts('all', this)">All Posts</button>
+        <button class="filter-btn" data-cat="ads" onclick="filterPosts('ads', this)">Google Ads</button>
+        <button class="filter-btn" data-cat="crm" onclick="filterPosts('crm', this)">CRM</button>
+        <button class="filter-btn" data-cat="auto" onclick="filterPosts('auto', this)">Automation</button>
+        <button class="filter-btn" data-cat="growth" onclick="filterPosts('growth', this)">Business Growth</button>
+        <button class="filter-btn" data-cat="sales" onclick="filterPosts('sales', this)">Sales</button>
+        <button class="filter-btn" data-cat="book" onclick="filterPosts('book', this)">Booking</button>
+    </div>
+</div>
+
+<!-- ==================== TOPIC CHIPS ==================== -->
+<div class="topics-strip" style="padding:28px 24px;">
+    <div class="topics-inner">
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div class="topics-title" style="margin-bottom:0;white-space:nowrap;">Browse Topics:</div>
+            <div class="topic-chips">
+                <div class="topic-chip active" onclick="filterPosts('all', null)">All</div>
+                <div class="topic-chip" onclick="filterPosts('ads', null)">Google Ads</div>
+                <div class="topic-chip" onclick="filterPosts('crm', null)">CRM</div>
+                <div class="topic-chip" onclick="filterPosts('auto', null)">Automation</div>
+                <div class="topic-chip" onclick="filterPosts('growth', null)">Business Growth</div>
+                <div class="topic-chip" onclick="filterPosts('sales', null)">Sales Tips</div>
+                <div class="topic-chip" onclick="filterPosts('book', null)">Booking Systems</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== BLOG POSTS ==================== -->
+<div class="blog-section">
+
+    <!-- Featured Post -->
+    <a href="#" class="featured-post reveal" data-cat="growth">
+        <div class="featured-visual">
+            <div class="feat-icon">&#128202;</div>
+            <div class="feat-tag">Featured &nbsp;|&nbsp; Business Growth</div>
+            <div class="feat-read-time">8 min read &nbsp;|&nbsp; April 2025</div>
+        </div>
+        <div class="featured-content">
+            <div class="featured-label">Featured Article</div>
+            <h2 class="featured-title">Why 90% of Service Businesses Lose Leads Before They Even Know It</h2>
+            <p class="featured-excerpt">The average response time for a new lead at a small service business is over 24 hours. By that point, most of your prospects have already called someone else. Here is what is actually happening to your leads and how to fix it before you spend another dollar on ads.</p>
+            <div class="featured-meta">
+                <div class="author-avatar">BV</div>
+                <div class="author-info">
+                    <strong>BV Consulting Team</strong>
+                    <span>April 8, 2025 &nbsp;|&nbsp; 8 min read</span>
+                </div>
+            </div>
+            <span class="read-more-link">Read Article &#8594;</span>
+        </div>
+    </a>
+
+    <!-- Post Grid -->
+    <div class="post-grid" id="postGrid">
+
+        <a href="#" class="post-card reveal" data-cat="ads">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128269;</div>
+                <div class="post-cat-tag cat-ads">Google Ads</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">The 5 Keyword Mistakes Contractors Make on Google Ads (And How to Fix Them)</h3>
+                <p class="post-card-excerpt">Broad match keywords, missing negatives, and poor ad group structure are draining your budget. Here is what to do instead to get real leads at a lower cost.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">April 3, 2025</span>
+                <span class="post-card-read">6 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="crm">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128101;</div>
+                <div class="post-cat-tag cat-crm">CRM</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">You Do Not Need a Complicated CRM. You Need One That Actually Gets Used.</h3>
+                <p class="post-card-excerpt">Most small businesses either have no CRM or have one that nobody updates. Here is the minimal setup that keeps every lead organized without adding extra work to your day.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">March 28, 2025</span>
+                <span class="post-card-read">5 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="auto">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#9889;</div>
+                <div class="post-cat-tag cat-auto">Automation</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">The 60-Second Rule: Why Your First Response to a Lead Determines Everything</h3>
+                <p class="post-card-excerpt">Studies show that responding to a new lead within 60 seconds makes you 21 times more likely to convert them than responding an hour later. Here is how to make it automatic.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">March 22, 2025</span>
+                <span class="post-card-read">4 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="sales">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128176;</div>
+                <div class="post-cat-tag cat-sales">Sales</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">How to Follow Up With a Lead Without Feeling Like You Are Being Annoying</h3>
+                <p class="post-card-excerpt">Most business owners stop following up after one or two attempts. But data shows most deals close after the fifth touchpoint. Here is how to follow up with confidence and a clear script.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">March 17, 2025</span>
+                <span class="post-card-read">5 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="ads">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128200;</div>
+                <div class="post-cat-tag cat-ads">Google Ads</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">What a Good Cost Per Lead Actually Looks Like for Home Service Businesses</h3>
+                <p class="post-card-excerpt">Is $40 a lead good or bad? It depends entirely on your service, close rate, and average job value. Here is the framework to figure out the number that actually matters for your business.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">March 11, 2025</span>
+                <span class="post-card-read">6 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="book">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128197;</div>
+                <div class="post-cat-tag cat-book">Booking</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">How One Automated Reminder Cut No-Shows by 78% for a Roofing Company</h3>
+                <p class="post-card-excerpt">No-shows cost roofing contractors thousands of dollars a month in wasted drive time and missed revenue. Here is the exact reminder sequence that solved it in under a week.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">March 6, 2025</span>
+                <span class="post-card-read">4 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="growth">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#127919;</div>
+                <div class="post-cat-tag cat-growth">Business Growth</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">Stop Chasing New Leads. Start Converting the Ones You Already Have.</h3>
+                <p class="post-card-excerpt">Most businesses spend all their energy on top-of-funnel marketing while ignoring a full pipeline of leads who already expressed interest. Here is how to mine what you already have.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">February 28, 2025</span>
+                <span class="post-card-read">7 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="crm">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128257;</div>
+                <div class="post-cat-tag cat-crm">CRM</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">The 5-Stage Pipeline Every Home Service Business Should Have in Their CRM</h3>
+                <p class="post-card-excerpt">New Lead, Contacted, Estimate Sent, Closed, and Lost. Here is how to set up each stage, what to track, and what automations should trigger at each step.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">February 22, 2025</span>
+                <span class="post-card-read">5 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="auto">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128140;</div>
+                <div class="post-cat-tag cat-auto">Automation</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">3 Workflows Every Service Business Should Automate This Month</h3>
+                <p class="post-card-excerpt">Lead response, appointment reminders, and review requests. These three automations alone will save you hours every week and increase revenue without hiring anyone new.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">February 16, 2025</span>
+                <span class="post-card-read">6 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="sales">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128222;</div>
+                <div class="post-cat-tag cat-sales">Sales</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">The Exact Text Script We Use to Book 3x More Estimates From New Leads</h3>
+                <p class="post-card-excerpt">Copy-paste this SMS template for your first response to a new lead. It is conversational, non-pushy, and built to get a reply within the first 10 minutes of a lead coming in.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">February 10, 2025</span>
+                <span class="post-card-read">3 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="growth">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#127968;</div>
+                <div class="post-cat-tag cat-growth">Business Growth</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">Why Roofing Companies Are Leaving $100k+ on the Table Every Year</h3>
+                <p class="post-card-excerpt">Between slow follow-up, missed calls, and no systematic booking process, the average roofing contractor loses significant revenue they already paid to generate. Here is the breakdown.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">February 4, 2025</span>
+                <span class="post-card-read">7 min read</span>
+            </div>
+        </a>
+
+        <a href="#" class="post-card reveal" data-cat="book">
+            <div class="post-card-visual">
+                <div class="post-card-icon">&#128279;</div>
+                <div class="post-cat-tag cat-book">Booking</div>
+            </div>
+            <div class="post-card-body">
+                <h3 class="post-card-title">Online Booking vs Phone Calls: What Your Customers Actually Prefer</h3>
+                <p class="post-card-excerpt">The answer might surprise you. Depending on your industry and customer demographic, forcing people to call may be costing you bookings. Here is the data and how to offer both seamlessly.</p>
+            </div>
+            <div class="post-card-footer">
+                <span class="post-card-date">January 28, 2025</span>
+                <span class="post-card-read">5 min read</span>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Load More -->
+    <div class="load-more-wrap" id="loadMoreWrap">
+        <button class="btn-outline" id="loadMoreBtn" onclick="loadMore()">Load More Articles</button>
+    </div>
+
+</div>
+
+<!-- ==================== NEWSLETTER ==================== -->
+<div class="newsletter-section">
+    <div class="newsletter-inner reveal">
+        <div class="sec-badge" style="margin-bottom:20px;"><span class="badge-dot"></span>Weekly Insights</div>
+        <h2>Get Lead Generation Tips<br><span class="grad-text">In Your Inbox</span></h2>
+        <p>No fluff, no filler. Just practical strategies for getting more leads, converting more clients, and building systems that work without you babysitting them.</p>
+        <div id="newsletterFormWrap">
+            <form class="newsletter-form" id="newsletterForm" onsubmit="submitNewsletter(event)">
+                <input type="email" class="newsletter-input" placeholder="your@email.com" id="nlEmail" required>
+                <button type="submit" class="newsletter-btn" id="nlBtn">Subscribe</button>
+            </form>
+            <p class="newsletter-note">No spam. Unsubscribe any time. We send once a week.</p>
+        </div>
+        <div class="newsletter-success" id="nlSuccess">
+            <p>&#10003; &nbsp;You are in! Check your inbox for your first issue.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== BACK TO TOP ==================== -->
+
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<style>
+    #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    background: #2563EB;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #1D4ED8;
+    transform: translateY(-3px);
+}
+
+/* Slightly bigger on mobile */
+@media (max-width: 768px) {
+    #backToTop {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<script>
+    const backToTop = document.getElementById("backToTop");
+
+// Show button when scrolling down
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+// Scroll to top when clicked
+backToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <a href="/index.html" class="logo" aria-label="BV Consulting">
+                    <img href="/index.html" src="./images/BVConsulting_Logo.png" alt="SEO Logo" class="logo-img">
+                    <span class="logo-text" style="font-size:16px;">BV Consulting</span>
+                </a>
+                <p class="footer-brand-desc">Done-for-you client acquisition systems, lead generation, automated follow-up, and streamlined booking. Your business, on autopilot.</p>
+            </div>
+            <div class="fc">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">All Services</a></li>
+                    <li><a href="google-ads.html">Google Search Ads</a></li>
+                    <li><a href="crm.html">CRM Integration</a></li>
+                    <li><a href="automation.html">Automation</a></li>
+                    <li><a href="booking.html">Booking Systems</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/book_appointmnet.html">Book a Call</a></li>
+                </ul>
+            </div>
+            <div class="fc">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="/privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="/terms_&_condition.html">Terms &amp; Conditions</a></li>
+                    <li><a href="/customer_support.html">Customer Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BV Consulting. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="/privacy_policy.html">Privacy Policy</a>
+                <a href="/terms_&_condition.html">Terms &amp; Conditions</a>
+                <a href="/customer_support.html">Customer Support</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+    const MAKE_WEBHOOK_URL = 'https://hook.us1.make.com/YOUR_WEBHOOK_ID_HERE';
+
+    // ---- Navbar scroll shadow ----
+    window.addEventListener('scroll', function() {
+        document.getElementById('mainNav').style.boxShadow =
+            window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.6)' : 'none';
+    });
+
+    // ---- Hamburger menu ----
+    const mobileBtn = document.getElementById('mobileBtn');
+    const navLinks  = document.getElementById('navLinks');
+
+    mobileBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = navLinks.classList.toggle('mobile-open');
+        this.setAttribute('aria-expanded', isOpen);
+        this.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && e.target !== mobileBtn) {
+            navLinks.classList.remove('mobile-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = '&#9776;';
+        }
+    });
+
+    // ---- Scroll reveal ----
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    reveals.forEach(el => revealObs.observe(el));
+
+    // ---- Category Filter ----
+    let currentCat = 'all';
+
+    function filterPosts(cat, btnEl) {
+        currentCat = cat;
+
+        // Update filter bar buttons
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        if (btnEl) {
+            btnEl.classList.add('active');
+        } else {
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                if (b.getAttribute('data-cat') === cat) b.classList.add('active');
+            });
+        }
+
+        // Update topic chips
+        document.querySelectorAll('.topic-chip').forEach(c => {
+            c.classList.remove('active');
+            const chipCat = c.textContent.trim() === 'All' ? 'all'
+                : c.textContent.trim() === 'Google Ads' ? 'ads'
+                : c.textContent.trim() === 'CRM' ? 'crm'
+                : c.textContent.trim() === 'Automation' ? 'auto'
+                : c.textContent.trim() === 'Business Growth' ? 'growth'
+                : c.textContent.trim() === 'Sales Tips' ? 'sales'
+                : c.textContent.trim() === 'Booking Systems' ? 'book'
+                : 'all';
+            if (chipCat === cat) c.classList.add('active');
+        });
+
+        // Filter featured post
+        const featuredPost = document.querySelector('.featured-post');
+        if (cat === 'all' || featuredPost.getAttribute('data-cat') === cat) {
+            featuredPost.classList.remove('hidden');
+        } else {
+            featuredPost.classList.add('hidden');
+        }
+
+        // Filter grid posts
+        document.querySelectorAll('.post-card').forEach(card => {
+            if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // Reset visible count and load more
+        visibleCount = initialCount;
+        applyVisibility();
+    }
+
+    // ---- Load More ----
+    const initialCount = 6;
+    let visibleCount   = initialCount;
+
+    function applyVisibility() {
+        const cards = document.querySelectorAll('#postGrid .post-card:not(.hidden)');
+        cards.forEach((card, i) => {
+            card.style.display = i < visibleCount ? '' : 'none';
+        });
+        const loadMoreWrap = document.getElementById('loadMoreWrap');
+        loadMoreWrap.style.display = cards.length > visibleCount ? 'block' : 'none';
+    }
+
+    function loadMore() {
+        visibleCount += 6;
+        applyVisibility();
+    }
+
+    applyVisibility();
+
+    // ---- Newsletter ----
+    function submitNewsletter(e) {
+        e.preventDefault();
+        const email  = document.getElementById('nlEmail').value.trim();
+        const btn    = document.getElementById('nlBtn');
+        const form   = document.getElementById('newsletterFormWrap');
+        const success = document.getElementById('nlSuccess');
+
+        btn.textContent = 'Subscribing...';
+        btn.disabled = true;
+
+        fetch(MAKE_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ type: 'newsletter_signup', email: email, source: 'blog', subscribedAt: new Date().toISOString() })
+        }).then(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        }).catch(() => {
+            form.style.display = 'none';
+            success.style.display = 'block';
+        });
+    }
+</script>
+
+</body>
+</html>
