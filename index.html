@@ -976,10 +976,199 @@
         .logo-img {
     width: 70px;
     height: 70px;
-    object-fit: contain; /* keeps proportions clean */
-    border-radius: 18px; /* matches your SVG rounded corners */
-    background: #000; /* optional, matches your current black background */
+    object-fit: contain;
+    border-radius: 18px;
+    background: #000;
 }
+
+        /* ===== PRICING ===== */
+        .pricing { background: var(--dark); }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--dark-2);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 36px 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            border-color: rgba(37,99,235,0.35);
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.popular {
+            border-color: var(--blue);
+            background: linear-gradient(160deg, #0C1A3E 0%, #111827 100%);
+            transform: scale(1.03);
+        }
+
+        .pricing-card.popular:hover {
+            transform: scale(1.03) translateY(-4px);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            background: var(--blue);
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 5px 18px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .pricing-tier {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--blue-light);
+            margin-bottom: 6px;
+        }
+
+        .pricing-name {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+
+        .pricing-tagline {
+            font-size: 13px;
+            color: var(--gray);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            margin-bottom: 6px;
+        }
+
+        .price-dollar {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .price-amount {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 1;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 6px;
+        }
+
+        .price-note {
+            font-size: 11px;
+            color: var(--gray);
+            margin-bottom: 28px;
+        }
+
+        .pricing-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            font-size: 13px;
+            color: var(--gray-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            line-height: 1.5;
+        }
+
+        .pricing-features li::before {
+            content: '';
+            width: 16px; height: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='8' fill='rgba(37,99,235,0.15)'/%3E%3Cpath d='M5 8l2 2 4-4' stroke='%2360A5FA' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .pricing-cta {
+            display: block;
+            text-align: center;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-top: auto;
+        }
+
+        .pricing-cta-outline {
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--white);
+        }
+
+        .pricing-cta-outline:hover {
+            border-color: var(--blue);
+            background: rgba(37,99,235,0.08);
+        }
+
+        .pricing-cta-solid {
+            background: var(--blue);
+            color: white;
+            border: 1px solid transparent;
+        }
+
+        .pricing-cta-solid:hover {
+            background: #1D4ED8;
+            box-shadow: 0 8px 25px rgba(37,99,235,0.4);
+        }
+
+        .pricing-best {
+            font-size: 11px;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+            .pricing-card.popular { transform: scale(1); }
+            .pricing-card.popular:hover { transform: translateY(-4px); }
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid { max-width: 100%; }
+        }
     </style>
 
 </head>
@@ -995,7 +1184,8 @@
         <ul class="nav-links" role="navigation" aria-label="Main navigation">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/index.html">Results</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#pricing">Pricing</a></li>
             <li><a href="/lead_generation.html">Lead Generation</a></li>
             <li><a href="/crm_integration.html">CRM Integration</a></li>
             <li><a href="/automation.html">Automation</a></li>
@@ -1373,6 +1563,89 @@
                     </div>
                 </div>
             </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== PRICING ==================== -->
+<section class="pricing" id="pricing">
+    <div class="sc">
+        <div class="sec-badge">Pricing</div>
+        <h2>Choose Your <span class="grad-text">Growth Package</span></h2>
+        <p class="sec-sub">Done-for-you automation systems that capture leads, eliminate no-shows, and reactivate clients — fully built and managed for you. No setup fee. Cancel anytime.</p>
+        <div class="pricing-grid">
+
+            <!-- TIER 1: STARTER -->
+            <div class="pricing-card reveal">
+                <div class="pricing-tier">Tier 01</div>
+                <div class="pricing-name">The Foundation</div>
+                <div class="pricing-tagline">"Stop the bleeding. Start capturing."</div>
+                <div class="pricing-price">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount">497</span>
+                    <span class="price-period">/mo</span>
+                </div>
+                <div class="price-note">No setup fee &bull; Cancel anytime</div>
+                <div class="pricing-divider"></div>
+                <ul class="pricing-features">
+                    <li>AI chatbot for website lead capture &amp; instant reply</li>
+                    <li>Appointment confirmation + no-show automation</li>
+                    <li>3-touch new lead nurture sequence (email + SMS)</li>
+                    <li>Monthly performance report</li>
+                </ul>
+                <a href="/book_appointmnet.html" class="pricing-cta pricing-cta-outline">Get Started →</a>
+                <p class="pricing-best">Best for owners who want to test before committing. Quick ROI with minimal risk.</p>
+            </div>
+
+            <!-- TIER 2: GROWTH (POPULAR) -->
+            <div class="pricing-card popular reveal">
+                <div class="popular-badge">⭐ Most Popular</div>
+                <div class="pricing-tier" style="margin-top:18px;">Tier 02</div>
+                <div class="pricing-name">Revenue Engine</div>
+                <div class="pricing-tagline">"Capture, convert &amp; keep every client."</div>
+                <div class="pricing-price">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount" style="background:linear-gradient(135deg,#60A5FA,#2563EB);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">797</span>
+                    <span class="price-period">/mo</span>
+                </div>
+                <div class="price-note">No setup fee &bull; Cancel anytime</div>
+                <div class="pricing-divider"></div>
+                <ul class="pricing-features">
+                    <li>All Foundation features included</li>
+                    <li>90-day lapsed client reactivation campaign</li>
+                    <li>Post-treatment upsell &amp; rebooking flows</li>
+                    <li>Instagram &amp; Facebook DM lead automation</li>
+                    <li>A/B tested messaging optimization</li>
+                    <li>Monthly strategy check-in call</li>
+                </ul>
+                <a href="/book_appointmnet.html" class="pricing-cta pricing-cta-solid">Get Started →</a>
+                <p class="pricing-best">Best for Med Spas doing $30K+/month ready to plug every revenue leak and scale consistently.</p>
+            </div>
+
+            <!-- TIER 3: ELITE -->
+            <div class="pricing-card reveal">
+                <div class="pricing-tier">Tier 03</div>
+                <div class="pricing-name">The Elite System</div>
+                <div class="pricing-tagline">"The full infrastructure of a 7-figure MedSpa."</div>
+                <div class="pricing-price">
+                    <span class="price-dollar">$</span>
+                    <span class="price-amount">1,297</span>
+                    <span class="price-period">/mo</span>
+                </div>
+                <div class="price-note">Includes website build &bull; Priority access</div>
+                <div class="pricing-divider"></div>
+                <ul class="pricing-features">
+                    <li>All Revenue Engine features included</li>
+                    <li>Custom high-converting website build</li>
+                    <li>Google Business Profile optimization</li>
+                    <li>SEO foundation + local search setup</li>
+                    <li>Membership &amp; package promotion flows</li>
+                    <li>Bi-weekly strategy calls + priority support</li>
+                </ul>
+                <a href="/book_appointmnet.html" class="pricing-cta pricing-cta-outline">Get Started →</a>
+                <p class="pricing-best">Best for growth-minded owners opening a second location or treating their practice as a serious investment.</p>
+            </div>
+
         </div>
     </div>
 </section>
