@@ -6,7 +6,7 @@ The public site is generated from these Python files. You don't need to use them
 ```bash
 cd _build
 pip3 install pillow        # one time
-python3 images.py          # optimize any photos placed in _build/src-images/
+python3 images.py          # compress photos in _build/src-images/ into AVIF, WebP & JPEG (480/800/1200px)
 python3 build.py           # regenerate every page, sitemap.xml, robots.txt
 ```
 

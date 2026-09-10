@@ -32,7 +32,7 @@ python3 -m http.server 8000
 then visit http://localhost:8000
 
 ## Images
-Optimized photos live in `/images/` in two sizes (800px and 1400px) as both WebP and JPEG.
+Compressed photos live in `/images/` in three sizes (480, 800, 1200px) as AVIF, WebP, and JPEG. Browsers download only the smallest format and size they need (a typical page loads about 30–110 KB of images).
 
 ## Settings
 `site.js` (top of file) holds the lead email, optional Google Sheet URL, and Google Analytics ID.

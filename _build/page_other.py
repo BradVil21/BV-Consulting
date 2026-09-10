@@ -437,7 +437,7 @@ def thank_you():
 <canvas id="confetti-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:500"></canvas>
 '''.format(check=ic("check", 40, 2.6), tel=TEL, phone=PHONE)
     script = r'''<script>
-(function(){
+document.addEventListener("DOMContentLoaded",function(){
   try{var n=sessionStorage.getItem("bv_lead_name"); if(n){document.getElementById("ty-name").textContent=", "+n;}}catch(e){}
   if(window.BV) window.BV.track("quote_thank_you_view");
   if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -445,7 +445,7 @@ def thank_you():
   var cols=["#2BA0EE","#0f5e93","#c98d7a","#efe3d6","#7cc7f6"],P=[];
   for(var i=0;i<140;i++)P.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,w:6+Math.random()*7,h:8+Math.random()*9,c:cols[i%cols.length],r:Math.random()*3,vr:(Math.random()-.5)*.3,vy:2.4+Math.random()*3,vx:(Math.random()-.5)*2});
   var t0=Date.now();(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(function(p){p.y+=p.vy;p.x+=p.vx;p.r+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore();});if(Date.now()-t0<4200)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height);})();
-})();
+});
 </script>'''
     page("/thank-you/", "Thank You | BV Consulting", "Your med spa growth plan request was received.", body,
          noindex=True, funnel=True, scripts_after=script, sitemap=False)

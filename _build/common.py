@@ -39,20 +39,23 @@ def strip(s):
 
 
 def picture(key, alt, sizes="(min-width: 960px) 50vw, 100vw", cls="", eager=False, fallback_icon="sparkle"):
-    """Responsive <picture>. Falls back to a branded gradient block if the photo isn't available yet."""
+    """Responsive, compressed <picture> (AVIF > WebP > JPEG). Falls back to a gradient block if the photo is missing."""
     if key not in IMG:
         return '<div class="photo photo-fallback %s" role="img" aria-label="%s">%s</div>' % (cls, esc(alt), ic(fallback_icon, 56, 1.3))
     m = IMG[key]
-    w = min(1400, m["w"]); h = round(w * m["ratio"])
+    w = min(1200, m["w"]); h = round(w * m["ratio"])
     load = 'fetchpriority="high" loading="eager"' if eager else 'loading="lazy"'
-    return ('<picture class="photo %s">'
-            '<source type="image/webp" srcset="/images/{k}-800.webp 800w, /images/{k}-1400.webp 1400w" sizes="{s}">'
-            '<img src="/images/{k}-1400.jpg" srcset="/images/{k}-800.jpg 800w, /images/{k}-1400.jpg 1400w" sizes="{s}" '
-            'width="{w}" height="{h}" alt="{a}" {l} decoding="async"></picture>' % cls).format(k=key, s=sizes, w=w, h=h, a=esc(alt), l=load)
+    def ss(ext):
+        return ", ".join("/images/%s-%d.%s %dw" % (key, x, ext, x) for x in (480, 800, 1200))
+    return ('<picture class="photo {c}">'
+            '<source type="image/avif" srcset="{avif}" sizes="{s}">'
+            '<source type="image/webp" srcset="{webp}" sizes="{s}">'
+            '<img src="/images/{k}-800.jpg" srcset="{jpg}" sizes="{s}" width="{w}" height="{h}" alt="{a}" {l} decoding="async"></picture>'
+            ).format(c=cls, avif=ss("avif"), webp=ss("webp"), jpg=ss("jpg"), s=sizes, k=key, w=w, h=h, a=esc(alt), l=load)
 
 
 def img_url(key):
-    return SITE + "/images/%s-1400.jpg" % key if key in IMG else SITE + "/og-image.png"
+    return SITE + "/images/%s-1200.jpg" % key if key in IMG else SITE + "/og-image.png"
 
 
 SERVICES = [
@@ -262,7 +265,8 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" /></noscript>
 <link rel="stylesheet" href="/styles.css" />
 {extra_head}{schema_html}
 </head>
@@ -276,7 +280,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 
 {footer}
 
-<script src="/site.js"></script>
+<script src="/site.js" defer></script>
 {scripts_after}
 </body>
 </html>
@@ -289,7 +293,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
     open(target, "w").write(doc)
     if sitemap and not noindex:
         PAGES.append((path, priority))
-        PAGE_IMAGES[path] = [k for k in re.findall(r'/images/([a-z0-9-]+)-1400\.jpg"', body)]
+        PAGE_IMAGES[path] = [k for k in re.findall(r'/images/([a-z0-9-]+)-800\.jpg"', body)]
     return target
 
 

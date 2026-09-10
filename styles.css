@@ -494,3 +494,4 @@ body.funnel .site-header{position:relative}
 .funnel-grid{grid-template-columns:minmax(0,1fr)}
 @media (min-width:960px){.funnel-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr)}}
 @media (max-width:959px){.funnel-copy .check-list{display:none}.funnel-copy .lede{font-size:1rem}}
+@media(max-width:639px){.fc-2{display:none}.fc-1{left:10px;bottom:12px}}

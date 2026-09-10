@@ -1,12 +1,27 @@
 {
  "growth-strategy-session": {
-  "w": 6000,
-  "h": 4000,
+  "w": 2400,
+  "h": 1600,
+  "ratio": 0.6667
+ },
+ "med-spa-consultation-mirror": {
+  "w": 2400,
+  "h": 1800,
+  "ratio": 0.75
+ },
+ "med-spa-laser-hair-removal": {
+  "w": 2400,
+  "h": 1800,
+  "ratio": 0.75
+ },
+ "med-spa-lip-filler-treatment": {
+  "w": 2400,
+  "h": 1600,
   "ratio": 0.6667
  },
  "med-spa-payment-terminal-booking": {
-  "w": 3000,
-  "h": 2002,
-  "ratio": 0.6673
+  "w": 2400,
+  "h": 1602,
+  "ratio": 0.6675
  }
 }

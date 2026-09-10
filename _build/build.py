@@ -81,7 +81,7 @@ def extras():
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for path, pr in PAGES:
-        imgs = "".join("<image:image><image:loc>%s/images/%s-1400.jpg</image:loc></image:image>" % (SITE, k)
+        imgs = "".join("<image:image><image:loc>%s/images/%s-1200.jpg</image:loc></image:image>" % (SITE, k)
                        for k in dict.fromkeys(PAGE_IMAGES.get(path, [])))
         sm.append("  <url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority>%s</url>" % (SITE, path, TODAY, pr, imgs))
     sm.append("</urlset>")
