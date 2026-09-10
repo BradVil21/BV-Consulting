@@ -1,86 +1,73 @@
-# Connecting the Quote Form to Google Sheets
+# Lead Forms: Email Delivery + Optional Google Sheet
 
-The quote form on `quote.html` works out of the box as a demo (loading bar, confetti, and the success popup all run). To actually **save each submission into a Google Sheet**, follow these one-time steps.
+Both forms on the site (the **Free Consultation** wizard on `quote.html` and the form on `contact.html`)
+send every submission to **BVConsultings@outlook.com**. All settings live at the top of `site.js`.
 
-## 1. Create the sheet
-1. Go to [sheets.google.com](https://sheets.google.com) and create a new spreadsheet.
-2. Name it something like **BV Consulting Quotes**.
-3. In **row 1**, add these column headers, one per cell (left to right):
+## 1. Activate email delivery (one time, required)
 
+The forms use [FormSubmit](https://formsubmit.co), a free form-to-email service for static websites.
+
+1. Upload the site to your live domain (https://bvconsulting.live).
+2. Go to your live `quote.html` or `contact.html` page and submit a test.
+3. Check the **BVConsultings@outlook.com** inbox (and the Junk folder) for an email from FormSubmit.
+4. Click **Activate Form**. From now on every lead is emailed to you as a clean table.
+
+Tip: submit your tests from the live site, not by double-clicking the HTML file on your computer.
+
+**Optional privacy upgrade:** after activation, FormSubmit gives you a random "alias" string.
+Replace the email in `formEndpoint` inside `site.js` with that alias so your address isn't visible in the page code:
+
+```javascript
+formEndpoint: "https://formsubmit.co/ajax/your-random-alias-string",
 ```
-Timestamp | service | device | who | urgency | location | name | phone | email | details
-```
 
-## 2. Add the Apps Script
-1. In the sheet, click **Extensions → Apps Script**.
-2. Delete anything in the editor and paste the code below.
-3. Click **Save** (disk icon).
+## 2. Optional: also log every lead to a Google Sheet
+
+1. Create a Google Sheet named **BV Consulting Leads**.
+2. Click **Extensions → Apps Script**, delete anything in the editor, paste the code below, and click **Save**.
 
 ```javascript
 function doPost(e) {
   try {
     var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
     var p = e.parameter;
-    sheet.appendRow([
-      new Date(),
-      p.service || "",
-      p.device || "",
-      p.who || "",
-      p.urgency || "",
-      p.location || "",
-      p.name || "",
-      p.phone || "",
-      p.email || "",
-      p.details || ""
-    ]);
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: "success" }))
+    // Build the header row automatically from whatever fields arrive.
+    var headers = sheet.getLastRow() > 0
+      ? sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+      : ["Timestamp"];
+    Object.keys(p).forEach(function (k) {
+      if (headers.indexOf(k) === -1) headers.push(k);
+    });
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    var row = headers.map(function (h) { return h === "Timestamp" ? new Date() : (p[h] || ""); });
+    sheet.appendRow(row);
+    return ContentService.createTextOutput(JSON.stringify({ result: "success" }))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
-    return ContentService
-      .createTextOutput(JSON.stringify({ result: "error", message: err.toString() }))
+    return ContentService.createTextOutput(JSON.stringify({ result: "error", message: err.toString() }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
 ```
 
-## 3. Deploy it as a Web App
-1. Click **Deploy → New deployment**.
-2. Click the gear icon → choose **Web app**.
-3. Set:
-   - **Description:** BV Quote Form
-   - **Execute as:** Me
-   - **Who has access:** **Anyone**
-4. Click **Deploy**, authorize when prompted, and **copy the Web app URL** (it ends in `/exec`).
-
-## 4. Paste the URL into the site
-1. Open `quote.html` in a text editor.
-2. Near the bottom, find this line:
+3. Click **Deploy → New deployment → Web app**.
+   - Execute as: **Me**
+   - Who has access: **Anyone**
+4. Click **Deploy**, authorize, and copy the Web app URL (ends in `/exec`).
+5. Open `site.js` and paste it into `googleSheetUrl`:
 
 ```javascript
-var GOOGLE_SCRIPT_URL = ""; // <-- paste your Apps Script Web App URL here
+googleSheetUrl: "https://script.google.com/macros/s/AKfyc.../exec",
 ```
 
-3. Paste your URL between the quotes:
+Every lead will now be emailed to you **and** added as a new row with columns like
+`form, service, industry, website_status, goal, timeline, name, business, phone, email, site, city, details, page`.
 
-```javascript
-var GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfyc.../exec";
-```
+Re-deploy after any script change (**Deploy → Manage deployments → Edit → New version**).
 
-4. Save and re-upload the file to your web host.
+## 3. Optional: Google Analytics 4
 
-That's it. Every quote submission now appends a new row to your Google Sheet, while the visitor still sees the loading bar, confetti, and success popup.
-
-## Optional: also save contact-page messages
-The contact form in `contact.html` can use the **same** Apps Script URL. Open `contact.html`, find the comment in the submit handler, and add a matching `fetch()` call (the data fields would be `name`, `phone`, `email`, `message`).
-
-## Optional: get an email for every submission
-Add this line inside `doPost`, right after `sheet.appendRow(...)`:
-
-```javascript
-MailApp.sendEmail("bvconsultings@outlook.com", "New Quote Request",
-  "Name: " + p.name + "\nPhone: " + p.phone + "\nEmail: " + p.email +
-  "\nService: " + p.service + "\nDetails: " + p.details);
-```
-
-Re-deploy after any change (**Deploy → Manage deployments → Edit → New version**).
+Create a GA4 property at analytics.google.com, copy the Measurement ID (looks like `G-XXXXXXXXXX`),
+and paste it into `gaId` in `site.js`. The site automatically tracks form leads (`generate_lead`),
+phone clicks (`click_to_call`), and email clicks (`click_email`). Mark `generate_lead` and
+`click_to_call` as key events in GA4.
