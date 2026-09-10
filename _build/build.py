@@ -114,5 +114,5 @@ if __name__ == "__main__":
     page_other.not_found()
     extras()
     open(os.path.join(OUT, "_config.yml"), "w").write("# GitHub Pages (Jekyll) settings: keep docs and build source off the public site\nexclude:\n  - README.md\n  - GOOGLE-SHEET-SETUP.md\n  - SEO-LAUNCH-CHECKLIST.md\n  - _build\n")
-    open(os.path.join(OUT, "styles.css"), "w").write(open(os.path.join(HERE, "base.css")).read() + open(os.path.join(HERE, "add.css")).read() + open(os.path.join(HERE, "add2.css")).read())
+    open(os.path.join(OUT, "styles.css"), "w").write(open(os.path.join(HERE, "base.css")).read() + open(os.path.join(HERE, "add.css")).read() + open(os.path.join(HERE, "add2.css")).read() + open(os.path.join(HERE, "add3.css")).read())
     print(len(PAGES), "indexable pages")

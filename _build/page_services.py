@@ -321,6 +321,8 @@ def build():
   </div>
 </section>
 
+{demo}
+
 <section class="section bg-soft">
   <div class="container">
     <div class="center" style="margin-bottom:30px"><span class="eyebrow">What you get</span><h2>{deliver_h}</h2></div>
@@ -365,6 +367,9 @@ def build():
            photo=picture(s["img"], L["alt"], sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon=s["icon"]),
            card_title=L["card_title"], card="".join("<li>%s</li>" % c for c in L["card"]), problems_h=L["problems_h"],
            problems=problems, deliver_h=L["deliver_h"], deliver=deliver, steps=steps, extra=extra, long=s["long"],
+           demo=(sms_demo("sms-demo", "bg-warm", "Live demo", "Text the Demo AI Agent Right Now") if key == "agents" else
+                 sms_demo("sms-demo", "bg-warm", "Live demo", "See Automated Med Spa Texting in Action",
+                          "Try a missed-call text back, an appointment reminder, or a rebooking nudge. Reply the way a real client would and watch the automation respond.", start="missed") if key == "sms" else ""),
            faqs=faq_html(L["faqs"]), related="\n".join(post_card(p) for p in related), others=other_html,
            cta=cta_strip("Ready to see what %s can do for your practice?" % s["name"].replace("Med Spa ", ""),
                          "Get a free quote and a clear plan tailored to your med spa."))
@@ -375,7 +380,7 @@ def build():
                       "audience": {"@type": "BusinessAudience", "audienceType": "Med spas and aesthetic practices"}}
         page(s["url"], L["title"], L["desc"], body,
              schemas=[service_ld, breadcrumb_ld([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), faq_ld(L["faqs"])],
-             active="/services/", priority="0.9", images=[s["img"]])
+             active="/services/", priority="0.9", images=[s["img"]], scripts_after=DEMO_SCRIPT if key in ("agents", "sms") else "")
 
 
 def build_hub():

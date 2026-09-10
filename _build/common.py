@@ -224,7 +224,7 @@ def footer(funnel=False):
     </div>
     <div class="foot-bottom">
       <span>&copy; <span id="year">2026</span> BV Consulting. All rights reserved.</span>
-      <span class="foot-tm">Product names such as Claude, ChatGPT, Gemini, and the software listed on this site are trademarks of their respective owners. BV Consulting is an independent consultancy and is not affiliated with or endorsed by them.</span>
+      <span class="foot-tm">Product names and logos shown on this site, such as Claude, ChatGPT, OpenAI, Gemini, Google, Zapier, Make, Calendly, Facebook, and HighLevel, are trademarks of their respective owners. BV Consulting is an independent consultancy and is not affiliated with or endorsed by them.</span>
     </div>
   </div>
 </footer>'''.format(pin=ic("pin", 14, 2), quote=QUOTE, svc=svc, local=LOCAL, tel=TEL, phone=PHONE, email=EMAIL)
@@ -249,7 +249,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 <meta name="description" content="{desc}" />
 <link rel="canonical" href="{canonical}" />
 <meta name="robots" content="{robots}" />
-<meta name="theme-color" content="#2BA0EE" />
+<meta name="theme-color" content="#4F5E3D" />
 <meta property="og:type" content="{og_type}" />
 <meta property="og:site_name" content="BV Consulting" />
 <meta property="og:locale" content="en_US" />
@@ -334,7 +334,7 @@ def software_strip(label="Works with the software med spas already use"):
         label, "".join("<li>%s</li>" % s for s in SOFTWARE))
 
 
-def ai_tools_section(bg=""):
+def ai_tools_section(bg="", carousel=True):
     cards = "\n".join('<div class="tool"><div class="tool-top"><b>%s</b><span>%s</span></div><p>%s</p></div>' % t for t in AI_TOOLS)
     return '''<section class="section %s" id="ai-tools">
   <div class="container">
@@ -343,7 +343,82 @@ def ai_tools_section(bg=""):
       <h2>We Build With Leading AI Tools, Including Claude</h2>
       <p style="max-width:760px;margin:0 auto">BV Consulting isn't locked into one vendor. We build and integrate AI agents and automations using several leading AI tools, including <strong>Claude by Anthropic</strong>, then connect them to your booking software, CRM, and phone system. You get the right model for each job, set up with your brand voice, your treatment menu, and clear guardrails.</p>
     </div>
-    <div class="tools">%s</div>
+    %s
+    <div class="tools" style="margin-top:26px">%s</div>
     <p class="center tools-note">We choose tools and settings based on your needs, budget, and privacy requirements. Where protected health information is involved, we use services and configurations that support a Business Associate Agreement (BAA).</p>
   </div>
-</section>''' % (bg, cards)
+</section>''' % (bg, logo_carousel("Tools &amp; platforms we integrate") if carousel else "", cards)
+
+
+LOGOS = [("zapier", "Zapier", 353), ("google", "Google", 293), ("calendly", "Calendly", 396), ("claude", "Claude by Anthropic", 443),
+         ("facebook", "Facebook", 97), ("make", "Make", 465), ("openai", "OpenAI", 349), ("highlevel", "HighLevel", 428)]
+
+
+def logo_carousel(label="Integrations &amp; AI tools we build with"):
+    def items(hidden):
+        out = []
+        for key, name, w in LOGOS:
+            sq = ' class="logo-sq"' if key == "facebook" else ""
+            alt = "" if hidden else name
+            out.append('<li><picture><source type="image/webp" srcset="/logos/%s.webp"><img%s src="/logos/%s.png" alt="%s" width="%d" height="96" loading="lazy" decoding="async"></picture></li>'
+                       % (key, sq, key, alt, w))
+        return "".join(out)
+    return '''<div class="logo-carousel-wrap">
+  <p class="logo-label">%s</p>
+  <div class="logo-carousel">
+    <div class="logo-track">
+      <ul class="logo-set">%s</ul>
+      <ul class="logo-set" aria-hidden="true">%s</ul>
+    </div>
+  </div>
+</div>''' % (label, items(False), items(True))
+
+
+DEMO_ICONS = {"lead": "sms", "missed": "phone", "reminder": "calendar", "rebook": "repeat"}
+
+
+def sms_demo(demo_id="sms-demo", bg="bg-soft", eyebrow="Try it yourself", title="Text Our Demo AI Agent and See How It Works",
+             lede="This is how an AI agent texts with your clients. Pick a scenario or type anything a real client might ask, like pricing, booking, or a treatment question.", start="lead"):
+    tabs = [("lead", "New lead texts in"), ("missed", "Missed call text back"), ("reminder", "Appointment reminder"), ("rebook", "Rebooking nudge")]
+    tab_html = "".join('<button type="button" class="demo-tab" data-demo-tab="%s" data-scenario="%s" aria-pressed="%s">%s%s</button>'
+                       % (demo_id, k, "true" if k == start else "false", ic(DEMO_ICONS[k], 15, 2), n) for k, n in tabs)
+    return '''<section class="section %s" id="%s-section">
+  <div class="container">
+    <div class="demo-grid">
+      <div class="demo-copy">
+        <span class="eyebrow">%s</span>
+        <h2>%s</h2>
+        <p>%s</p>
+        <div class="demo-tabs" role="group" aria-label="Demo scenarios">%s</div>
+        <ul class="check-list">
+          <li>Answers treatment, pricing, and hours questions in your brand voice</li>
+          <li>Books consultations and syncs them to your calendar and CRM</li>
+          <li>Routes medical questions to your licensed team and honors STOP opt-outs</li>
+        </ul>
+        <p class="demo-note">Interactive demo with sample replies. Nothing you type is sent or saved. Your real agent is trained on your treatments, pricing, policies, and schedule.</p>
+        <p style="margin-top:14px"><a class="btn btn-primary" href="%s">Get an AI Agent for My Med Spa</a></p>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone" id="%s" data-sms-demo data-start="%s">
+          <div class="phone-screen">
+            <div class="phone-notch" aria-hidden="true"></div>
+            <div class="phone-status" aria-hidden="true"><span>9:41</span><span>%s%s</span></div>
+            <div class="phone-head"><div class="phone-avatar" aria-hidden="true">YM</div><div class="phone-name">Your Med Spa</div><div class="phone-sub"><i></i>AI assistant &middot; replies instantly</div></div>
+            <button type="button" class="phone-reset">Restart</button>
+            <div class="chat" role="log" aria-live="polite" aria-label="Demo text conversation"></div>
+            <div class="chips"></div>
+            <form class="phone-input" autocomplete="off">
+              <label class="hp" for="%s-input">Type a message</label>
+              <input id="%s-input" type="text" maxlength="280" placeholder="Text message" enterkeyhint="send" />
+              <button type="submit" aria-label="Send message">%s</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>''' % (bg, demo_id, eyebrow, title, lede, tab_html, QUOTE, demo_id, start,
+                 ic("chart", 13, 2.4), ic("zap", 13, 2.4), demo_id, demo_id, ic("arrow", 18, 2.4))
+
+
+DEMO_SCRIPT = '<script src="/sms-demo.js" defer></script>'

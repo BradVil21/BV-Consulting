@@ -77,7 +77,7 @@ def build():
         <div class="float-card fc-3"><span class="fc-ic">{i_sms}</span><div><b>Reminder sent</b>24 hours before the appointment</div></div>
       </div>
     </div>
-    {software}
+    {carousel}
   </div>
 </section>
 
@@ -92,7 +92,9 @@ def build():
   </div>
 </section>
 
-<section class="section bg-soft" id="services">
+{demo}
+
+<section class="section" id="services">
   <div class="container">
     <div class="center" style="margin-bottom:30px">
       <span class="eyebrow">What we build</span>
@@ -105,7 +107,7 @@ def build():
   </div>
 </section>
 
-<section class="section">
+<section class="section bg-soft">
   <div class="container">
     <div class="split-photo">
       <div>
@@ -128,7 +130,7 @@ def build():
 
 {ai_tools}
 
-<section class="section">
+<section class="section bg-soft">
   <div class="container">
     <div class="split-photo flip">
       <div>
@@ -140,6 +142,7 @@ def build():
           <li><a href="{u_api}">API integrations</a>: Boulevard, Zenoti, Vagaro, Stripe, Square, GoHighLevel, and more</li>
           <li><a href="{u_auto}">AI automation</a>: review requests, reactivation, and membership renewals</li>
         </ul>
+        {software}
       </div>
       {pos_photo}
     </div>
@@ -183,10 +186,10 @@ def build():
 {cta}
 '''.format(quote=QUOTE,
            hero_photo=picture("med-spa-lip-filler-treatment", "Injector performing a dermal filler treatment on a client at a med spa", sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon="syringe"),
-           i_bot=ic("bot", 18), i_cal=ic("calendar", 18), i_sms=ic("sms", 18), software=software_strip(),
+           i_bot=ic("bot", 18), i_cal=ic("calendar", 18), i_sms=ic("sms", 18), carousel=logo_carousel(), software=software_strip("Plus the med spa software you already use").replace('class="soft-strip"', 'class="soft-strip left"'),
            pains=pains, cards="\n      ".join(cards),
            laser_photo=picture("med-spa-laser-hair-removal", "Registered nurse performing laser hair removal at a med spa", fallback_icon="zap"),
-           trust=trust, ai_tools=ai_tools_section("bg-soft"),
+           trust=trust, ai_tools=ai_tools_section("", carousel=False), demo=sms_demo(),
            u_sms=SVC["sms"]["url"], u_api=SVC["api"]["url"], u_auto=SVC["automation"]["url"],
            pos_photo=picture("med-spa-payment-terminal-booking", "Payment terminal at a med spa front desk connected to booking software", fallback_icon="dollar"),
            posts=posts, faqs=faq_html(HOME_FAQS),
@@ -195,4 +198,4 @@ def build():
     page("/", "Med Spa Marketing, AI Agents & Automation | BV Consulting",
          "BV Consulting helps med spas book more clients with AI agents, automated SMS and booking, SEO, high-converting websites, and API integrations. Free quote.",
          body, schemas=[BUSINESS, WEBSITE, faq_ld(HOME_FAQS)], active="/", priority="1.0",
-         images=["med-spa-lip-filler-treatment"])
+         images=["med-spa-lip-filler-treatment"], scripts_after=DEMO_SCRIPT)

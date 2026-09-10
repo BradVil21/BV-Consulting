@@ -1,8 +1,8 @@
 :root{
-  --blue:#2BA0EE; --blue-dark:#1b86cf; --blue-deep:#0f5e93;
-  --blue-soft:#eaf6fe; --blue-50:#f3faff;
+  --blue:#4F5E3D; --blue-dark:#3E4B30; --blue-deep:#2C3622;
+  --blue-soft:#ECEFE4; --blue-50:#F5F7F0;
   --black:#0a0d12; --ink:#111418; --ink-2:#33404d; --muted:#5f6b78;
-  --line:#e6e9ee; --bg:#ffffff; --bg-soft:#f6f9fc;
+  --line:#e6e9ee; --bg:#ffffff; --bg-soft:#f6f7f3;
   --shadow:0 10px 30px rgba(10,13,18,.08);
   --shadow-sm:0 4px 12px rgba(10,13,18,.06);
   --radius:14px; --radius-sm:10px;
@@ -35,7 +35,7 @@ p{margin:0 0 1em;color:var(--ink-2);font-size:1rem}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:var(--tap);padding:13px 20px;border-radius:999px;font-weight:700;font-size:.98rem;border:2px solid transparent;transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s,color .2s;cursor:pointer;text-decoration:none;line-height:1.1;max-width:100%}
 .btn-primary{background:var(--blue);color:#fff}
-.btn-primary:hover{background:var(--blue-dark);box-shadow:0 8px 20px rgba(43,160,238,.32);transform:translateY(-1px);text-decoration:none;color:#fff}
+.btn-primary:hover{background:var(--blue-dark);box-shadow:0 8px 20px rgba(79,94,61,.32);transform:translateY(-1px);text-decoration:none;color:#fff}
 .btn-secondary{background:#fff;color:var(--blue-dark);border-color:var(--blue)}
 .btn-secondary:hover{background:var(--blue);color:#fff;text-decoration:none}
 .btn-dark{background:var(--black);color:#fff}
@@ -59,10 +59,10 @@ p{margin:0 0 1em;color:var(--ink-2);font-size:1rem}
 .nav-links a.nav-cta{background:var(--blue);color:#fff;margin:10px 16px 6px;border-radius:10px;text-align:center;padding:14px 16px;border-bottom:0;justify-content:center;width:calc(100% - 32px);align-self:center}
 .nav-links a.nav-cta:hover{background:var(--blue-dark);color:#fff}
 
-.hero{position:relative;background:radial-gradient(1200px 500px at 18% -10%,rgba(43,160,238,.16),transparent 60%),radial-gradient(900px 450px at 92% 6%,rgba(15,94,147,.10),transparent 55%),linear-gradient(180deg,var(--blue-50) 0%,#ffffff 85%);padding:44px 0 36px;overflow:hidden}
+.hero{position:relative;background:radial-gradient(1200px 500px at 18% -10%,rgba(79,94,61,.16),transparent 60%),radial-gradient(900px 450px at 92% 6%,rgba(44,54,34,.10),transparent 55%),linear-gradient(180deg,var(--blue-50) 0%,#ffffff 85%);padding:44px 0 36px;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
 .hero .eyebrow{background:#fff;border:1px solid var(--blue-soft)}
-.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--blue-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1 span{background:linear-gradient(90deg,#6E8050,#2C3622);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-sub{font-size:1.02rem;color:var(--ink-2);margin-bottom:22px}
 .hero-ctas{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
 .hero-ctas .btn{width:100%}
@@ -76,7 +76,7 @@ p{margin:0 0 1em;color:var(--ink-2);font-size:1rem}
 .page-hero p{max-width:640px}
 
 /* Image placeholder */
-.img-ph{position:relative;width:100%;background:linear-gradient(135deg,var(--blue-soft),#fff);border:1px dashed #b9d9f0;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--blue-deep);aspect-ratio:4/3}
+.img-ph{position:relative;width:100%;background:linear-gradient(135deg,var(--blue-soft),#fff);border:1px dashed #cdd5bf;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--blue-deep);aspect-ratio:4/3}
 .img-ph.wide{aspect-ratio:16/9}
 .img-ph.tall{aspect-ratio:1/1}
 .img-ph .ph-inner{text-align:center;padding:18px}
@@ -136,7 +136,7 @@ details.faq-item > *:not(summary){margin-top:10px;color:var(--ink-2)}
 .field{margin-bottom:14px}
 .field label{display:block;font-size:.85rem;font-weight:700;color:var(--ink);margin-bottom:6px}
 .field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;color:var(--ink);background:#fff;transition:border-color .2s,box-shadow .2s;min-height:var(--tap)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(43,160,238,.15)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue);box-shadow:0 0 0 4px rgba(79,94,61,.15)}
 .field textarea{resize:vertical;min-height:110px}
 .field-row{display:grid;grid-template-columns:1fr;gap:12px}
 .form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm)}
@@ -151,7 +151,7 @@ details.faq-item > *:not(summary){margin-top:10px;color:var(--ink-2)}
 .post-card p{font-size:.93rem;margin:0}
 .post-card .pc-meta{font-size:.8rem;color:var(--muted);margin-top:auto;padding-top:8px}
 
-footer{background:var(--black);color:#aeb9c6;padding:40px 0 20px}
+footer{background:#1c2118;color:#aeb9c6;padding:40px 0 20px}
 footer a{color:#aeb9c6}
 footer a:hover{color:#fff}
 .foot-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-bottom:26px}
@@ -169,7 +169,7 @@ footer a:hover{color:#fff}
 [data-reveal].revealed{opacity:1;transform:none}
 
 /* ===== Back to top button ===== */
-#back-to-top{position:fixed;bottom:24px;right:20px;z-index:120;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(43,160,238,.4);opacity:0;transform:translateY(14px);transition:opacity .3s var(--ease),transform .3s var(--ease),background .2s;pointer-events:none}
+#back-to-top{position:fixed;bottom:24px;right:20px;z-index:120;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(79,94,61,.4);opacity:0;transform:translateY(14px);transition:opacity .3s var(--ease),transform .3s var(--ease),background .2s;pointer-events:none}
 #back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
 #back-to-top:hover{background:var(--blue-dark);transform:translateY(-3px)}
 
