@@ -136,6 +136,7 @@
       <a href="/about/">About</a>
       <a href="/blog/">Blog</a>
       <a href="/contact/">Contact</a>
+      <a class="nav-demo" href="#demo"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg><span>View Demo</span></a>
       <a class="nav-cta" href="/quote/">Get a Free Quote</a>
     </nav>
   </div>
@@ -177,29 +178,21 @@
   </div>
 </section>
 
-<section class="section bg-warm" id="sms-demo-section">
+<section class="section bg-warm demo-section" id="demo" aria-label="Interactive SMS demo">
   <div class="container">
     <div class="demo-grid">
-      <div class="demo-copy">
+      <div class="demo-copy demo-top">
         <span class="eyebrow">Live demo</span>
         <h2>See Automated Med Spa Texting in Action</h2>
         <p>Try a missed-call text back, an appointment reminder, or a rebooking nudge. Reply the way a real client would and watch the automation respond.</p>
         <div class="demo-tabs" role="group" aria-label="Demo scenarios"><button type="button" class="demo-tab" data-demo-tab="sms-demo" data-scenario="lead" aria-pressed="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>New lead texts in</button><button type="button" class="demo-tab" data-demo-tab="sms-demo" data-scenario="missed" aria-pressed="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Missed call text back</button><button type="button" class="demo-tab" data-demo-tab="sms-demo" data-scenario="reminder" aria-pressed="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2.5 2.5L16 12"/></svg>Appointment reminder</button><button type="button" class="demo-tab" data-demo-tab="sms-demo" data-scenario="rebook" aria-pressed="false"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Rebooking nudge</button></div>
-        <ul class="check-list">
-          <li>Answers treatment, pricing, and hours questions in your brand voice</li>
-          <li>Books consultations and syncs them to your calendar and CRM</li>
-          <li>Routes medical questions to your licensed team and honors STOP opt-outs</li>
-        </ul>
-        <p class="demo-note">Interactive demo with sample replies. Nothing you type is sent or saved. Your real agent is trained on your treatments, pricing, policies, and schedule.</p>
-        <p style="margin-top:14px"><a class="btn btn-primary" href="/quote/">Get an AI Agent for My Med Spa</a></p>
       </div>
       <div class="phone-wrap">
         <div class="phone" id="sms-demo" data-sms-demo data-start="missed">
           <div class="phone-screen">
             <div class="phone-notch" aria-hidden="true"></div>
             <div class="phone-status" aria-hidden="true"><span>9:41</span><span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h7l-1 8 11-13h-7z"/></svg></span></div>
-            <div class="phone-head"><div class="phone-avatar" aria-hidden="true">YM</div><div class="phone-name">Your Med Spa</div><div class="phone-sub"><i></i>AI assistant &middot; replies instantly</div></div>
-            <button type="button" class="phone-reset">Restart</button>
+            <div class="phone-head"><div class="phone-avatar" aria-hidden="true">YM</div><div class="phone-id"><div class="phone-name">Your Med Spa</div><div class="phone-sub"><i></i>AI assistant<span class="ps-extra"> &middot; online</span></div></div><button type="button" class="phone-reset"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg><span>Restart</span></button></div>
             <div class="chat" role="log" aria-live="polite" aria-label="Demo text conversation"></div>
             <div class="chips"></div>
             <form class="phone-input" autocomplete="off">
@@ -209,6 +202,15 @@
             </form>
           </div>
         </div>
+      </div>
+      <div class="demo-copy demo-bottom">
+        <ul class="check-list">
+          <li>Answers treatment, pricing, and hours questions in your brand voice</li>
+          <li>Books consultations and syncs them to your calendar and CRM</li>
+          <li>Routes medical questions to your licensed team and honors STOP opt-outs</li>
+        </ul>
+        <p class="demo-note">Interactive demo with sample replies. Nothing you type is sent or saved. Your real agent is trained on your treatments, pricing, policies, and schedule.</p>
+        <p class="demo-cta"><a class="btn btn-primary" href="/quote/">Get an AI Agent for My Med Spa</a></p>
       </div>
     </div>
   </div>

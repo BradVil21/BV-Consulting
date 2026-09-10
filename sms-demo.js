@@ -151,6 +151,7 @@
       self.chipsEl.appendChild(b);
     });
     this.chipsEl.hidden = !list || !list.length;
+    this.scroll();
   };
 
   Demo.prototype.aiReply = function (texts, after, startDelay) {

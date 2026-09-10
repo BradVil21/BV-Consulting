@@ -159,7 +159,7 @@ def faq_html(faqs):
 NAV = [("Home", "/"), ("Services", "/services/"), ("About", "/about/"), ("Blog", "/blog/"), ("Contact", "/contact/")]
 
 
-def header(active, funnel=False):
+def header(active, funnel=False, has_demo=False):
     if funnel:
         return '''<header class="site-header">
   <div class="container nav-wrap">
@@ -171,6 +171,7 @@ def header(active, funnel=False):
     for name, url in NAV:
         cur = ' aria-current="page"' if url == active else ""
         links.append('<a href="%s"%s>%s</a>' % (url, cur, name))
+    links.append('<a class="nav-demo" href="%s">%s<span>View Demo</span></a>' % ("#demo" if has_demo else "/#demo", ic("sms", 17, 2)))
     links.append('<a class="nav-cta" href="%s">Get a Free Quote</a>' % QUOTE)
     return '''<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -286,7 +287,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 </html>
 '''.format(title=esc(title), desc=esc(desc), canonical=canonical, robots=robots, og_type=og_type, og=og,
            extra_head=extra_head + ("\n" if extra_head else ""), schema_html="\n".join(ld(s) for s in schemas),
-           bodycls=' class="funnel"' if funnel else "", header=header(active, funnel), body=body,
+           bodycls=' class="funnel"' if funnel else "", header=header(active, funnel, "data-sms-demo" in body), body=body,
            footer=footer(funnel), scripts_after=scripts_after)
     target = os.path.join(OUT, path.strip("/"), "index.html") if path != "/404" else os.path.join(OUT, "404.html")
     os.makedirs(os.path.dirname(target), exist_ok=True)
@@ -382,29 +383,21 @@ def sms_demo(demo_id="sms-demo", bg="bg-soft", eyebrow="Try it yourself", title=
     tabs = [("lead", "New lead texts in"), ("missed", "Missed call text back"), ("reminder", "Appointment reminder"), ("rebook", "Rebooking nudge")]
     tab_html = "".join('<button type="button" class="demo-tab" data-demo-tab="%s" data-scenario="%s" aria-pressed="%s">%s%s</button>'
                        % (demo_id, k, "true" if k == start else "false", ic(DEMO_ICONS[k], 15, 2), n) for k, n in tabs)
-    return '''<section class="section %s" id="%s-section">
+    return '''<section class="section %s demo-section" id="demo" aria-label="Interactive SMS demo">
   <div class="container">
     <div class="demo-grid">
-      <div class="demo-copy">
+      <div class="demo-copy demo-top">
         <span class="eyebrow">%s</span>
         <h2>%s</h2>
         <p>%s</p>
         <div class="demo-tabs" role="group" aria-label="Demo scenarios">%s</div>
-        <ul class="check-list">
-          <li>Answers treatment, pricing, and hours questions in your brand voice</li>
-          <li>Books consultations and syncs them to your calendar and CRM</li>
-          <li>Routes medical questions to your licensed team and honors STOP opt-outs</li>
-        </ul>
-        <p class="demo-note">Interactive demo with sample replies. Nothing you type is sent or saved. Your real agent is trained on your treatments, pricing, policies, and schedule.</p>
-        <p style="margin-top:14px"><a class="btn btn-primary" href="%s">Get an AI Agent for My Med Spa</a></p>
       </div>
       <div class="phone-wrap">
         <div class="phone" id="%s" data-sms-demo data-start="%s">
           <div class="phone-screen">
             <div class="phone-notch" aria-hidden="true"></div>
             <div class="phone-status" aria-hidden="true"><span>9:41</span><span>%s%s</span></div>
-            <div class="phone-head"><div class="phone-avatar" aria-hidden="true">YM</div><div class="phone-name">Your Med Spa</div><div class="phone-sub"><i></i>AI assistant &middot; replies instantly</div></div>
-            <button type="button" class="phone-reset">Restart</button>
+            <div class="phone-head"><div class="phone-avatar" aria-hidden="true">YM</div><div class="phone-id"><div class="phone-name">Your Med Spa</div><div class="phone-sub"><i></i>AI assistant<span class="ps-extra"> &middot; online</span></div></div><button type="button" class="phone-reset">%s<span>Restart</span></button></div>
             <div class="chat" role="log" aria-live="polite" aria-label="Demo text conversation"></div>
             <div class="chips"></div>
             <form class="phone-input" autocomplete="off">
@@ -415,10 +408,19 @@ def sms_demo(demo_id="sms-demo", bg="bg-soft", eyebrow="Try it yourself", title=
           </div>
         </div>
       </div>
+      <div class="demo-copy demo-bottom">
+        <ul class="check-list">
+          <li>Answers treatment, pricing, and hours questions in your brand voice</li>
+          <li>Books consultations and syncs them to your calendar and CRM</li>
+          <li>Routes medical questions to your licensed team and honors STOP opt-outs</li>
+        </ul>
+        <p class="demo-note">Interactive demo with sample replies. Nothing you type is sent or saved. Your real agent is trained on your treatments, pricing, policies, and schedule.</p>
+        <p class="demo-cta"><a class="btn btn-primary" href="%s">Get an AI Agent for My Med Spa</a></p>
+      </div>
     </div>
   </div>
-</section>''' % (bg, demo_id, eyebrow, title, lede, tab_html, QUOTE, demo_id, start,
-                 ic("chart", 13, 2.4), ic("zap", 13, 2.4), demo_id, demo_id, ic("arrow", 18, 2.4))
+</section>''' % (bg, eyebrow, title, lede, tab_html, demo_id, start,
+                 ic("chart", 13, 2.4), ic("zap", 13, 2.4), ic("repeat", 13, 2.2), demo_id, demo_id, ic("arrow", 18, 2.4), QUOTE)
 
 
 DEMO_SCRIPT = '<script src="/sms-demo.js" defer></script>'
