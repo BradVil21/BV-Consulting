@@ -1,4 +1,9 @@
 {
+ "growth-strategy-session": {
+  "w": 6000,
+  "h": 4000,
+  "ratio": 0.6667
+ },
  "med-spa-payment-terminal-booking": {
   "w": 3000,
   "h": 2002,

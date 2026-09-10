@@ -53,7 +53,7 @@ def about():
 
 {cta}
 '''.format(crumbs=crumbs([("Home", "/"), ("About", "/about/")]), pin=ic("pin", 16, 2),
-           photo=picture("med-spa-laser-hair-removal", "Registered nurse providing laser treatment at a med spa", fallback_icon="heart"),
+           photo=picture("growth-strategy-session", "Strategy workshop with a presenter and a team working on laptops", fallback_icon="heart"),
            i_shield=ic("shield", 22), i_chat=ic("chat", 22), i_chart=ic("chart", 22), i_heart=ic("heart", 22),
            tools=ai_tools_section(""),
            cta=cta_strip("Let's grow your med spa together", "Get a free quote and a clear growth plan for your practice."))
@@ -61,7 +61,7 @@ def about():
          "BV Consulting builds AI agents, SEO, websites, SMS booking automation, and integrations for med spas. Based in Fort Lauderdale, FL, serving med spas nationwide.",
          body, schemas=[{"@context": "https://schema.org", "@type": "AboutPage", "url": SITE + "/about/", "name": "About BV Consulting", "about": {"@id": BUSINESS_ID}},
                         breadcrumb_ld([("Home", "/"), ("About", "/about/")])],
-         active="/about/", priority="0.6", images=["med-spa-laser-hair-removal"])
+         active="/about/", priority="0.6", images=["growth-strategy-session"])
 
 
 # ---------------------------------------------------------------- Contact
@@ -338,7 +338,7 @@ def quote():
 '''.format(i_check=ic("check", 16, 3), panels="\n            ".join(panels), states=states,
            photo=picture("med-spa-consultation-mirror", "Med spa client reviewing her results in a mirror", sizes="(min-width: 960px) 45vw, 100vw", fallback_icon="sparkle"),
            svc_list="".join('<li><a href="%s"><strong>%s</strong></a>: %s</li>' % (s["url"], s["name"], s["short"]) for s in SERVICES),
-           photo2=picture("med-spa-lip-filler-treatment", "Injector performing a dermal filler treatment", fallback_icon="syringe"),
+           photo2=picture("growth-strategy-session", "Growth strategy session with a presenter and a team on laptops", fallback_icon="users"),
            faqs=faq_html(faqs))
 
     script = r'''<script>
