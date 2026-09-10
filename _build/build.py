@@ -3,7 +3,7 @@ import os, re, shutil, json
 OLD_URLS = {'/about.html': '/about/', '/services.html': '/services/', '/blog.html': '/blog/', '/contact.html': '/contact/', '/quote.html': '/quote/', '/privacy.html': '/privacy/', '/terms.html': '/terms/', '/ai-automation-fort-lauderdale.html': '/med-spa-ai-automation-fort-lauderdale/', '/api-integration-fort-lauderdale.html': '/med-spa-api-integrations-fort-lauderdale/', '/web-design-fort-lauderdale.html': '/med-spa-website-design-fort-lauderdale/', '/blog-ai-automation-ideas-small-business.html': '/blog/ai-agents-for-med-spas/', '/blog-app-integrations-save-time.html': '/blog/med-spa-software-integrations/', '/blog-what-is-api-integration.html': '/blog/med-spa-software-integrations/', '/blog-local-seo-checklist-fort-lauderdale.html': '/blog/med-spa-seo-checklist/', '/blog-missed-calls-ai-follow-up.html': '/blog/med-spa-missed-calls-no-shows/', '/blog-website-cost-fort-lauderdale.html': '/blog/med-spa-website-cost/', '/blog-computer-setup.html': '/blog/', '/blog-speed-up-computer.html': '/blog/'}
 from common import *
 from posts_meta import POSTS
-import posts_a, posts_b, page_home, page_services, page_other, page_local
+import posts_a, posts_b, page_home, page_services, page_other, page_local, page_tools
 from tools import revenue_calc, automation_timeline, seo_scorecard, TOOLS_SCRIPT
 
 CONTENT = {}
@@ -126,6 +126,7 @@ if __name__ == "__main__":
     page_services.build_hub()
     page_other.local_page()
     page_local.build()
+    page_tools.calculator_page()
     page_other.about()
     page_other.contact()
     page_other.quote()

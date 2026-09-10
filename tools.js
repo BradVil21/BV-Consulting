@@ -27,11 +27,19 @@
       out("month", money(total)); out("year", money(total * 12));
       out("leads", money(leads)); out("noshows", money(noshows));
       out("recover", money(leads / 3 + noshows * 0.25));
+      out("sticky", money(total));
     }
     inputs.forEach(function (i) {
       i.addEventListener("input", function () { update(); if (!used) { used = true; track("tool_calculator_use"); } });
     });
     update();
+    var sticky = root.querySelector("[data-calc-sticky]"), results = root.querySelector(".calc-big"), inBox = root.querySelector(".calc-inputs");
+    if (sticky && "IntersectionObserver" in window) {
+      var inputsOn = false, resultsOn = false;
+      var sync = function () { var on = inputsOn && !resultsOn; sticky.classList.toggle("show", on); document.body.classList.toggle("calc-sticky-on", on); };
+      new IntersectionObserver(function (e) { inputsOn = e[0].isIntersecting; sync(); }, { threshold: 0.15 }).observe(inBox);
+      new IntersectionObserver(function (e) { resultsOn = e[0].intersectionRatio > 0.9; sync(); }, { threshold: [0, 0.9, 1] }).observe(results);
+    }
   }
 
   /* ---------------- Automation timeline ---------------- */

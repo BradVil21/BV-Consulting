@@ -13,7 +13,10 @@ def _head(eyebrow, title, lede):
     </div>''' % (eyebrow, title, lede)
 
 
-def revenue_calc(bg="bg-soft", title="How Much Revenue Is Your Med Spa Missing?"):
+CALC_URL = "/med-spa-revenue-calculator/"
+
+
+def revenue_calc(bg="bg-soft", title="How Much Revenue Is Your Med Spa Missing?", show_head=True, full_link=True):
     fields = [
         ("missed", "Calls, texts &amp; DMs that go unanswered each week", 0, 80, 1, 12, "", ""),
         ("book", "Share of those that would have booked", 5, 60, 5, 30, "", "%"),
@@ -45,12 +48,14 @@ def revenue_calc(bg="bg-soft", title="How Much Revenue Is Your Med Spa Missing?"
           <strong>+<span data-out="recover">$0</span>/month</strong>
         </div>
         <a class="btn btn-primary calc-cta" href="{quote}">Get a Plan to Recover It</a>
-        <p class="calc-note">Illustrative estimate based on your inputs (4.33 weeks per month). Actual results vary by practice.</p>
+        <p class="calc-note">Illustrative estimate based on your inputs (4.33 weeks per month). Actual results vary by practice.</p>{full}
       </div>
+      <div class="calc-sticky" data-calc-sticky aria-hidden="true"><span>Estimated loss</span><b data-out="sticky">$0</b><span>/mo</span></div>
     </div>
   </div>
 </section>'''.format(bg=bg, rows=rows, quote=QUOTE, i_phone=ic("phone", 16, 2), i_cal=ic("calendar", 16, 2),
-                     head=_head("Free calculator", title, "Move the sliders to match your practice and see what missed calls and no-shows could be costing you every month."))
+                     full=('<a class="calc-full" href="%s">Open the full calculator page &rarr;</a>' % CALC_URL) if full_link else "",
+                     head=_head("Free calculator", title, "Move the sliders to match your practice and see what missed calls and no-shows could be costing you every month.") if show_head else "")
 
 
 TL_TRIGGERS = [("lead", "sparkle", "New lead"), ("missed", "phone", "Missed call"), ("booked", "calendar", "Consult booked"),

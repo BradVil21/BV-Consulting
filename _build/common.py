@@ -218,6 +218,7 @@ def footer(funnel=False):
       <div><h4>Company</h4><ul>
         <li><a href="/about/">About</a></li>
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/med-spa-revenue-calculator/">Revenue Calculator</a></li>
         <li><a href="{local}">Fort Lauderdale Med Spa Marketing</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a href="/privacy/">Privacy Policy</a></li>
