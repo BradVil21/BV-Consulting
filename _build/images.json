@@ -4,10 +4,20 @@
   "h": 1600,
   "ratio": 0.6667
  },
+ "med-spa-client-relaxing-robe": {
+  "w": 2400,
+  "h": 2866,
+  "ratio": 1.1942
+ },
  "med-spa-consultation-mirror": {
   "w": 2400,
   "h": 1800,
   "ratio": 0.75
+ },
+ "med-spa-facial-treatment": {
+  "w": 2400,
+  "h": 1951,
+  "ratio": 0.8129
  },
  "med-spa-laser-hair-removal": {
   "w": 2400,
@@ -19,9 +29,29 @@
   "h": 1600,
   "ratio": 0.6667
  },
+ "med-spa-lounge-treatment-room": {
+  "w": 2400,
+  "h": 1350,
+  "ratio": 0.5625
+ },
  "med-spa-payment-terminal-booking": {
   "w": 2400,
   "h": 1602,
   "ratio": 0.6675
+ },
+ "spa-bathtub-palm-plant": {
+  "w": 2400,
+  "h": 1600,
+  "ratio": 0.6667
+ },
+ "spa-candle-ambiance": {
+  "w": 2400,
+  "h": 1600,
+  "ratio": 0.6667
+ },
+ "wellness-yoga-palm-trees": {
+  "w": 2202,
+  "h": 2560,
+  "ratio": 1.1626
  }
 }

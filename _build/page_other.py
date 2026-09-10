@@ -648,7 +648,7 @@ def local_page():
 
 {cta}
 '''.format(call_btn=CALL_BTN, crumbs=crumbs([("Home", "/"), ("Fort Lauderdale Med Spa Marketing", LOCAL)]), quote=QUOTE, tel=TEL, phone=PHONE, email=EMAIL,
-           photo=picture("med-spa-laser-hair-removal", "Nurse performing laser hair removal at a Fort Lauderdale area med spa", sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon="pin"),
+           photo=picture("wellness-yoga-palm-trees", "Woman meditating at sunrise beneath palm trees", sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon="pin"),
            i_pin=ic("pin", 20), i_cal=ic("calendar", 20), i_chat=ic("chat", 20), i_zap=ic("zap", 20), i_phone=ic("phone", 20), i_search=ic("search", 20),
            i_pin2=ic("pin", 18, 2), i_phone2=ic("phone", 18, 2), i_mail2=ic("mail", 18, 2), i_clock2=ic("clock", 18, 2), i_web2=ic("web", 18, 2),
            svc=svc, areas=areas, faqs=faq_html(LOCAL_FAQS),
@@ -663,7 +663,7 @@ def local_page():
     page(LOCAL, "Med Spa Marketing in Fort Lauderdale, FL | BV Consulting",
          "Fort Lauderdale med spa marketing from a local team: AI agents, SMS booking automation, local SEO, websites, and integrations for South Florida med spas.",
          body, schemas=[local_ld, service_ld, breadcrumb_ld([("Home", "/"), ("Fort Lauderdale Med Spa Marketing", LOCAL)]), faq_ld(LOCAL_FAQS)],
-         priority="0.9", images=["med-spa-laser-hair-removal"])
+         priority="0.9", images=["wellness-yoga-palm-trees"])
 
 
 # ---------------------------------------------------------------- Legal

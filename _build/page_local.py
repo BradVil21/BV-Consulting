@@ -10,7 +10,7 @@ LOCAL_PAGES = [
      "desc": "Local SEO for Fort Lauderdale med spas. Rank in Google Maps for Botox, filler, and laser searches across Las Olas, Wilton Manors, and all of Broward.",
      "h1": "Med Spa SEO in Fort Lauderdale, FL",
      "lede": "Show up when people in Fort Lauderdale search for Botox, lip filler, laser hair removal, and facials near them. We handle your Google Business Profile, treatment pages, reviews, and local listings, built around how South Florida clients actually search.",
-     "img": "med-spa-laser-hair-removal", "alt": "Laser hair removal treatment at a Fort Lauderdale area med spa",
+     "img": "med-spa-facial-treatment", "alt": "Client relaxing with eyes closed during a facial treatment",
      "local_h": "What Ranking a Fort Lauderdale Med Spa Really Takes",
      "local": [
          ("pin", "The Map Pack decides most calls", "Search &ldquo;Botox near me&rdquo; from Las Olas or Flagler Village and Google shows a handful of nearby practices above everything else. Proximity, reviews, and a complete Google Business Profile decide who makes that list."),
@@ -37,7 +37,7 @@ LOCAL_PAGES = [
      "desc": "Fort Lauderdale med spa website design: fast, mobile-first, bilingual-ready sites with online booking, treatment pages, and local SEO built in.",
      "h1": "Med Spa Website Design in Fort Lauderdale",
      "lede": "A website that feels as polished as your treatment rooms and books consultations from any phone. We design and build fast, mobile-first med spa websites for Fort Lauderdale practices, with online booking, treatment pages, and local SEO from day one.",
-     "img": "med-spa-consultation-mirror", "alt": "Med spa client reviewing her results in a hand mirror",
+     "img": "spa-bathtub-palm-plant", "alt": "Minimalist spa bathroom with a freestanding stone tub and palm plant",
      "local_h": "Built for How Fort Lauderdale Clients Browse and Book",
      "local": [
          ("mobile", "Designed for phones first", "Most med spa visitors browse on a phone, between errands, after work, or on a weekend at the beach. Every page is built to load fast and book in a few taps."),
@@ -64,7 +64,7 @@ LOCAL_PAGES = [
      "desc": "AI receptionists for Fort Lauderdale med spas that answer calls, texts, and DMs 24/7 in English or Spanish and book consultations while you're closed.",
      "h1": "AI Agents for Fort Lauderdale Med Spas",
      "lede": "An AI receptionist that answers every call, text, and Instagram DM, day or night, in English or Spanish. It books consultations, answers the questions you approve, and hands clinical questions to your licensed team.",
-     "img": "med-spa-consultation-mirror", "alt": "Med spa client smiling at her results after a consultation",
+     "img": "spa-candle-ambiance", "alt": "Candle and greenery in a calm, softly lit spa setting",
      "local_h": "Why Fort Lauderdale Practices Are Adding AI Agents",
      "local": [
          ("clock", "Late-night and out-of-town inquiries", "Visitors and seasonal residents often message late at night or from other time zones. Your agent replies in seconds instead of the next business day."),
@@ -118,7 +118,7 @@ LOCAL_PAGES = [
      "desc": "AI automation for Fort Lauderdale med spas: instant lead follow-up, review requests, membership renewals, and win-back campaigns that run on autopilot.",
      "h1": "AI Automation for Fort Lauderdale Med Spas",
      "lede": "Hand the repetitive work to automation: lead follow-up in seconds, intake and aftercare messages, review requests, and win-back campaigns. Your team gets time back for the clients in the room.",
-     "img": "med-spa-lip-filler-treatment", "alt": "Provider performing a lip filler treatment at a med spa",
+     "img": "med-spa-laser-hair-removal", "alt": "Registered nurse performing laser hair removal at a med spa",
      "local_h": "Where Automation Pays Off for Fort Lauderdale Practices",
      "local": [
          ("users", "Consistency through staff changes", "Front desk turnover is a familiar challenge for busy practices. Automated follow-up keeps working the same way no matter who is on shift."),
@@ -145,7 +145,7 @@ LOCAL_PAGES = [
      "desc": "Connect your Fort Lauderdale med spa's booking software, CRM, payments, ads, and phone system so every lead and appointment syncs without double entry.",
      "h1": "Med Spa Software Integrations in Fort Lauderdale",
      "lede": "Your booking software, CRM, forms, payments, ads, and phone system, finally talking to each other. We connect the tools your Fort Lauderdale practice already uses so data moves on its own.",
-     "img": "med-spa-payment-terminal-booking", "alt": "Med spa front desk payment terminal connected to booking software",
+     "img": "med-spa-lounge-treatment-room", "alt": "Modern med spa lounge with treatment beds, plants, and relaxation chairs",
      "local_h": "Integration Problems We Solve for South Florida Practices",
      "local": [
          ("layers", "One view across locations", "Practices with locations in more than one South Florida county get a single view of leads, bookings, and revenue."),
