@@ -1,7 +1,7 @@
 # BV Consulting Website
 
 AI agents, automated SMS & booking, SEO, website development, and API integrations for **med spas**.
-Based in Fort Lauderdale, FL, serving med spas nationwide. Live site: https://bvconsulting.live
+Based in Fort Lauderdale, FL, serving med spas nationwide. Live site: https://www.bvconsulting.live
 
 ## Clean URLs
 Every page lives in its own folder as `index.html`, so URLs have no `.html`:

@@ -1,7 +1,7 @@
 import json, os, html, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SITE = "https://bvconsulting.live"
+SITE = "https://www.bvconsulting.live"  # live host (apex redirects to www)
 OUT = os.path.dirname(HERE) if os.path.basename(HERE) == "_build" else os.path.join(HERE, "out")
 PHONE = "954-825-1009"
 TEL = "+19548251009"

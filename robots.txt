@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you/
 
-Sitemap: https://bvconsulting.live/sitemap.xml
+Sitemap: https://www.bvconsulting.live/sitemap.xml
