@@ -562,7 +562,7 @@ LOCAL_FAQS = [
 def local_page():
     areas = "".join("<li>%s</li>" % a for a in BROWARD)
     svc = "\n".join('<a class="svc-card" href="%s"><div class="svc-body"><span class="svc-ic" style="margin-top:0">%s</span><h3>%s</h3><p>%s</p><span class="more">Learn more &rarr;</span></div></a>' % (
-        s["url"], ic(s["icon"], 20, 1.9), s["name"], s["short"]) for s in SERVICES)
+        LOCAL_BY_SVC[s["key"]], ic(s["icon"], 20, 1.9), s["name"] + " in Fort Lauderdale", s["short"]) for s in SERVICES)
     body = '''
 <section class="hero bg-warm">
   <div class="container">

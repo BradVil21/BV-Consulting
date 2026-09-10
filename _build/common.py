@@ -157,6 +157,11 @@ def faq_html(faqs):
     return "\n".join('<details class="faq-item"><summary>%s</summary><p>%s</p></details>' % (q, a) for q, a in faqs)
 
 
+LOCAL_NAV = [("Med Spa SEO", "/med-spa-seo-fort-lauderdale/"), ("Website Design", "/med-spa-website-design-fort-lauderdale/"),
+             ("AI Agents", "/med-spa-ai-agents-fort-lauderdale/"), ("SMS &amp; Booking", "/med-spa-sms-booking-automation-fort-lauderdale/"),
+             ("AI Automation", "/med-spa-ai-automation-fort-lauderdale/"), ("Integrations", "/med-spa-api-integrations-fort-lauderdale/")]
+LOCAL_BY_SVC = {"seo": LOCAL_NAV[0][1], "web": LOCAL_NAV[1][1], "agents": LOCAL_NAV[2][1], "sms": LOCAL_NAV[3][1], "automation": LOCAL_NAV[4][1], "api": LOCAL_NAV[5][1]}
+
 NAV = [("Home", "/"), ("Services", "/services/"), ("About", "/about/"), ("Blog", "/blog/"), ("Contact", "/contact/")]
 
 
@@ -226,12 +231,14 @@ def footer(funnel=False):
         <li>Mon&ndash;Fri 8am&ndash;6pm ET</li>
       </ul></div>
     </div>
+    <nav class="foot-local" aria-label="Fort Lauderdale services"><b>Fort Lauderdale:</b>{local_links}</nav>
     <div class="foot-bottom">
       <span>&copy; <span id="year">2026</span> BV Consulting. All rights reserved.</span>
       <span class="foot-tm">Product names and logos shown on this site, such as Claude, ChatGPT, OpenAI, Gemini, Google, Zapier, Make, Calendly, Facebook, and HighLevel, are trademarks of their respective owners. BV Consulting is an independent consultancy and is not affiliated with or endorsed by them.</span>
     </div>
   </div>
-</footer>'''.format(pin=ic("pin", 14, 2), quote=QUOTE, svc=svc, local=LOCAL, tel=TEL, phone=PHONE, email=EMAIL)
+</footer>'''.format(pin=ic("pin", 14, 2), quote=QUOTE, svc=svc, local=LOCAL, tel=TEL, phone=PHONE, email=EMAIL,
+           local_links="".join('<a href="%s">%s</a>' % (u, n) for n, u in LOCAL_NAV))
 
 
 PAGES = []  # (path, priority) for sitemap

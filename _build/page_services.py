@@ -1,4 +1,5 @@
 from common import *
+from tools import revenue_calc, automation_timeline, seo_scorecard, TOOLS_SCRIPT
 from posts_meta import POSTS
 
 LANDING = {
@@ -288,6 +289,8 @@ def build():
         others = [x for x in SERVICES if x["key"] != key]
         other_html = "\n".join('<a class="svc-card" href="%s"><div class="svc-body"><span class="svc-ic" style="margin-top:0">%s</span><h3>%s</h3><p>%s</p><span class="more">Learn more &rarr;</span></div></a>'
                                % (x["url"], ic(x["icon"], 20, 1.9), x["name"], x["short"]) for x in others)
+        TOOLS = {"sms": revenue_calc(""), "automation": automation_timeline("bg-warm"), "api": automation_timeline("bg-warm"),
+                 "seo": seo_scorecard("bg-warm"), "web": seo_scorecard("bg-warm", "Is Your Website Helping Your Local SEO?"), "agents": ""}
         extra = {"tools": ai_tools_section("bg-soft"), "compliance": COMPLIANCE, "compliance-seo": SEO_NOTE, None: ""}[L["extra"]]
         body = '''
 <section class="hero bg-warm">
@@ -302,6 +305,7 @@ def build():
           <a class="btn btn-primary" href="{quote}">Get a Free Quote</a>
           <a class="btn btn-secondary" href="tel:{tel}">{call_btn}</a>
         </div>
+        <p class="local-callout">{pin_sm}<span>South Florida practice? <a href="{local_url}">{svc_name} in Fort Lauderdale</a></span></p>
       </div>
       <div class="svc-hero-photo">
         {photo}
@@ -322,6 +326,8 @@ def build():
 </section>
 
 {demo}
+
+{tool}
 
 <section class="section bg-soft">
   <div class="container">
@@ -362,7 +368,7 @@ def build():
 </section>
 
 {cta}
-'''.format(call_btn=CALL_BTN, crumbs=crumbs([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), eyebrow=L["eyebrow"],
+'''.format(call_btn=CALL_BTN, pin_sm=ic("pin", 16, 2), local_url=LOCAL_BY_SVC[key], svc_name=s["name"].replace("&", "&amp;"), tool=TOOLS[key], crumbs=crumbs([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), eyebrow=L["eyebrow"],
            h1=L["h1"], lede=L["lede"], quote=QUOTE, tel=TEL, phone=PHONE,
            photo=picture(s["img"], L["alt"], sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon=s["icon"]),
            card_title=L["card_title"], card="".join("<li>%s</li>" % c for c in L["card"]), problems_h=L["problems_h"],
@@ -380,7 +386,7 @@ def build():
                       "audience": {"@type": "BusinessAudience", "audienceType": "Med spas and aesthetic practices"}}
         page(s["url"], L["title"], L["desc"], body,
              schemas=[service_ld, breadcrumb_ld([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), faq_ld(L["faqs"])],
-             active="/services/", priority="0.9", images=[s["img"]], scripts_after=DEMO_SCRIPT if key in ("agents", "sms") else "")
+             active="/services/", priority="0.9", images=[s["img"]], scripts_after=(DEMO_SCRIPT if key in ("agents", "sms") else "") + (TOOLS_SCRIPT if key != "agents" else ""))
 
 
 def build_hub():

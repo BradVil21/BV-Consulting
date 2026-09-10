@@ -1,4 +1,5 @@
 from common import *
+from tools import revenue_calc, TOOLS_SCRIPT
 from posts_meta import POSTS
 
 HOME_FAQS = [
@@ -93,6 +94,8 @@ def build():
 </section>
 
 {demo}
+
+{calc}
 
 <section class="section" id="services">
   <div class="container">
@@ -189,7 +192,7 @@ def build():
            i_bot=ic("bot", 18), i_cal=ic("calendar", 18), i_sms=ic("sms", 18), carousel=logo_carousel(), software=software_strip("Plus the med spa software you already use").replace('class="soft-strip"', 'class="soft-strip left"'),
            pains=pains, cards="\n      ".join(cards),
            laser_photo=picture("med-spa-laser-hair-removal", "Registered nurse performing laser hair removal at a med spa", fallback_icon="zap"),
-           trust=trust, ai_tools=ai_tools_section("", carousel=False), demo=sms_demo(),
+           trust=trust, ai_tools=ai_tools_section("", carousel=False), demo=sms_demo(), calc=revenue_calc("bg-warm"),
            u_sms=SVC["sms"]["url"], u_api=SVC["api"]["url"], u_auto=SVC["automation"]["url"],
            pos_photo=picture("med-spa-payment-terminal-booking", "Payment terminal at a med spa front desk connected to booking software", fallback_icon="dollar"),
            posts=posts, faqs=faq_html(HOME_FAQS),
@@ -198,4 +201,4 @@ def build():
     page("/", "Med Spa Marketing, AI Agents & Automation | BV Consulting",
          "BV Consulting helps med spas book more clients with AI agents, automated SMS and booking, SEO, high-converting websites, and API integrations. Free quote.",
          body, schemas=[BUSINESS, WEBSITE, faq_ld(HOME_FAQS)], active="/", priority="1.0",
-         images=["med-spa-lip-filler-treatment"], scripts_after=DEMO_SCRIPT)
+         images=["med-spa-lip-filler-treatment"], scripts_after=DEMO_SCRIPT + TOOLS_SCRIPT)

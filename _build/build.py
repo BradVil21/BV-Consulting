@@ -1,11 +1,22 @@
 import os, re, shutil
 from common import *
 from posts_meta import POSTS
-import posts_a, posts_b, page_home, page_services, page_other
+import posts_a, posts_b, page_home, page_services, page_other, page_local
+from tools import revenue_calc, automation_timeline, seo_scorecard, TOOLS_SCRIPT
 
 CONTENT = {}
 CONTENT.update(posts_a.CONTENT)
 CONTENT.update(posts_b.CONTENT)
+
+
+POST_TOOLS = {
+    "med-spa-seo-checklist": seo_scorecard("bg-warm", "Score Your Med Spa SEO Checklist"),
+    "med-spa-website-cost": seo_scorecard("bg-warm", "Is Your Website Helping Your Local SEO?"),
+    "med-spa-missed-calls-no-shows": revenue_calc("bg-warm", "What Are Missed Calls and No-Shows Costing You?"),
+    "med-spa-sms-booking-automation": revenue_calc("bg-warm"),
+    "med-spa-software-integrations": automation_timeline("bg-warm", "See Connected Med Spa Software in Action"),
+    "ai-agents-for-med-spas": automation_timeline("bg-warm", "See What an AI Agent Automates"),
+}
 
 
 def build_post(p):
@@ -50,6 +61,7 @@ def build_post(p):
     </div>
   </div>
 </article>
+{tool}
 <section class="section bg-soft">
   <div class="container">
     <div class="center" style="margin-bottom:26px"><span class="eyebrow">Keep reading</span><h2>Related Articles</h2></div>
@@ -61,6 +73,7 @@ def build_post(p):
            cat=p["cat"].replace("&", "&amp;"), title=p["title"], date=p["date"], date_h=TODAY_HUMAN, mins=p["mins"],
            hero=hero, intro=c["intro"], takeaways="".join("<li>%s</li>" % t for t in c["takeaways"]), toc=toc,
            sections="\n".join(secs), faqs=faqs, related="\n".join(post_card(x) for x in related),
+           tool=POST_TOOLS.get(p["slug"], ""),
            cta=cta_strip("Ready to put this to work at your med spa?", "Get a free growth plan and quote. It takes about 60 seconds."))
     words = len(strip(c["intro"] + " ".join(s[2] for s in c["sections"]) + " ".join(q + a for q, a in c["faqs"])).split())
     post_ld = {"@context": "https://schema.org", "@type": "BlogPosting", "@id": SITE + p["url"] + "#article",
@@ -73,7 +86,8 @@ def build_post(p):
     page(p["url"], p["seo_title"], p["desc"], body,
          schemas=[post_ld, breadcrumb_ld([("Home", "/"), ("Blog", "/blog/"), (p["title"], p["url"])]), faq_ld(c["faqs"])],
          og_type="article", active="/blog/", priority="0.7", images=[p["img"]],
-         extra_head='<meta property="article:published_time" content="%sT09:00:00-04:00" />' % p["date"])
+         extra_head='<meta property="article:published_time" content="%sT09:00:00-04:00" />' % p["date"],
+         scripts_after=TOOLS_SCRIPT if p["slug"] in POST_TOOLS else "")
     return words
 
 
@@ -102,6 +116,7 @@ if __name__ == "__main__":
     page_services.build()
     page_services.build_hub()
     page_other.local_page()
+    page_local.build()
     page_other.about()
     page_other.contact()
     page_other.quote()
@@ -114,5 +129,5 @@ if __name__ == "__main__":
     page_other.not_found()
     extras()
     open(os.path.join(OUT, "_config.yml"), "w").write("# GitHub Pages (Jekyll) settings: keep docs and build source off the public site\nexclude:\n  - README.md\n  - GOOGLE-SHEET-SETUP.md\n  - SEO-LAUNCH-CHECKLIST.md\n  - _build\n")
-    open(os.path.join(OUT, "styles.css"), "w").write(open(os.path.join(HERE, "base.css")).read() + open(os.path.join(HERE, "add.css")).read() + open(os.path.join(HERE, "add2.css")).read() + open(os.path.join(HERE, "add3.css")).read())
+    open(os.path.join(OUT, "styles.css"), "w").write(open(os.path.join(HERE, "base.css")).read() + open(os.path.join(HERE, "add.css")).read() + open(os.path.join(HERE, "add2.css")).read() + open(os.path.join(HERE, "add3.css")).read() + open(os.path.join(HERE, "add4.css")).read())
     print(len(PAGES), "indexable pages")
