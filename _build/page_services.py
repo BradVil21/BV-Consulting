@@ -300,7 +300,7 @@ def build():
         <p class="hero-sub">{lede}</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="{quote}">Get a Free Quote</a>
-          <a class="btn btn-secondary" href="tel:{tel}">Call {phone}</a>
+          <a class="btn btn-secondary" href="tel:{tel}">{call_btn}</a>
         </div>
       </div>
       <div class="svc-hero-photo">
@@ -362,7 +362,7 @@ def build():
 </section>
 
 {cta}
-'''.format(crumbs=crumbs([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), eyebrow=L["eyebrow"],
+'''.format(call_btn=CALL_BTN, crumbs=crumbs([("Home", "/"), ("Services", "/services/"), (s["name"], s["url"])]), eyebrow=L["eyebrow"],
            h1=L["h1"], lede=L["lede"], quote=QUOTE, tel=TEL, phone=PHONE,
            photo=picture(s["img"], L["alt"], sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon=s["icon"]),
            card_title=L["card_title"], card="".join("<li>%s</li>" % c for c in L["card"]), problems_h=L["problems_h"],
@@ -405,7 +405,7 @@ def build_hub():
     <span class="eyebrow">Services for med spas</span>
     <h1>Med Spa Marketing &amp; Automation Services</h1>
     <p class="lede">AI agent creation, automated SMS and booking, AI automation, SEO, website development, and API integrations, built specifically for med spas and aesthetic practices nationwide.</p>
-    <div class="hero-ctas" style="margin-top:18px"><a class="btn btn-primary" href="{quote}">Get a Free Quote</a><a class="btn btn-secondary" href="tel:{tel}">Call {phone}</a></div>
+    <div class="hero-ctas" style="margin-top:18px"><a class="btn btn-primary" href="{quote}">Get a Free Quote</a><a class="btn btn-secondary" href="tel:{tel}">{call_btn}</a></div>
   </div>
 </section>
 {blocks}
@@ -417,7 +417,7 @@ def build_hub():
   </div>
 </section>
 {cta}
-'''.format(crumbs=crumbs([("Home", "/"), ("Services", "/services/")]), quote=QUOTE, tel=TEL, phone=PHONE,
+'''.format(call_btn=CALL_BTN, crumbs=crumbs([("Home", "/"), ("Services", "/services/")]), quote=QUOTE, tel=TEL, phone=PHONE,
            blocks="\n".join(blocks), tools=ai_tools_section(""), faqs=faq_html(faqs),
            cta=cta_strip("Not sure where to start?", "Tell us about your practice and we'll recommend the right first step."))
     page("/services/", "Med Spa Marketing & Automation Services | BV Consulting",

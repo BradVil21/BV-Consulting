@@ -125,7 +125,7 @@ def contact():
 '''.format(crumbs=crumbs([("Home", "/"), ("Contact", "/contact/")]), quote=QUOTE, i_arrow=ic("arrow", 22), i_phone=ic("phone", 22),
            i_mail=ic("mail", 22), i_pin=ic("pin", 22), tel=TEL, phone=PHONE, email=EMAIL, opts=opts)
     page("/contact/", "Contact BV Consulting | Med Spa Marketing & AI | 954-825-1009",
-         "Contact BV Consulting about AI agents, SEO, websites, SMS booking automation, and integrations for your med spa. Call 954-825-1009 or email us.",
+         "Contact BV Consulting about AI agents, SEO, websites, SMS booking automation, and integrations for your med spa by phone, text, or email.",
          body, schemas=[BUSINESS, {"@context": "https://schema.org", "@type": "ContactPage", "url": SITE + "/contact/", "name": "Contact BV Consulting", "about": {"@id": BUSINESS_ID}},
                         breadcrumb_ld([("Home", "/"), ("Contact", "/contact/")])],
          active="/contact/", extra_head=style, priority="0.6")
@@ -162,41 +162,116 @@ def blog_index():
 
 
 # ---------------------------------------------------------------- Quote funnel
+# Add real client reviews here to show them in the card slider, e.g.
+# ("Client quote text...", "Name", "Practice / City"). Leave empty to show service highlights instead.
+REVIEWS = []
+
+HIGHLIGHTS = [
+    ("bot", "AI", "Never miss a lead again", "Your AI agent answers texts and missed calls in seconds, day or night, and books the consultation for your team.", "AI Agents &amp; SMS"),
+    ("calendar", "BK", "Fewer no-shows, fuller books", "Automated confirmations, reminders, and rebooking nudges that sync with the booking software you already use.", "Booking Automation"),
+    ("search", "SEO", "Get found on Google", "Local SEO and treatment pages built around what clients actually search for, like lip filler or laser hair removal near me.", "Med Spa SEO"),
+    ("nodes", "API", "Your tools, finally connected", "Your booking software, CRM, forms, and payments talking to each other, so there's less double entry for the front desk.", "API Integrations"),
+    ("shield", "BV", "Compliance-minded from day one", "Opt-in consent, STOP handling, and no medical advice from AI. Clinical questions are routed to your licensed team.", "Built for Med Spas"),
+]
+
 QUOTE_STYLE = '''<style>
-.wizard{max-width:none}
-.wiz-card{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 50px rgba(10,13,18,.12);padding:24px 20px 26px;overflow:hidden}
-.wiz-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;color:var(--black);margin:0 0 12px}
-.progress-head{margin-bottom:18px}
-.progress-meta{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);font-weight:600;margin-bottom:8px}
+body.funnel{background:#f3f8fc}
+.funnel-nav{max-width:700px}
+.secure-badge{display:inline-flex;align-items:center;gap:6px;background:#e8f7ef;color:#0a7a45;border:1px solid #c9ecd8;border-radius:999px;padding:6px 12px;font-size:.8rem;font-weight:700;white-space:nowrap}
+.q-wrap{padding:22px 0 44px}
+.q-wrap .container{max-width:700px}
+.qcard{background:#fff;border-radius:26px;box-shadow:0 24px 60px rgba(15,94,147,.10),0 2px 6px rgba(10,13,18,.04);border:1px solid #e8eef5;padding:28px 18px 24px}
+.q-intro{text-align:center}
+.q-pill{display:inline-flex;align-items:center;gap:7px;background:var(--blue-soft);color:var(--blue-deep);border-radius:999px;padding:8px 14px;font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.q-pill svg{fill:currentColor}
+.q-intro h1{font-size:clamp(1.75rem,6.4vw,2.55rem);line-height:1.14;margin:16px auto 12px;max-width:560px;letter-spacing:-.01em}
+.grad{background:linear-gradient(90deg,var(--blue-deep),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.q-lede{color:var(--ink-2);font-size:1rem;line-height:1.7;max-width:460px;margin:0 auto 22px}
+.q-progress{display:none;margin-bottom:18px}
+.qcard.started .q-progress{display:block}
+.qcard.started .q-intro{display:none}
+.progress-meta{display:flex;justify-content:space-between;font-size:.8rem;color:var(--muted);font-weight:700;margin-bottom:8px}
 .progress-track{height:8px;border-radius:999px;background:var(--blue-soft);overflow:hidden}
 .progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--blue),var(--blue-deep));border-radius:999px;transition:width .4s var(--ease)}
 .step-panel{display:none;animation:fadeIn .35s var(--ease)}
 .step-panel.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .step-q{font-family:'Poppins',sans-serif;font-weight:700;color:var(--black);font-size:1.25rem;margin:0 0 4px;line-height:1.25}
 .step-help{color:var(--muted);font-size:.9rem;margin-bottom:16px}
-.opt-grid{display:grid;grid-template-columns:1fr;gap:9px}
-@media(min-width:560px){.opt-grid{grid-template-columns:1fr 1fr}}
-.opt{display:flex;align-items:center;gap:11px;text-align:left;background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;font-size:.95rem;font-weight:600;color:var(--ink);transition:border-color .15s,background .15s;font-family:inherit;width:100%;min-height:var(--tap)}
+.step-panel[data-step="1"] .step-q{font-size:1rem;text-align:center;color:var(--ink-2);margin-bottom:12px}
+.opt-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+@media(min-width:560px){.opt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.opt{display:flex;align-items:center;gap:11px;text-align:left;background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;font-size:.95rem;font-weight:600;color:var(--ink);transition:border-color .15s,background .15s,transform .15s,box-shadow .15s;font-family:inherit;width:100%;min-height:var(--tap)}
 .opt:hover{border-color:var(--blue);background:var(--blue-50)}
 .opt.selected{border-color:var(--blue);background:var(--blue-soft)}
 .opt .opt-ic{flex-shrink:0;width:34px;height:34px;border-radius:9px;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;color:var(--blue-dark)}
 .opt.selected .opt-ic{background:var(--blue);color:#fff}
-.wiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px}
-.btn-back{background:transparent;border:0;color:var(--muted);font-weight:600;font-family:inherit;font-size:.95rem;cursor:pointer;padding:8px 4px}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.opt.opt-card{flex-direction:column;justify-content:flex-start;text-align:center;gap:6px;padding:20px 10px 18px;border:2px solid #dfe8f1;border-radius:18px;background:#fbfdff}
+.opt.opt-card .opt-ic{width:54px;height:54px;border-radius:14px;margin-bottom:8px}
+.opt.opt-card b{font-family:'Poppins',sans-serif;font-size:1rem;color:var(--black);line-height:1.25}
+.opt.opt-card small{font-size:.8rem;color:var(--muted);font-weight:500;line-height:1.35}
+.opt.opt-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,94,147,.10)}
+@media(max-width:359px){.choice-grid{grid-template-columns:minmax(0,1fr)}}
+.opt.multi .opt-check{margin-left:auto}
+.wiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:12px}
+.qcard:not(.started) .wiz-nav{display:none}
+.btn-back{background:transparent;border:0;color:var(--muted);font-weight:700;font-family:inherit;font-size:.95rem;cursor:pointer;padding:8px 4px;min-height:var(--tap)}
 .btn-back:hover{color:var(--ink)}
-.btn-back.is-hidden{visibility:hidden}
 .summary-box{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:16px;font-size:.86rem}
 .summary-box .srow{display:flex;justify-content:space-between;gap:12px;padding:3px 0;color:var(--ink-2)}
 .summary-box .srow b{color:var(--black);font-weight:600;flex-shrink:0}
 .summary-box .srow span:last-child{text-align:right;color:var(--blue-dark);font-weight:600}
-.funnel-grid{grid-template-areas:"copy" "form" "photo"}
-.funnel-copy{grid-area:copy}.funnel-form{grid-area:form}.funnel-photo{grid-area:photo;margin-top:0}
-@media(min-width:960px){.funnel-grid{grid-template-areas:"copy form" "photo form";grid-template-rows:auto 1fr}}
+.q-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;list-style:none;margin:22px 0 0;padding:18px 0 0;border-top:1px solid var(--line)}
+.q-trust li{display:flex;align-items:center;gap:6px;font-size:.84rem;font-weight:600;color:var(--ink-2)}
+.q-trust svg{color:#12a26a;flex-shrink:0}
+.qslider{margin-top:18px}
+.qslides{display:grid;background:#f8fbfe;border:1px solid #e3ebf3;border-radius:18px;overflow:hidden;touch-action:pan-y}
+.qslide{grid-area:1/1;margin:0;padding:18px 18px 16px;opacity:0;visibility:hidden;transition:opacity .45s var(--ease),visibility .45s}
+.qslide.is-active{opacity:1;visibility:visible}
+.qs-top{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.qs-top .qs-ic{width:30px;height:30px;border-radius:9px;background:var(--blue-soft);color:var(--blue-dark);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qs-top b{font-family:'Poppins',sans-serif;color:var(--black);font-size:1rem;line-height:1.3}
+.qs-stars{display:flex;gap:2px;color:#f5b301}
+.qs-stars svg{fill:currentColor}
+.qslide p{font-style:italic;color:var(--ink-2);font-size:.95rem;line-height:1.65;margin:0 0 14px}
+.qslide figcaption{display:flex;align-items:center;gap:11px}
+.qs-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;font-weight:800;font-size:.78rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qslide figcaption strong{display:block;color:var(--black);font-size:.92rem;line-height:1.2}
+.qslide figcaption small{display:block;color:var(--muted);font-size:.78rem;margin-top:2px}
+.qs-dots{display:flex;justify-content:center;gap:4px;margin-top:8px}
+.qs-dots button{width:24px;height:24px;border:0;background:transparent;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.qs-dots button:before{content:"";width:8px;height:8px;border-radius:50%;background:#d3dee9;transition:background .2s,transform .2s}
+.qs-dots button[aria-current="true"]:before{background:var(--blue);transform:scale(1.25)}
+.q-contact{text-align:center;margin-top:12px;font-size:.92rem;color:var(--ink-2);line-height:1.8}
+.q-contact a[href^="tel"]{white-space:nowrap}
+.q-contact a{font-weight:700;color:var(--blue-deep);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
+.q-consent{font-size:.76rem;color:var(--muted);margin-top:10px;text-align:center;line-height:1.5}
+.q-tools{background:#fff;border-top:1px solid #e3ebf3;border-bottom:1px solid #e3ebf3;padding:34px 0 26px;text-align:center}
+.q-tools h2{font-size:1.15rem;margin:0 0 18px}
+.q-tools .logo-label{display:none}
+.q-tools .logo-set{gap:14px;padding-right:14px}
+.q-tools .logo-set li{background:#fff;border:1px solid var(--line);border-radius:12px;height:62px;padding:0 22px;box-shadow:0 1px 2px rgba(10,13,18,.03)}
+.q-tools .logo-set img{height:28px}
+.q-tools .logo-set img.logo-sq{height:32px}
+.q-tools-note{font-size:.76rem;color:var(--muted);max-width:560px;margin:14px auto 0;line-height:1.5}
+.q-faq{padding:36px 0 10px}
+.q-faq .container{max-width:700px}
+.q-faq h2{font-size:1.3rem;text-align:center;margin-bottom:14px}
+.funnel-foot{background:#f3f8fc;border-top:0;text-align:center;padding:18px 0 30px}
+.funnel-foot .container{max-width:700px}
+.ff-links{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;margin-bottom:10px}
+.ff-links a{color:var(--ink-2);font-weight:600;font-size:.86rem}
+.funnel-foot p{font-size:.8rem;color:var(--muted);line-height:1.6;margin:0 0 6px}
 .load-overlay{position:fixed;inset:0;background:rgba(255,255,255,.96);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:300;padding:24px;text-align:center}
 .load-overlay.show{display:flex}
 .spinner{width:46px;height:46px;border:4px solid var(--blue-soft);border-top-color:var(--blue);border-radius:50%;animation:spin 1s linear infinite;margin-bottom:18px}
 @keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:640px){.qcard{padding:34px 34px 28px}.q-wrap{padding:30px 0 56px}.qslide{padding:20px 22px 18px}}
+.funnel-nav .brand{white-space:nowrap}
+@media(max-width:480px){.secure-badge{font-size:.72rem;padding:5px 10px;gap:5px}.secure-badge svg{width:13px;height:13px}.funnel-nav .brand{font-size:.98rem;gap:8px}.funnel-nav .brand-badge{width:34px;height:34px}}
+@media(max-width:359px){.secure-badge span{display:none}.secure-badge{padding:7px}.qcard{padding:22px 14px 20px}.q-pill{font-size:.64rem;letter-spacing:.06em;padding:7px 11px}}
+@media (prefers-reduced-motion:reduce){.qslide{transition:none}}
 </style>'''
 
 
@@ -209,15 +284,13 @@ def quote():
                 " multi" if multi else "", v, ' aria-pressed="false"' if multi else "", ic(i, 18, 1.7), v, chk))
         return "\n".join(out)
 
+    cards = "".join('<button type="button" class="opt opt-card" data-value="%s"><span class="opt-ic">%s</span><b>%s</b><small>%s</small></button>' % (v, ic(i, 26, 1.7), v, sub)
+                    for i, v, sub in [("pin", "Single Med Spa", "One location, or opening soon"),
+                                      ("building", "Multi-Location Group", "Several locations or a franchise")])
     steps = [
         ("services", "What do you want help with?", "Choose all that apply.", True,
          [("bot", "AI agent / AI receptionist"), ("calendar", "Automated SMS &amp; booking"), ("sparkle", "AI automation workflows"),
           ("search", "Med spa SEO"), ("web", "Website development"), ("nodes", "API &amp; software integrations"), ("layers", "The complete growth system")]),
-        ("practice", "What type of practice do you run?", "So we can tailor ideas to your services.", False,
-         [("sparkle", "Med spa"), ("syringe", "Injector or aesthetics studio"), ("heart", "Dermatology or plastic surgery"),
-          ("zap", "Laser &amp; skin clinic"), ("refresh", "Wellness, IV, or weight loss clinic"), ("dots", "Something else")]),
-        ("locations", "How many locations do you have?", "Including any opening soon.", False,
-         [("pin", "1 location"), ("layers", "2 to 3 locations"), ("flag", "4 to 10 locations"), ("chart", "More than 10")]),
         ("software", "Which booking or EMR software do you use?", "We'll check integration options before your consultation.", False,
          [("calendar", "Boulevard"), ("calendar", "Zenoti"), ("calendar", "Mangomint"), ("calendar", "Vagaro"), ("calendar", "Mindbody"),
           ("calendar", "AestheticsPro"), ("calendar", "Aesthetic Record"), ("calendar", "PatientNow"), ("dots", "Other software"), ("question", "Not sure / none")]),
@@ -225,139 +298,145 @@ def quote():
          [("phone", "Missed calls &amp; slow follow-up"), ("calendar", "No-shows &amp; cancellations"), ("search", "Not showing up on Google"),
           ("web", "Website doesn't convert"), ("edit", "Too much front desk admin"), ("repeat", "Low rebooking &amp; retention")]),
     ]
-    panels = []
+    panels = ['''<div class="step-panel active" data-step="1" data-key="size">
+              <h2 class="step-q">Which best describes your practice?</h2>
+              <div class="choice-grid" data-choices>%s</div>
+            </div>''' % cards]
     for n, (key, q, help_, multi, items) in enumerate(steps):
         cont = '<button type="button" class="btn btn-primary wiz-continue" data-continue disabled>Continue</button>' if multi else ""
-        panels.append('''<div class="step-panel%s" data-step="%d" data-key="%s"%s>
+        panels.append('''<div class="step-panel" data-step="%d" data-key="%s"%s>
               <h2 class="step-q">%s</h2><p class="step-help">%s</p>
               <div class="opt-grid" data-choices>%s</div>%s
-            </div>''' % (" active" if n == 0 else "", n + 1, key, ' data-multi="1"' if multi else "", q, help_, opts(items, multi), cont))
+            </div>''' % (n + 2, key, ' data-multi="1"' if multi else "", q, help_, opts(items, multi), cont))
+    total = len(panels) + 1
     states = "".join('<option%s>%s</option>' % (' value=""' if s == "" else "", s) for s in [""] + US_STATES)
+
+    star = ic("star", 17, 1.2)
+    if REVIEWS:
+        slides = ['''<figure class="qslide" aria-roledescription="slide" aria-label="%d of %d">
+          <div class="qs-top qs-stars" aria-label="5 out of 5 stars">%s</div>
+          <p>%s</p>
+          <figcaption><span class="qs-av" aria-hidden="true">%s</span><span><strong>%s</strong><small>%s</small></span></figcaption>
+        </figure>''' % (n + 1, len(REVIEWS), star * 5, txt, "".join(w[0] for w in name.split()[:2]).upper(), name, where)
+                  for n, (txt, name, where) in enumerate(REVIEWS)]
+        slider_label = "Client reviews"
+    else:
+        slides = ['''<figure class="qslide" aria-roledescription="slide" aria-label="%d of %d">
+          <div class="qs-top"><span class="qs-ic">%s</span><b>%s</b></div>
+          <p>%s</p>
+          <figcaption><span class="qs-av" aria-hidden="true">%s</span><span><strong>%s</strong><small>Included in your growth plan</small></span></figcaption>
+        </figure>''' % (n + 1, len(HIGHLIGHTS), ic(i, 17, 2), t, d, av, tag)
+                  for n, (i, av, t, d, tag) in enumerate(HIGHLIGHTS)]
+        slider_label = "What BV Consulting builds for med spas"
+    slides[0] = slides[0].replace('class="qslide"', 'class="qslide is-active"', 1)
 
     faqs = [
         ("Is the quote really free?", "Yes. The consultation, growth plan, and quote are free with no obligation."),
-        ("How fast will I hear back?", "We typically respond within 24 hours on business days, by phone or email, whichever you prefer."),
+        ("How fast will I hear back?", "We typically respond within 24 hours on business days, by phone, text, or email, whichever you prefer."),
         ("Do you work with med spas outside Florida?", "Yes. BV Consulting is based in Fort Lauderdale and works with med spas nationwide."),
         ("Should I include patient information?", "No. Please don't share any patient or health information in this form. We only need details about your practice."),
     ]
     body = '''
-<section class="funnel-hero">
+<section class="q-wrap">
   <div class="container">
-    <div class="funnel-grid">
-      <div class="funnel-copy">
-        <span class="eyebrow">Free quote for med spas</span>
-        <h1>Get Your Free Med Spa Growth Plan &amp; Quote</h1>
-        <p class="lede">Answer 6 quick questions (about 60 seconds). We'll review your practice and send a clear plan and quote for AI agents, automated SMS and booking, SEO, your website, and integrations.</p>
-        <ul class="check-list" style="margin-top:14px">
-          <li>A review of your website, Google presence, and booking flow</li>
-          <li>Specific AI agent and automation opportunities for your practice</li>
-          <li>A clear, written quote with no obligation</li>
-        </ul>
-        <ul class="mini-trust">
-          <li>{i_check} Free &amp; no obligation</li><li>{i_check} Reply within 24 hours</li><li>{i_check} Serving med spas nationwide</li>
-        </ul>
+    <div class="qcard" id="quote-form-wrap">
+      <div class="q-intro">
+        <span class="q-pill">{star_sm}Free quote, no obligation</span>
+        <h1>Get a Free <span class="grad">Med Spa Growth Plan</span> in About a Minute</h1>
+        <p class="q-lede">Answer a few quick questions and we'll send a clear plan and quote for AI agents, automated texting and booking, SEO, and your website.</p>
       </div>
-      <div class="funnel-form" id="quote-form-wrap">
-        <div class="wiz-card">
-          <div class="progress-head">
-            <div class="progress-meta"><span id="step-label">Step 1 of 6</span><span id="step-pct">17%</span></div>
-            <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="q-progress">
+        <div class="progress-meta"><span id="step-label">Step 2 of {total}</span><span id="step-pct"></span></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+      <form id="quote-form" novalidate>
+        <input type="text" name="_honey" id="q-honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        {panels}
+        <div class="step-panel" data-step="{total}" data-key="contact">
+          <h2 class="step-q">Where should we send your growth plan?</h2>
+          <p class="step-help">Last step. We'll reach out within 24 hours.</p>
+          <div class="summary-box" id="summary-box"></div>
+          <div class="field-row">
+            <div class="field"><label for="q-name">Full name</label><input id="q-name" type="text" required autocomplete="name" placeholder="Your name" /></div>
+            <div class="field"><label for="q-business">Practice name</label><input id="q-business" type="text" required autocomplete="organization" placeholder="Your med spa" /></div>
           </div>
-          <form id="quote-form" novalidate>
-            <input type="text" name="_honey" id="q-honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            {panels}
-            <div class="step-panel" data-step="6" data-key="contact">
-              <h2 class="step-q">Where should we send your growth plan?</h2>
-              <p class="step-help">Last step. We'll reach out within 24 hours.</p>
-              <div class="summary-box" id="summary-box"></div>
-              <div class="field-row">
-                <div class="field"><label for="q-name">Full name</label><input id="q-name" type="text" required autocomplete="name" placeholder="Your name" /></div>
-                <div class="field"><label for="q-business">Practice name</label><input id="q-business" type="text" required autocomplete="organization" placeholder="Your med spa" /></div>
-              </div>
-              <div class="field-row">
-                <div class="field"><label for="q-email">Email</label><input id="q-email" type="email" required autocomplete="email" placeholder="you@yourmedspa.com" /></div>
-                <div class="field"><label for="q-phone">Phone</label><input id="q-phone" type="tel" required autocomplete="tel" placeholder="(000) 000-0000" /></div>
-              </div>
-              <div class="field-row">
-                <div class="field"><label for="q-state">State</label><select id="q-state" required>{states}</select></div>
-                <div class="field"><label for="q-city">City</label><input id="q-city" type="text" autocomplete="address-level2" placeholder="City" /></div>
-              </div>
-              <div class="field"><label for="q-site">Website <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="q-site" type="text" placeholder="yourmedspa.com" /></div>
-              <div class="field"><label for="q-details">Anything else? <span style="font-weight:400;color:var(--muted)">(optional, no patient info please)</span></label><textarea id="q-details" placeholder="Goals, tools you use, timeline..."></textarea></div>
-              <button type="submit" class="btn btn-primary" style="width:100%">Get My Free Growth Plan</button>
-              <p style="font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center">By submitting, you agree to be contacted by BV Consulting about your request. See our <a href="/privacy/">Privacy Policy</a>.</p>
-              <div class="form-error" id="quote-error" role="alert"></div>
-            </div>
-            <div class="wiz-nav">
-              <button type="button" class="btn-back is-hidden" id="btn-back">&larr; Back</button>
-              <span style="font-size:.8rem;color:var(--muted)">Free &bull; No obligation</span>
-            </div>
-          </form>
+          <div class="field-row">
+            <div class="field"><label for="q-email">Email</label><input id="q-email" type="email" required autocomplete="email" placeholder="you@yourmedspa.com" /></div>
+            <div class="field"><label for="q-phone">Phone</label><input id="q-phone" type="tel" required autocomplete="tel" placeholder="(000) 000-0000" /></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="q-state">State</label><select id="q-state" required>{states}</select></div>
+            <div class="field"><label for="q-city">City</label><input id="q-city" type="text" autocomplete="address-level2" placeholder="City" /></div>
+          </div>
+          <div class="field"><label for="q-site">Website <span style="font-weight:400;color:var(--muted)">(optional)</span></label><input id="q-site" type="text" placeholder="yourmedspa.com" /></div>
+          <div class="field"><label for="q-details">Anything else? <span style="font-weight:400;color:var(--muted)">(optional, no patient info please)</span></label><textarea id="q-details" placeholder="Goals, tools you use, timeline..."></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Get My Free Growth Plan</button>
+          <p class="q-consent">By submitting, you agree to our <a href="/privacy/">Privacy Policy</a> and consent to be contacted by BV Consulting by phone, text, or email about your request. Consent isn't a condition of purchase. Msg &amp; data rates may apply. Reply STOP to opt out.</p>
+          <div class="form-error" id="quote-error" role="alert"></div>
         </div>
+        <div class="wiz-nav">
+          <button type="button" class="btn-back" id="btn-back">&larr; Back</button>
+          <span style="font-size:.8rem;color:var(--muted)">Free &bull; No obligation</span>
+        </div>
+      </form>
+
+      <ul class="q-trust">
+        <li>{i_check}Serving Med Spas Nationwide</li><li>{i_check}100% Free Quote</li><li>{i_check}No Spam, Ever</li><li>{i_check}Reply Within 24 Hours</li>
+      </ul>
+
+      <div class="qslider" aria-roledescription="carousel" aria-label="{slider_label}">
+        <div class="qslides" aria-live="off">
+        {slides}
+        </div>
+        <div class="qs-dots" role="group" aria-label="Choose slide">{dots}</div>
       </div>
-      <div class="funnel-photo">{photo}</div>
-    </div>
-    <div style="margin-top:36px">{carousel}</div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container">
-    <div class="center" style="margin-bottom:28px"><span class="eyebrow">What happens next</span><h2>From Form to Growth Plan in Three Steps</h2></div>
-    <div class="next-steps">
-      <div class="next-step"><b>We review your practice</b><span>We look at your website, Google profile, reviews, and booking flow before we talk.</span></div>
-      <div class="next-step"><b>Free strategy call</b><span>A focused call about your goals, software, and where bookings are slipping away.</span></div>
-      <div class="next-step"><b>Your plan &amp; quote</b><span>A written growth plan with recommended services, tools, timeline, and pricing.</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-soft">
-  <div class="container">
-    <div class="split-photo flip">
-      <div>
-        <span class="eyebrow">What we can build for you</span>
-        <h2>One Partner for Your Entire Growth System</h2>
-        <ul class="check-list">{svc_list}</ul>
-        <p style="margin-top:10px">We build with leading AI tools, including Claude by Anthropic, and integrate with the booking software you already use.</p>
-        <p style="margin-top:16px"><a class="btn btn-primary" href="#quote-form-wrap">Start My Free Quote</a></p>
+      <div class="q-contact">
+        <div>Rather talk to a person? Call or text <a href="tel:{tel}">(954) 825-1009</a></div>
+        <div>Questions? Email <a href="mailto:{email}">{email}</a></div>
       </div>
-      {photo2}
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="q-tools" aria-labelledby="q-tools-h">
   <div class="container">
-    <div class="center" style="margin-bottom:26px"><span class="eyebrow">FAQ</span><h2>Quick Questions</h2></div>
-    <div style="max-width:780px;margin:0 auto">{faqs}</div>
-    <div class="center" style="margin-top:26px"><a class="btn btn-primary" href="#quote-form-wrap">Get My Free Quote</a></div>
+    <h2 id="q-tools-h">Built with <span class="grad">trusted AI &amp; booking tools</span></h2>
+    {carousel}
+    <p class="q-tools-note">We build with leading AI tools, including Claude by Anthropic, and connect them to the software your med spa already uses. BV Consulting is an independent consultancy and is not endorsed by these companies.</p>
+  </div>
+</section>
+
+<section class="q-faq">
+  <div class="container">
+    <h2>Quick Questions</h2>
+    {faqs}
   </div>
 </section>
 
 <div class="load-overlay" id="load-overlay" role="status" aria-live="polite"><div class="spinner"></div><h3>Sending your request&hellip;</h3><p style="color:var(--muted)">This only takes a moment.</p></div>
-'''.format(i_check=ic("check", 16, 3), panels="\n            ".join(panels), states=states,
-           photo=picture("med-spa-consultation-mirror", "Med spa client reviewing her results in a mirror", sizes="(min-width: 960px) 45vw, 100vw", fallback_icon="sparkle"),
-           svc_list="".join('<li><a href="%s"><strong>%s</strong></a>: %s</li>' % (s["url"], s["name"], s["short"]) for s in SERVICES),
-           photo2=picture("growth-strategy-session", "Growth strategy session with a presenter and a team on laptops", fallback_icon="users"),
-           faqs=faq_html(faqs), carousel=logo_carousel("Built with trusted tools"))
+'''.format(star_sm=ic("star", 12, 1), i_check=ic("check", 15, 3), panels="\n        ".join(panels), states=states, total=total,
+           slides="\n        ".join(slides), slider_label=slider_label, tel=TEL, email=EMAIL,
+           dots="".join('<button type="button" aria-label="Slide %d"%s></button>' % (n + 1, ' aria-current="true"' if n == 0 else "") for n in range(len(slides))),
+           faqs=faq_html(faqs), carousel=logo_carousel(""))
 
     script = r'''<script>
 document.addEventListener("DOMContentLoaded",function(){
-  var TOTAL=6, current=1, answers={services:[]};
+  var TOTAL=__TOTAL__, current=1, answers={services:[]};
+  var card=document.getElementById("quote-form-wrap");
   var panels=document.querySelectorAll(".step-panel");
   var fill=document.getElementById("progress-fill"), label=document.getElementById("step-label"), pct=document.getElementById("step-pct");
-  var back=document.getElementById("btn-back"), wrap=document.getElementById("quote-form-wrap");
-  var LABELS={services:"Services",practice:"Practice",locations:"Locations",software:"Software",challenge:"Challenge"};
+  var back=document.getElementById("btn-back");
+  var LABELS={size:"Practice",services:"Services",software:"Software",challenge:"Challenge"};
   var started=false;
   function show(step,scroll){
     current=step;
     panels.forEach(function(p){p.classList.toggle("active", +p.dataset.step===step);});
+    card.classList.toggle("started", step>1);
     var percent=Math.round(step/TOTAL*100);
     fill.style.width=percent+"%"; label.textContent="Step "+step+" of "+TOTAL; pct.textContent=percent+"%";
-    back.classList.toggle("is-hidden", step===1);
     if(step===TOTAL) buildSummary();
-    if(scroll && wrap.getBoundingClientRect().top<0){ window.scrollTo({top:wrap.getBoundingClientRect().top+window.scrollY-16,behavior:"smooth"}); }
+    if(scroll){ var top=card.getBoundingClientRect().top; if(top<0||top>window.innerHeight*.4){ window.scrollTo({top:top+window.scrollY-12,behavior:"smooth"}); } }
   }
   document.querySelectorAll("[data-choices]").forEach(function(grid){
     var panel=grid.closest(".step-panel"), key=panel.dataset.key, multi=panel.dataset.multi==="1";
@@ -372,15 +451,15 @@ document.addEventListener("DOMContentLoaded",function(){
         } else {
           grid.querySelectorAll(".opt").forEach(function(b){b.classList.remove("selected");});
           btn.classList.add("selected"); answers[key]=btn.dataset.value;
-          setTimeout(function(){ if(current<TOTAL) show(current+1,true); },200);
+          setTimeout(function(){ if(current<TOTAL) show(current+1,true); },220);
         }
       });
     });
     if(cont){ cont.addEventListener("click",function(){ show(current+1,true); }); }
   });
   back.addEventListener("click",function(){ if(current>1) show(current-1,true); });
-  function escHtml(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
-  function val(k){return Array.isArray(answers[k])?answers[k].join(", "):(answers[k]||"");}
+  function escHtml(s){var d=document.createElement("div");d.innerHTML=s;return String(d.textContent).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function val(k){var v=Array.isArray(answers[k])?answers[k].join(", "):(answers[k]||""); var d=document.createElement("div"); d.innerHTML=v; return d.textContent;}
   function buildSummary(){
     document.getElementById("summary-box").innerHTML=Object.keys(LABELS).filter(function(k){return val(k);}).map(function(k){
       return '<div class="srow"><b>'+LABELS[k]+'</b><span>'+escHtml(val(k))+'</span></div>';}).join("");
@@ -392,7 +471,7 @@ document.addEventListener("DOMContentLoaded",function(){
     var ids=["q-name","q-business","q-email","q-phone","q-state"];
     for(var i=0;i<ids.length;i++){ var el=document.getElementById(ids[i]); if(!el.checkValidity()||!el.value.trim()){ el.reportValidity(); el.focus(); return; } }
     var g=function(id){return document.getElementById(id).value.trim();};
-    var data={form:"Med spa quote funnel (/quote)",services:val("services"),practice_type:val("practice"),locations:val("locations"),
+    var data={form:"Med spa quote funnel (/quote)",practice_size:val("size"),services:val("services"),
       software:val("software"),biggest_challenge:val("challenge"),name:g("q-name"),practice:g("q-business"),email:g("q-email"),
       phone:g("q-phone"),state:g("q-state"),city:g("q-city"),website:g("q-site"),details:g("q-details")};
     var err=document.getElementById("quote-error"), ov=document.getElementById("load-overlay");
@@ -402,17 +481,35 @@ document.addEventListener("DOMContentLoaded",function(){
       window.location.href="/thank-you/";
     }).catch(function(){
       ov.classList.remove("show");
-      err.innerHTML='We couldn’t send your request just now. Please <a href="'+window.BV.mailtoFallback(data,"Med spa quote request")+'">email your details to us</a> or call <a href="tel:+19548251009">954-825-1009</a>.';
+      err.innerHTML='We couldn’t send your request just now. Please <a href="'+window.BV.mailtoFallback(data,"Med spa quote request")+'">email your details to us</a> or call or text <a href="tel:+19548251009">(954) 825-1009</a>.';
       err.classList.add("show");
     });
   });
   show(1,false);
+
+  /* slider */
+  var slider=document.querySelector(".qslider");
+  if(slider){
+    var slides=slider.querySelectorAll(".qslide"), dots=slider.querySelectorAll(".qs-dots button"), idx=0, timer=null, paused=false;
+    var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function go(n){ idx=(n+slides.length)%slides.length;
+      slides.forEach(function(s,i){s.classList.toggle("is-active",i===idx);});
+      dots.forEach(function(d,i){ if(i===idx) d.setAttribute("aria-current","true"); else d.removeAttribute("aria-current"); }); }
+    function play(){ if(reduce) return; clearInterval(timer); timer=setInterval(function(){ if(!paused&&!document.hidden) go(idx+1); },6000); }
+    dots.forEach(function(d,i){ d.addEventListener("click",function(){ go(i); play(); }); });
+    slider.addEventListener("mouseenter",function(){paused=true;}); slider.addEventListener("mouseleave",function(){paused=false;});
+    slider.addEventListener("focusin",function(){paused=true;}); slider.addEventListener("focusout",function(){paused=false;});
+    var x0=null, box=slider.querySelector(".qslides");
+    box.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;},{passive:true});
+    box.addEventListener("touchend",function(e){ if(x0===null) return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40){ go(idx+(dx<0?1:-1)); play(); } x0=null; });
+    play();
+  }
 });
-</script>'''
+</script>'''.replace("__TOTAL__", str(total))
     page(QUOTE, "Free Med Spa Marketing Quote | BV Consulting",
          "Get a free growth plan and quote for your med spa: AI agents, automated SMS and booking, SEO, website development, and API integrations. Takes 60 seconds.",
          body, schemas=[breadcrumb_ld([("Home", "/"), ("Free Quote", QUOTE)]), faq_ld(faqs)],
-         extra_head=QUOTE_STYLE, scripts_after=script, funnel=True, priority="0.9", images=["med-spa-consultation-mirror"])
+         extra_head=QUOTE_STYLE, scripts_after=script, funnel=True, priority="0.9")
 
 
 def thank_you():
@@ -423,7 +520,7 @@ def thank_you():
     <span class="eyebrow">Request received</span>
     <h1>Thank you<span id="ty-name"></span>! Your growth plan is on the way.</h1>
     <p class="lede" style="margin:0 auto 22px">We'll review your practice and reach out within 24 hours on business days to schedule your free strategy call. Keep an eye on your phone and inbox.</p>
-    <div class="hero-ctas" style="justify-content:center"><a class="btn btn-primary" href="/blog/">Read Med Spa Growth Guides</a><a class="btn btn-secondary" href="tel:{tel}">Call {phone}</a></div>
+    <div class="hero-ctas" style="justify-content:center"><a class="btn btn-primary" href="/blog/">Read Med Spa Growth Guides</a><a class="btn btn-secondary" href="tel:{tel}">{call_btn}</a></div>
   </div>
 </section>
 <section class="section">
@@ -436,7 +533,7 @@ def thank_you():
   </div>
 </section>
 <canvas id="confetti-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:500"></canvas>
-'''.format(check=ic("check", 40, 2.6), tel=TEL, phone=PHONE)
+'''.format(call_btn=CALL_BTN, check=ic("check", 40, 2.6), tel=TEL, phone=PHONE)
     script = r'''<script>
 document.addEventListener("DOMContentLoaded",function(){
   try{var n=sessionStorage.getItem("bv_lead_name"); if(n){document.getElementById("ty-name").textContent=", "+n;}}catch(e){}
@@ -477,7 +574,7 @@ def local_page():
         <p class="hero-sub">BV Consulting is a Fort Lauderdale-based team helping South Florida med spas book more clients with AI agents, automated SMS and booking, local SEO, websites, and software integrations. We know the market because we work in it.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="{quote}">Get a Free Quote</a>
-          <a class="btn btn-secondary" href="tel:{tel}">Call {phone}</a>
+          <a class="btn btn-secondary" href="tel:{tel}">{call_btn}</a>
         </div>
         <div class="hero-meta"><span><span class="dot"></span>Local, in-person meetings</span><span><span class="dot"></span>Broward, Palm Beach &amp; Miami-Dade</span></div>
       </div>
@@ -550,7 +647,7 @@ def local_page():
 </section>
 
 {cta}
-'''.format(crumbs=crumbs([("Home", "/"), ("Fort Lauderdale Med Spa Marketing", LOCAL)]), quote=QUOTE, tel=TEL, phone=PHONE, email=EMAIL,
+'''.format(call_btn=CALL_BTN, crumbs=crumbs([("Home", "/"), ("Fort Lauderdale Med Spa Marketing", LOCAL)]), quote=QUOTE, tel=TEL, phone=PHONE, email=EMAIL,
            photo=picture("med-spa-laser-hair-removal", "Nurse performing laser hair removal at a Fort Lauderdale area med spa", sizes="(min-width: 960px) 45vw, 100vw", eager=True, fallback_icon="pin"),
            i_pin=ic("pin", 20), i_cal=ic("calendar", 20), i_chat=ic("chat", 20), i_zap=ic("zap", 20), i_phone=ic("phone", 20), i_search=ic("search", 20),
            i_pin2=ic("pin", 18, 2), i_phone2=ic("phone", 18, 2), i_mail2=ic("mail", 18, 2), i_clock2=ic("clock", 18, 2), i_web2=ic("web", 18, 2),

@@ -16,6 +16,7 @@ ICONS.update({
     "syringe": '<path d="M18 2l4 4M17 7l3-3M19 9L9 19l-4 1 1-4L16 6zM14 8l2 2M11 11l2 2M5 19l-3 3"/>',
     "sms": '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/>',
     "lock": '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    "building": '<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/>',
     "flag": '<path d="M4 22V4M4 4h13l-2 4 2 4H4"/>',
     "cpu": '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 9h6v6H9zM9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
     "repeat": '<path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>',
@@ -162,11 +163,11 @@ NAV = [("Home", "/"), ("Services", "/services/"), ("About", "/about/"), ("Blog",
 def header(active, funnel=False, has_demo=False):
     if funnel:
         return '''<header class="site-header">
-  <div class="container nav-wrap">
+  <div class="container nav-wrap funnel-nav">
     <a class="brand" href="/" aria-label="BV Consulting home"><span class="brand-badge">BV</span><span>BV Consulting</span></a>
-    <a class="btn btn-secondary funnel-call" href="tel:%s">%s<span>Call %s</span></a>
+    <span class="secure-badge">%s<span>Secure &amp; Confidential</span></span>
   </div>
-</header>''' % (TEL, ic("phone", 16, 2), PHONE)
+</header>''' % ic("shield", 15, 2)
     links = []
     for name, url in NAV:
         cur = ' aria-current="page"' if url == active else ""
@@ -187,12 +188,14 @@ def header(active, funnel=False, has_demo=False):
 
 def footer(funnel=False):
     if funnel:
-        return '''<footer class="footer-slim">
-  <div class="container foot-bottom">
-    <span>&copy; <span id="year">2026</span> BV Consulting &middot; Based in Fort Lauderdale, FL &middot; Serving med spas nationwide</span>
-    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="tel:%s">%s</a></span>
+        return '''<footer class="footer-slim funnel-foot">
+  <div class="container">
+    <nav class="ff-links" aria-label="Legal"><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Service</a><a href="/contact/">Contact Us</a></nav>
+    <p>BV Consulting is an independent consultancy based in Fort Lauderdale, FL, serving med spas nationwide. We never sell your information, and we never ask for patient or health information.</p>
+    <p class="ff-tm">Logos shown are trademarks of their respective owners and do not imply endorsement.</p>
+    <p class="ff-copy">&copy; <span id="year">2026</span> BV Consulting</p>
   </div>
-</footer>''' % (TEL, PHONE)
+</footer>'''
     svc = "\n        ".join('<li><a href="%s">%s</a></li>' % (s["url"], s["name"]) for s in SERVICES)
     return '''<footer>
   <div class="container">
@@ -306,11 +309,11 @@ def cta_strip(h, p, btn="Get Your Free Quote"):
       <p>%s</p>
       <div class="hero-ctas" style="justify-content:center;margin:0">
         <a class="btn btn-secondary" href="%s" style="background:#fff;color:var(--blue-dark);border-color:#fff">%s</a>
-        <a class="btn btn-secondary" href="tel:%s" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.7)">Call %s</a>
+        <a class="btn btn-secondary" href="tel:%s" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.7)">%sGet Started</a>
       </div>
     </div>
   </div>
-</section>''' % (h, p, QUOTE, btn, TEL, PHONE)
+</section>''' % (h, p, QUOTE, btn, TEL, ic("phone", 18, 2))
 
 
 def post_card(p):
@@ -422,5 +425,7 @@ def sms_demo(demo_id="sms-demo", bg="bg-soft", eyebrow="Try it yourself", title=
 </section>''' % (bg, eyebrow, title, lede, tab_html, demo_id, start,
                  ic("chart", 13, 2.4), ic("zap", 13, 2.4), ic("repeat", 13, 2.2), demo_id, demo_id, ic("arrow", 18, 2.4), QUOTE)
 
+
+CALL_BTN = ic("phone", 18, 2) + "Get Started"
 
 DEMO_SCRIPT = '<script src="/sms-demo.js" defer></script>'
