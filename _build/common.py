@@ -5,7 +5,7 @@ SITE = "https://bvconsulting.live"
 OUT = os.path.dirname(HERE) if os.path.basename(HERE) == "_build" else os.path.join(HERE, "out")
 PHONE = "954-825-1009"
 TEL = "+19548251009"
-EMAIL = "BVConsultings@outlook.com"
+EMAIL = "bvconsultings@outlook.com"
 TODAY = "2026-09-10"
 TODAY_HUMAN = "September 10, 2026"
 QUOTE = "/quote/"

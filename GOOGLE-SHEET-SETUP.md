@@ -1,7 +1,7 @@
 # Lead Forms: Email Delivery + Optional Google Sheet
 
 Both forms on the site (the **quote funnel** at `/quote/` and the form at `/contact/`)
-send every submission to **BVConsultings@outlook.com**. All settings live at the top of `site.js`.
+send every submission to **bvconsultings@outlook.com**. All settings live at the top of `site.js`.
 
 ## 1. Activate email delivery (one time, required)
 
@@ -9,7 +9,7 @@ The forms use [FormSubmit](https://formsubmit.co), a free form-to-email service 
 
 1. Upload the site to your live domain (https://bvconsulting.live).
 2. Go to https://bvconsulting.live/quote/ and submit a test.
-3. Check the **BVConsultings@outlook.com** inbox (and the Junk folder) for an email from FormSubmit.
+3. Check the **bvconsultings@outlook.com** inbox (and the Junk folder) for an email from FormSubmit.
 4. Click **Activate Form**. From now on every lead is emailed to you as a clean table.
 
 Tip: submit your tests from the live site, not by double-clicking the HTML file on your computer.

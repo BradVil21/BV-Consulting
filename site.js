@@ -6,7 +6,7 @@ var BV_CONFIG = {
   // Every form submission is emailed here (via FormSubmit.co, free).
   // The FIRST submission sends an activation email to this inbox. Click
   // "Activate Form" in that email once and all future leads arrive.
-  email: "BVConsultings@outlook.com",
+  email: "bvconsultings@outlook.com",
   formEndpoint: "https://formsubmit.co/ajax/BVConsultings@outlook.com",
 
   // Optional: also log every lead to a Google Sheet.
