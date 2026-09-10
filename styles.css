@@ -759,3 +759,20 @@ body.funnel .site-header{position:relative}
 }
 @media (prefers-reduced-motion:reduce){.calc-sticky{transition:none}}
 @media(max-width:899px){body.calc-sticky-on #back-to-top{opacity:0;pointer-events:none}}
+
+/* Calculator promo (links to the standalone calculator page) */
+.calc-promo{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;max-width:1040px;margin:0 auto;background:linear-gradient(150deg,#0f5e93,#0a3f66);color:#fff;border-radius:22px;padding:26px 22px;box-shadow:0 20px 44px rgba(15,94,147,.22);text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.calc-promo:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 26px 54px rgba(15,94,147,.3)}
+.cp-kicker{display:inline-flex;align-items:center;gap:6px;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bfe3fb;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 12px}
+.calc-promo h2{color:#fff;margin:12px 0 8px;font-size:clamp(1.45rem,4.5vw,2rem)}
+.calc-promo p{color:#dbeefc;margin:0 0 18px;max-width:560px}
+.cp-btn{background:#fff;color:var(--blue-deep);border-color:#fff}
+.calc-promo:hover .cp-btn{background:var(--blue-soft)}
+.cp-points{list-style:none;margin:0;padding:0;display:grid;gap:10px;align-content:center}
+.cp-points li{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;font-weight:600;color:#fff;font-size:.95rem}
+.cp-points svg{color:#8ff0c2;flex-shrink:0}
+@media(min-width:860px){.calc-promo{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px;padding:38px 40px}}
+@media(max-width:559px){.cp-btn{width:100%}}
+.site-header .brand{white-space:nowrap}
+@media(min-width:960px) and (max-width:1060px){.nav-links{gap:10px}.nav-links a{font-size:.86rem}.nav-links a.nav-demo{padding:6px 10px}.nav-links a.nav-cta{padding:9px 12px}.site-header .brand{font-size:.95rem}}
+.cp-btn{text-align:center}

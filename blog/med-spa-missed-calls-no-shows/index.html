@@ -145,6 +145,7 @@
       <a href="/services/">Services</a>
       <a href="/about/">About</a>
       <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/med-spa-revenue-calculator/">Calculator</a>
       <a href="/contact/">Contact</a>
       <a class="nav-demo" href="/#demo"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg><span>View Demo</span></a>
       <a class="nav-cta" href="/quote/">Get a Free Quote</a>
@@ -222,53 +223,21 @@
     </div>
   </div>
 </article>
-<section class="section bg-warm tool-section" id="calculator" aria-label="Missed revenue calculator">
+<section class="section bg-warm" aria-label="Free revenue calculator">
   <div class="container">
-    <div class="center tool-head">
-      <span class="eyebrow">Free calculator</span>
-      <h2>What Are Missed Calls and No-Shows Costing You?</h2>
-      <p>Move the sliders to match your practice and see what missed calls and no-shows could be costing you every month.</p>
-    </div>
-    <div class="calc" data-calc>
-      <div class="calc-inputs">
-        <div class="calc-field">
-          <div class="calc-label"><label for="calc-missed">Calls, texts &amp; DMs that go unanswered each week</label><output for="calc-missed" data-show="missed">12</output></div>
-          <input type="range" id="calc-missed" data-in="missed" min="0" max="80" step="1" value="12" data-pre="" data-suf="" />
-        </div>
-        <div class="calc-field">
-          <div class="calc-label"><label for="calc-book">Share of those that would have booked</label><output for="calc-book" data-show="book">30%</output></div>
-          <input type="range" id="calc-book" data-in="book" min="5" max="60" step="5" value="30" data-pre="" data-suf="%" />
-        </div>
-        <div class="calc-field">
-          <div class="calc-label"><label for="calc-value">Average visit value</label><output for="calc-value" data-show="value">$450</output></div>
-          <input type="range" id="calc-value" data-in="value" min="100" max="2000" step="25" value="450" data-pre="$" data-suf="" />
-        </div>
-        <div class="calc-field">
-          <div class="calc-label"><label for="calc-appts">Appointments per month</label><output for="calc-appts" data-show="appts">250</output></div>
-          <input type="range" id="calc-appts" data-in="appts" min="0" max="1500" step="10" value="250" data-pre="" data-suf="" />
-        </div>
-        <div class="calc-field">
-          <div class="calc-label"><label for="calc-noshow">No-show &amp; late cancel rate</label><output for="calc-noshow" data-show="noshow">8%</output></div>
-          <input type="range" id="calc-noshow" data-in="noshow" min="0" max="30" step="1" value="8" data-pre="" data-suf="%" />
-        </div>
+    <a class="calc-promo" href="/med-spa-revenue-calculator/">
+      <div class="cp-copy">
+        <span class="cp-kicker"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Free tool</span>
+        <h2>What Are Missed Calls and No-Shows Costing You?</h2>
+        <p>Use our free calculator to see what missed calls, unanswered texts, and no-shows could be costing your practice every month.</p>
+        <span class="btn cp-btn">Open the Calculator <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </div>
-      <div class="calc-results" aria-live="polite">
-        <span class="calc-kicker">Estimated revenue slipping away</span>
-        <div class="calc-big"><b data-out="month">$0</b><span>/month</span></div>
-        <div class="calc-year">About <b data-out="year">$0</b> a year</div>
-        <ul class="calc-rows">
-          <li><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Unanswered leads</span><b data-out="leads">$0</b></li>
-          <li><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2.5 2.5L16 12"/></svg>No-shows &amp; late cancels</span><b data-out="noshows">$0</b></li>
-        </ul>
-        <div class="calc-recover">
-          <span>If automation won back <b>1 in 3</b> missed leads and cut no-shows by <b>25%</b>:</span>
-          <strong>+<span data-out="recover">$0</span>/month</strong>
-        </div>
-        <a class="btn btn-primary calc-cta" href="/quote/">Get a Plan to Recover It</a>
-        <p class="calc-note">Illustrative estimate based on your inputs (4.33 weeks per month). Actual results vary by practice.</p><a class="calc-full" href="/med-spa-revenue-calculator/">Open the full calculator page &rarr;</a>
-      </div>
-      <div class="calc-sticky" data-calc-sticky aria-hidden="true"><span>Estimated loss</span><b data-out="sticky">$0</b><span>/mo</span></div>
-    </div>
+      <ul class="cp-points">
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Adjust 5 quick sliders</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>See your monthly and yearly estimate</li>
+        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>No email required</li>
+      </ul>
+    </a>
   </div>
 </section>
 <section class="section bg-soft">
@@ -362,6 +331,6 @@
 </footer>
 
 <script src="/site.js" defer></script>
-<script src="/tools.js" defer></script>
+
 </body>
 </html>
