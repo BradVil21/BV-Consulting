@@ -249,7 +249,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 <meta name="description" content="{desc}" />
 <link rel="canonical" href="{canonical}" />
 <meta name="robots" content="{robots}" />
-<meta name="theme-color" content="#4F5E3D" />
+<meta name="theme-color" content="#2BA0EE" />
 <meta property="og:type" content="{og_type}" />
 <meta property="og:site_name" content="BV Consulting" />
 <meta property="og:locale" content="en_US" />

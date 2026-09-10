@@ -74,7 +74,7 @@ def contact():
 .ci-item h2{margin:0 0 2px;font-size:1.05rem}
 .ci-item p,.ci-item a{margin:0;font-size:.95rem}
 .form-note{font-size:.82rem;color:var(--muted);margin-top:8px}
-.form-success{display:none;background:var(--blue-soft);border:1px solid #d3dbc6;color:var(--blue-deep);border-radius:12px;padding:16px;font-weight:600;margin-top:10px}
+.form-success{display:none;background:var(--blue-soft);border:1px solid #bfe3fb;color:var(--blue-deep);border-radius:12px;padding:16px;font-weight:600;margin-top:10px}
 .form-success.show{display:block}
 @media(min-width:880px){.contact-grid{grid-template-columns:1fr 1.1fr;gap:36px;align-items:start}}
 </style>'''
@@ -443,7 +443,7 @@ document.addEventListener("DOMContentLoaded",function(){
   if(window.BV) window.BV.track("quote_thank_you_view");
   if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   var c=document.getElementById("confetti-canvas"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;
-  var cols=["#4F5E3D","#2C3622","#c98d7a","#efe3d6","#a9b88e"],P=[];
+  var cols=["#2BA0EE","#0f5e93","#c98d7a","#efe3d6","#7cc7f6"],P=[];
   for(var i=0;i<140;i++)P.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,w:6+Math.random()*7,h:8+Math.random()*9,c:cols[i%cols.length],r:Math.random()*3,vr:(Math.random()-.5)*.3,vy:2.4+Math.random()*3,vx:(Math.random()-.5)*2});
   var t0=Date.now();(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(function(p){p.y+=p.vy;p.x+=p.vx;p.r+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore();});if(Date.now()-t0<4200)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height);})();
 });
