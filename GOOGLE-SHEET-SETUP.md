@@ -1,6 +1,6 @@
 # Lead Forms: Email Delivery + Optional Google Sheet
 
-Both forms on the site (the **Free Consultation** wizard on `quote.html` and the form on `contact.html`)
+Both forms on the site (the **quote funnel** at `/quote/` and the form at `/contact/`)
 send every submission to **BVConsultings@outlook.com**. All settings live at the top of `site.js`.
 
 ## 1. Activate email delivery (one time, required)
@@ -8,7 +8,7 @@ send every submission to **BVConsultings@outlook.com**. All settings live at the
 The forms use [FormSubmit](https://formsubmit.co), a free form-to-email service for static websites.
 
 1. Upload the site to your live domain (https://bvconsulting.live).
-2. Go to your live `quote.html` or `contact.html` page and submit a test.
+2. Go to https://bvconsulting.live/quote/ and submit a test.
 3. Check the **BVConsultings@outlook.com** inbox (and the Junk folder) for an email from FormSubmit.
 4. Click **Activate Form**. From now on every lead is emailed to you as a clean table.
 
@@ -61,13 +61,13 @@ googleSheetUrl: "https://script.google.com/macros/s/AKfyc.../exec",
 ```
 
 Every lead will now be emailed to you **and** added as a new row with columns like
-`form, service, industry, website_status, goal, timeline, name, business, phone, email, site, city, details, page`.
+`form, services, practice_type, locations, software, biggest_challenge, name, practice, email, phone, state, city, website, details, page`.
 
 Re-deploy after any script change (**Deploy → Manage deployments → Edit → New version**).
 
 ## 3. Optional: Google Analytics 4
 
 Create a GA4 property at analytics.google.com, copy the Measurement ID (looks like `G-XXXXXXXXXX`),
-and paste it into `gaId` in `site.js`. The site automatically tracks form leads (`generate_lead`),
-phone clicks (`click_to_call`), and email clicks (`click_email`). Mark `generate_lead` and
-`click_to_call` as key events in GA4.
+and paste it into `gaId` in `site.js`. The site automatically tracks quote starts (`quote_start`), form leads (`generate_lead`),
+thank-you page views (`quote_thank_you_view`), phone clicks (`click_to_call`), and email clicks (`click_email`).
+Mark `generate_lead` and `click_to_call` as key events in GA4. For Google or Meta ads, use a visit to `/thank-you/` as your conversion.

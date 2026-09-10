@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thank You | BV Consulting</title>
+<meta name="description" content="Your med spa growth plan request was received." />
+<link rel="canonical" href="https://bvconsulting.live/thank-you/" />
+<meta name="robots" content="noindex,follow" />
+<meta name="theme-color" content="#2BA0EE" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="BV Consulting" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Thank You | BV Consulting" />
+<meta property="og:description" content="Your med spa growth plan request was received." />
+<meta property="og:url" content="https://bvconsulting.live/thank-you/" />
+<meta property="og:image" content="https://bvconsulting.live/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Thank You | BV Consulting" />
+<meta name="twitter:description" content="Your med spa growth plan request was received." />
+<meta name="twitter:image" content="https://bvconsulting.live/og-image.png" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+
+</head>
+<body class="funnel">
+
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="BV Consulting home"><span class="brand-badge">BV</span><span>BV Consulting</span></a>
+    <a class="btn btn-secondary funnel-call" href="tel:+19548251009"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>Call 954-825-1009</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="funnel-hero" style="padding-bottom:60px">
+  <div class="container center" style="max-width:760px">
+    <div style="width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-deep));display:flex;align-items:center;justify-content:center;margin:10px auto 18px;color:#fff"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
+    <span class="eyebrow">Request received</span>
+    <h1>Thank you<span id="ty-name"></span>! Your growth plan is on the way.</h1>
+    <p class="lede" style="margin:0 auto 22px">We'll review your practice and reach out within 24 hours on business days to schedule your free strategy call. Keep an eye on your phone and inbox.</p>
+    <div class="hero-ctas" style="justify-content:center"><a class="btn btn-primary" href="/blog/">Read Med Spa Growth Guides</a><a class="btn btn-secondary" href="tel:+19548251009">Call 954-825-1009</a></div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="next-steps">
+      <div class="next-step"><b>We review your practice</b><span>Website, Google profile, reviews, and booking flow.</span></div>
+      <div class="next-step"><b>Free strategy call</b><span>We'll confirm your goals, software, and priorities.</span></div>
+      <div class="next-step"><b>Your plan &amp; quote</b><span>A written plan with services, tools, timeline, and pricing.</span></div>
+    </div>
+  </div>
+</section>
+<canvas id="confetti-canvas" style="position:fixed;inset:0;pointer-events:none;z-index:500"></canvas>
+
+</main>
+
+<footer class="footer-slim">
+  <div class="container foot-bottom">
+    <span>&copy; <span id="year">2026</span> BV Consulting &middot; Based in Fort Lauderdale, FL &middot; Serving med spas nationwide</span>
+    <span><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="tel:+19548251009">954-825-1009</a></span>
+  </div>
+</footer>
+
+<script src="/site.js"></script>
+<script>
+(function(){
+  try{var n=sessionStorage.getItem("bv_lead_name"); if(n){document.getElementById("ty-name").textContent=", "+n;}}catch(e){}
+  if(window.BV) window.BV.track("quote_thank_you_view");
+  if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var c=document.getElementById("confetti-canvas"),x=c.getContext("2d");c.width=innerWidth;c.height=innerHeight;
+  var cols=["#2BA0EE","#0f5e93","#c98d7a","#efe3d6","#7cc7f6"],P=[];
+  for(var i=0;i<140;i++)P.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,w:6+Math.random()*7,h:8+Math.random()*9,c:cols[i%cols.length],r:Math.random()*3,vr:(Math.random()-.5)*.3,vy:2.4+Math.random()*3,vx:(Math.random()-.5)*2});
+  var t0=Date.now();(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(function(p){p.y+=p.vy;p.x+=p.vx;p.r+=p.vr;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.w/2,-p.h/2,p.w,p.h);x.restore();});if(Date.now()-t0<4200)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height);})();
+})();
+</script>
+</body>
+</html>

@@ -1,64 +1,57 @@
-# SEO Launch Checklist: Get BV Consulting Found in Fort Lauderdale
+# SEO Launch Checklist: Get BV Consulting Found by Med Spas
 
-The website is built for local SEO (keyword-targeted pages, schema markup, sitemap, fast mobile pages, and 6 blog posts).
-These off-site steps are what put you on Google Maps and in search results. Work top to bottom.
+The website is built for search: med spa keyword pages for every service, a Fort Lauderdale local page,
+6 med spa blog posts, clean URLs, schema markup, an image sitemap, and a `/quote/` funnel.
+These steps get it indexed and ranking. Work top to bottom.
 
 ## Week 1: Go live and get indexed
-- [ ] Push the site to GitHub and confirm https://bvconsulting.live loads with **https** (GitHub Pages → Settings → Pages → Custom domain `bvconsulting.live` → Enforce HTTPS). At your domain registrar, point the domain to GitHub Pages (A records for the apex domain, per GitHub's docs).
-- [ ] Submit a test on the quote form and click **Activate Form** in the FormSubmit email (see `GOOGLE-SHEET-SETUP.md`).
-- [ ] **Google Search Console**: add `bvconsulting.live` as a Domain property, verify via DNS, and submit `https://bvconsulting.live/sitemap.xml`.
-- [ ] **Google Analytics 4**: create a property and paste the ID into `gaId` in `site.js`.
-- [ ] **Bing Webmaster Tools**: import from Search Console (also feeds Bing, DuckDuckGo, and Copilot results).
+- [ ] Push to GitHub. In the repo: Settings → Pages → Custom domain `bvconsulting.live` → **Enforce HTTPS**.
+- [ ] Visit https://bvconsulting.live/quote/ and submit a test. Click **Activate Form** in the FormSubmit email (check Junk).
+- [ ] **Google Search Console**: add `bvconsulting.live` (Domain property, verify via DNS), submit `https://bvconsulting.live/sitemap.xml`.
+      Then use URL Inspection → Request Indexing for `/`, `/quote/`, `/med-spa-marketing-fort-lauderdale/`, and each service page.
+- [ ] **Google Analytics 4**: create a property, paste the ID into `gaId` in `site.js`. Mark `generate_lead` and `click_to_call` as key events.
+- [ ] **Bing Webmaster Tools**: import from Search Console.
 
-## Week 1–2: Google Business Profile (biggest local ranking lever)
-- [ ] Create/claim your profile at business.google.com as **BV Consulting** (your real business name, no extra keywords).
-- [ ] If you work from home or at client locations, set it up as a **service-area business**, hide the address, and add Fort Lauderdale, Wilton Manors, Oakland Park, Plantation, Davie, Hollywood, Pompano Beach, Coral Springs, and Weston.
-- [ ] Primary category: pick the closest match available, such as **Website designer**. Add secondary categories you genuinely offer (e.g. Internet marketing service, Marketing consultant, Software company).
-- [ ] Phone **954-825-1009**, website **https://bvconsulting.live**, hours Mon–Fri 8am–6pm. These must match the website exactly.
-- [ ] Add services (AI Automation, Web Design, Local SEO, API Integrations) with short descriptions and links to the matching pages.
-- [ ] Upload a logo (`logo.png`), a cover image, and real photos of you working.
-- [ ] Post an update each week (share each blog post as a GBP update).
+## Week 1–2: Google Business Profile (for the Fort Lauderdale local page)
+- [ ] Create/claim **BV Consulting** at business.google.com. Use your real business name only.
+- [ ] Set it up as a **service-area business** (hide your home address). Service areas: Fort Lauderdale, Broward County, Palm Beach County, Miami-Dade County.
+- [ ] Primary category: **Marketing agency** (or the closest available, such as Internet marketing service). Secondary: Website designer, Software company, Marketing consultant.
+- [ ] Phone **954-825-1009**, website **https://bvconsulting.live/med-spa-marketing-fort-lauderdale/** (or the home page), hours Mon–Fri 8am–6pm.
+      These must match the NAP block on the Fort Lauderdale page exactly.
+- [ ] Add services: AI Agents for Med Spas, Med Spa SEO, Med Spa Website Design, SMS & Booking Automation, AI Automation, API Integrations.
+- [ ] Upload the logo (`logo.png`) and real photos of your work.
+- [ ] Once verified, replace the map on the Fort Lauderdale page with your profile's **Embed a map** code (there's a comment marking the spot).
 
-## Week 2–4: Citations (consistent Name / Phone / Website everywhere)
-Use exactly: **BV Consulting · Fort Lauderdale, FL · 954-825-1009 · https://bvconsulting.live · BVConsultings@outlook.com**
-- [ ] Apple Business Connect (Apple Maps)
-- [ ] Bing Places for Business
-- [ ] Yelp for Business
+## Week 2–4: Listings & authority (consistent name / phone / website everywhere)
+Use exactly: **BV Consulting · Fort Lauderdale, FL · 954-825-1009 · https://bvconsulting.live**
+- [ ] LinkedIn Company Page (and your personal profile)
 - [ ] Facebook Business Page + Instagram
-- [ ] LinkedIn Company Page (and add BV Consulting to your personal LinkedIn)
-- [ ] Better Business Bureau
-- [ ] Nextdoor Business
-- [ ] Clutch.co and UpCity (directories for agencies)
-- [ ] Greater Fort Lauderdale Chamber of Commerce (membership also earns a local backlink)
+- [ ] Apple Business Connect, Bing Places, Yelp, BBB
+- [ ] Agency directories: Clutch.co, UpCity, DesignRush, GoodFirms
+- [ ] Med spa industry: join the **American Med Spa Association (AmSpa)** vendor/partner programs if available, and look for partner/integration directories of the booking platforms you work with
+- [ ] Greater Fort Lauderdale Chamber of Commerce
+- [ ] Add these profile URLs to the `"sameAs"` list in `_build/common.py` (inside `BUSINESS`) and rebuild, or send them to Claude to add
 
-After creating profiles, add their URLs to the `"sameAs"` list in the JSON-LD schema on `index.html` and `contact.html`, for example:
-`"sameAs": ["https://www.linkedin.com/company/...", "https://www.facebook.com/...", "https://www.instagram.com/..."]`
+## Ongoing: Reviews & proof
+- [ ] Ask every med spa client for a Google review after launch milestones. Never offer incentives.
+- [ ] Publish case studies (with client permission): what you built, tools used, and measured results.
+- [ ] Add real testimonials to the home page once you have them.
 
-## Ongoing: Reviews
-- [ ] Get your Google review link (GBP → "Ask for reviews") and send it to every client after a project.
-- [ ] Reply to every review within a few days.
-- [ ] Never offer incentives for reviews and don't only ask happy clients (both break Google's policies).
-- [ ] Once you have real reviews, add a few to the home page where the `<!-- REVIEWS -->` note is.
+## Ongoing: Content (2–4 posts per month)
+Send new blog photos and I'll add them. High-intent med spa topics to write next:
+- Best AI receptionist options for med spas (how to choose)
+- Boulevard vs Zenoti vs Mangomint: integrations and automation compared
+- HIPAA and AI chatbots: what med spa owners should know
+- Med spa Google Ads vs SEO: where to spend first
+- How to reduce med spa no-shows with deposits and reminders
+- Med spa membership programs: automating renewals and credits
+- Instagram DM automation for med spas
+- Local SEO for multi-location med spas
+- Treatment page templates that convert (injectables, laser, facials)
 
-## Ongoing: Content (drives clicks and traffic)
-- [ ] Publish 2–4 new blog posts per month. Ideas:
-  - Hurricane season tech and data backup plan for Broward small businesses
-  - Best AI tools for Fort Lauderdale real estate agents
-  - How restaurants on Las Olas can automate reservations and reviews
-  - Website checklist for South Florida contractors
-  - GoHighLevel vs HubSpot for small businesses
-  - How marine businesses can get more leads during boat show season
-  - Case studies of your own client projects (with permission): these build the most trust
-- [ ] Share every post on Google Business Profile, LinkedIn, Facebook, and Instagram.
-- [ ] Add each new post to `blog.html` and `sitemap.xml`, then request indexing in Search Console.
+For each post: add it to the blog, link it from a related service page, share it on LinkedIn and your Google Business Profile, then Request Indexing in Search Console.
 
 ## Monthly: Track
-- [ ] Search Console → Performance: which searches show your site; improve pages with high impressions but low clicks.
-- [ ] GBP Performance: calls, website clicks, direction requests.
-- [ ] GA4: `generate_lead` and `click_to_call` events.
-- [ ] Ask every new client how they found you.
-
-## Nice next steps
-- Add a real founder photo and short bio to `about.html` (people hire people).
-- Build portfolio/case-study pages as you complete projects.
-- Consider Google Local Services Ads or Google Ads for "web design Fort Lauderdale" while SEO builds.
+- [ ] Search Console → Performance: queries with high impressions and low clicks → improve titles/descriptions.
+- [ ] GA4: `quote_start` → `generate_lead` conversion rate on `/quote/`.
+- [ ] Google Business Profile: calls and website clicks.

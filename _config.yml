@@ -1,0 +1,6 @@
+# GitHub Pages (Jekyll) settings: keep docs and build source off the public site
+exclude:
+  - README.md
+  - GOOGLE-SHEET-SETUP.md
+  - SEO-LAUNCH-CHECKLIST.md
+  - _build

@@ -1,28 +1,39 @@
 # BV Consulting Website
 
-AI Automation, Web Design & API Integrations for small businesses in Fort Lauderdale, FL.
-Live site: https://bvconsulting.live
+AI agents, automated SMS & booking, SEO, website development, and API integrations for **med spas**.
+Based in Fort Lauderdale, FL, serving med spas nationwide. Live site: https://bvconsulting.live
 
-## Files
-| File | Purpose |
+## Clean URLs
+Every page lives in its own folder as `index.html`, so URLs have no `.html`:
+
+| URL | File |
 |---|---|
-| `index.html` | Home page |
-| `services.html` | Services overview |
-| `ai-automation-fort-lauderdale.html` | AI Automation landing page |
-| `web-design-fort-lauderdale.html` | Web Design & Local SEO landing page |
-| `api-integration-fort-lauderdale.html` | API Integrations landing page |
-| `about.html`, `contact.html`, `quote.html` | Company, contact, free consultation wizard |
-| `blog.html` + `blog-*.html` | Blog index and 6 SEO articles |
-| `privacy.html`, `terms.html`, `404.html` | Legal + not-found page |
-| `site.js` | Shared scripts + **settings** (form email, Google Sheet, Google Analytics) |
-| `styles.css` | All styles |
-| `sitemap.xml`, `robots.txt`, `CNAME` | SEO + custom domain for GitHub Pages |
-| `og-image.png`, `logo.png`, `favicon.svg`, `apple-touch-icon.png` | Social share image and icons |
+| `/` | `index.html` |
+| `/quote/` (lead funnel, all "Get a Free Quote" buttons point here) | `quote/index.html` |
+| `/thank-you/` (shown after a quote is submitted; good for ad conversion tracking) | `thank-you/index.html` |
+| `/services/` | `services/index.html` |
+| `/med-spa-ai-agents/` | `med-spa-ai-agents/index.html` |
+| `/med-spa-sms-booking-automation/` | `med-spa-sms-booking-automation/index.html` |
+| `/med-spa-ai-automation/` | `med-spa-ai-automation/index.html` |
+| `/med-spa-seo/` | `med-spa-seo/index.html` |
+| `/med-spa-website-design/` | `med-spa-website-design/index.html` |
+| `/med-spa-api-integrations/` | `med-spa-api-integrations/index.html` |
+| `/med-spa-marketing-fort-lauderdale/` (local SEO page) | `med-spa-marketing-fort-lauderdale/index.html` |
+| `/about/`, `/contact/`, `/privacy/`, `/terms/` | `<name>/index.html` |
+| `/blog/` and `/blog/<post>/` | `blog/index.html`, `blog/<post>/index.html` |
 
-See `GOOGLE-SHEET-SETUP.md` to activate lead emails and `SEO-LAUNCH-CHECKLIST.md` for the steps that get you found on Google.
+Links use root paths like `/styles.css`, so **double-clicking an HTML file won't display correctly**.
+To preview on your Mac, open Terminal in this folder and run:
 
-## Adding a new blog post
-1. Copy an existing `blog-*.html` file and rename it with a keyword-rich name (e.g. `blog-hurricane-prep-small-business.html`).
-2. Update the `<title>`, meta description, canonical URL, `og:url`, the JSON-LD blocks, and the article content.
-3. Add a card for it on `blog.html` and a `<url>` entry in `sitemap.xml`.
-4. Link to it from at least one related service page or post.
+```bash
+python3 -m http.server 8000
+```
+
+then visit http://localhost:8000
+
+## Images
+Optimized photos live in `/images/` in two sizes (800px and 1400px) as both WebP and JPEG.
+
+## Settings
+`site.js` (top of file) holds the lead email, optional Google Sheet URL, and Google Analytics ID.
+See `GOOGLE-SHEET-SETUP.md` to activate lead emails and `SEO-LAUNCH-CHECKLIST.md` for launch steps.

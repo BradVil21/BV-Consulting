@@ -42,7 +42,7 @@ var BV_CONFIG = {
   window.BV.submitLead = function (data, subject) {
     var payload = {};
     Object.keys(data).forEach(function (k) { payload[k] = data[k]; });
-    payload._subject = subject || "New lead from bvconsulting.live";
+    payload._subject = subject || "New med spa lead from bvconsulting.live";
     payload._template = "table";
     payload._captcha = "false";
     if (payload.email) { payload._replyto = payload.email; }
@@ -109,8 +109,8 @@ var BV_CONFIG = {
       ".page-hero .eyebrow", ".page-hero h1", ".page-hero p",
       ".section .center .eyebrow", ".section .center h2", ".section .center p",
       ".card", ".step", ".value", ".pillar", ".industry", ".promise",
-      ".post-card", ".ci-item", ".form-card", ".cta-strip",
-      ".split > div", "details.faq-item"
+      ".post-card", ".ci-item", ".form-card", ".cta-strip", ".svc-card", ".pain", ".tool", ".trust", ".next-step",
+      ".split > div", ".split-photo > *", ".nap-card", ".map-wrap", "details.faq-item"
     ];
     var seen = [];
     revealTargets.forEach(function (sel) {
@@ -120,7 +120,7 @@ var BV_CONFIG = {
         if (!el.hasAttribute("data-reveal")) el.setAttribute("data-reveal", "");
       });
     });
-    document.querySelectorAll(".cards, .process, .values, .pillars, .industries, .promises, .blog-grid, .deliverables").forEach(function (grid) {
+    document.querySelectorAll(".cards, .process, .values, .pillars, .industries, .promises, .blog-grid, .deliverables, .svc-grid, .pains, .tools, .trust-row, .next-steps").forEach(function (grid) {
       Array.prototype.forEach.call(grid.children, function (child, i) {
         child.setAttribute("data-reveal", "");
         child.dataset.revealDelay = (i * 80);
