@@ -5,9 +5,9 @@ The website is built for search: med spa keyword pages for every service, a Fort
 These steps get it indexed and ranking. Work top to bottom.
 
 ## Week 1: Go live and get indexed
-- [ ] Push to GitHub. In the repo: Settings → Pages → Custom domain `bvconsulting.live` → **Enforce HTTPS**.
+- [x] Push to GitHub. Vercel deploys automatically. In Vercel → Settings → Domains, keep `www.bvconsulting.live` as the primary domain (the bare domain redirects to it). `vercel.json` handles trailing slashes and redirects from old page URLs.
 - [ ] Visit https://www.bvconsulting.live/quote/ and submit a test. Click **Activate Form** in the FormSubmit email (check Junk).
-- [ ] **Google Search Console**: add `bvconsulting.live` (Domain property, verify via DNS), submit `https://www.bvconsulting.live/sitemap.xml`.
+- [x] **Google Search Console**: add `bvconsulting.live` (Domain property, verify via DNS), submit `https://www.bvconsulting.live/sitemap.xml`.
       Then use URL Inspection → Request Indexing for `/`, `/quote/`, `/med-spa-marketing-fort-lauderdale/`, and each service page.
 - [ ] **Google Analytics 4**: create a property, paste the ID into `gaId` in `site.js`. Mark `generate_lead` and `click_to_call` as key events.
 - [ ] **Bing Webmaster Tools**: import from Search Console.

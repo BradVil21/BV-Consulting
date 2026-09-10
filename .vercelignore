@@ -1,0 +1,4 @@
+_build
+*.md
+_config.yml
+.DS_Store

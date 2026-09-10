@@ -258,8 +258,7 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 <meta name="description" content="{desc}" />
-<link rel="canonical" href="{canonical}" />
-<meta name="robots" content="{robots}" />
+{canonical_tag}<meta name="robots" content="{robots}" />
 <meta name="theme-color" content="#2BA0EE" />
 <meta property="og:type" content="{og_type}" />
 <meta property="og:site_name" content="BV Consulting" />
@@ -295,7 +294,8 @@ def page(path, title, desc, body, schemas=(), og_type="website", active="", extr
 {scripts_after}
 </body>
 </html>
-'''.format(title=esc(title), desc=esc(desc), canonical=canonical, robots=robots, og_type=og_type, og=og,
+'''.format(title=esc(title), desc=esc(desc), canonical=canonical,
+           canonical_tag='' if path == "/404" else '<link rel="canonical" href="%s" />\n' % canonical, robots=robots, og_type=og_type, og=og,
            extra_head=extra_head + ("\n" if extra_head else ""), schema_html="\n".join(ld(s) for s in schemas),
            bodycls=' class="funnel"' if funnel else "", header=header(active, funnel, "data-sms-demo" in body), body=body,
            footer=footer(funnel), scripts_after=scripts_after)

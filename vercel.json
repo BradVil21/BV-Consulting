@@ -1,0 +1,137 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/about.html",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/quote.html",
+      "destination": "/quote/",
+      "permanent": true
+    },
+    {
+      "source": "/privacy.html",
+      "destination": "/privacy/",
+      "permanent": true
+    },
+    {
+      "source": "/terms.html",
+      "destination": "/terms/",
+      "permanent": true
+    },
+    {
+      "source": "/ai-automation-fort-lauderdale.html",
+      "destination": "/med-spa-ai-automation-fort-lauderdale/",
+      "permanent": true
+    },
+    {
+      "source": "/api-integration-fort-lauderdale.html",
+      "destination": "/med-spa-api-integrations-fort-lauderdale/",
+      "permanent": true
+    },
+    {
+      "source": "/web-design-fort-lauderdale.html",
+      "destination": "/med-spa-website-design-fort-lauderdale/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-automation-ideas-small-business.html",
+      "destination": "/blog/ai-agents-for-med-spas/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-app-integrations-save-time.html",
+      "destination": "/blog/med-spa-software-integrations/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-what-is-api-integration.html",
+      "destination": "/blog/med-spa-software-integrations/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-local-seo-checklist-fort-lauderdale.html",
+      "destination": "/blog/med-spa-seo-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-missed-calls-ai-follow-up.html",
+      "destination": "/blog/med-spa-missed-calls-no-shows/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-website-cost-fort-lauderdale.html",
+      "destination": "/blog/med-spa-website-cost/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-computer-setup.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog-speed-up-computer.html",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/_build/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/GOOGLE-SHEET-SETUP.md",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/SEO-LAUNCH-CHECKLIST.md",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/README.md",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/_config.yml",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/CNAME",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/thank-you/",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ]
+}

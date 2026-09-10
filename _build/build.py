@@ -1,4 +1,6 @@
-import os, re, shutil
+import os, re, shutil, json
+
+OLD_URLS = {'/about.html': '/about/', '/services.html': '/services/', '/blog.html': '/blog/', '/contact.html': '/contact/', '/quote.html': '/quote/', '/privacy.html': '/privacy/', '/terms.html': '/terms/', '/ai-automation-fort-lauderdale.html': '/med-spa-ai-automation-fort-lauderdale/', '/api-integration-fort-lauderdale.html': '/med-spa-api-integrations-fort-lauderdale/', '/web-design-fort-lauderdale.html': '/med-spa-website-design-fort-lauderdale/', '/blog-ai-automation-ideas-small-business.html': '/blog/ai-agents-for-med-spas/', '/blog-app-integrations-save-time.html': '/blog/med-spa-software-integrations/', '/blog-what-is-api-integration.html': '/blog/med-spa-software-integrations/', '/blog-local-seo-checklist-fort-lauderdale.html': '/blog/med-spa-seo-checklist/', '/blog-missed-calls-ai-follow-up.html': '/blog/med-spa-missed-calls-no-shows/', '/blog-website-cost-fort-lauderdale.html': '/blog/med-spa-website-cost/', '/blog-computer-setup.html': '/blog/', '/blog-speed-up-computer.html': '/blog/'}
 from common import *
 from posts_meta import POSTS
 import posts_a, posts_b, page_home, page_services, page_other, page_local
@@ -100,7 +102,14 @@ def extras():
         sm.append("  <url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority>%s</url>" % (SITE, path, TODAY, pr, imgs))
     sm.append("</urlset>")
     open(os.path.join(OUT, "sitemap.xml"), "w").write("\n".join(sm) + "\n")
-    open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nAllow: /\nDisallow: /thank-you/\n\nSitemap: %s/sitemap.xml\n" % SITE)
+    open(os.path.join(OUT, "robots.txt"), "w").write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
+    # Vercel hosting: trailing-slash URLs, permanent redirects for retired pages, keep build files private
+    redirects = [{"source": s, "destination": d, "permanent": True} for s, d in OLD_URLS.items()]
+    redirects += [{"source": s, "destination": "/", "permanent": False} for s in ("/_build/:path*", "/GOOGLE-SHEET-SETUP.md", "/SEO-LAUNCH-CHECKLIST.md", "/README.md", "/_config.yml", "/CNAME")]
+    json.dump({"$schema": "https://openapi.vercel.sh/vercel.json", "trailingSlash": True, "redirects": redirects,
+               "headers": [{"source": "/thank-you/", "headers": [{"key": "X-Robots-Tag", "value": "noindex"}]}]},
+              open(os.path.join(OUT, "vercel.json"), "w"), indent=2)
+    open(os.path.join(OUT, ".vercelignore"), "w").write("_build\n*.md\n_config.yml\n.DS_Store\n")
     open(os.path.join(OUT, "CNAME"), "w").write("bvconsulting.live\n")
 
 
